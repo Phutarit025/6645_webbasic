@@ -1,90 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tutorial</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Tutorial</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.5;
-      margin: 0;
-    }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
+      h1 {
+        color: #f40c0c;
+        text-align: center;
+      }
 
-    h1 {
+      a {
+        text-decoration: none;
+        color: #0cf41f;
+      }
 
-      color: #f40c0c;
-      text-align: center;
-    }
+      a:hover {
+        text-decoration: underline;
+        color: #e404ac;
+        font-style: italic;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
 
-    a {
-      text-decoration: none;
-      color: #0cf41f;
-    }
+      pre {
+        background-color: rgb(212, 201, 188);
+        border-left: #04a5e4 5px solid;
+        font-size: 16px;
+        padding: 10px;
+      }
 
-    a:hover {
-      text-decoration: underline;
-      color: #e404ac;
-      font-style: italic;
-      font-weight: bold;
-      text-transform: uppercase;
+      footer {
+        text-align: center;
+        margin-top: 50px 0px 0px;
+        background-color: rgb(230, 240, 240);
+        color: rgb(11, 22, 22);
+        padding: 10px;
+      }
 
-    }
+      .container {
+        max-width: 1400px;
+        margin: auto;
+      }
+    </style>
+  </head>
 
-    pre {
-      background-color: rgb(212, 201, 188);
-      border-left: #04a5e4 5px solid;
-      font-size: 16px;
-      padding: 10px;
-    }
+  <body>
+    <div class="container">
+      <h1 style="">HTML Tutorial</h1>
+      <p>
+        Welcome to the HTML tutorial. Click on the topics below to start
+        learning:
+      </p>
 
-    footer {
-      text-align: center;
-      margin-top: 50px 0px 0px;
-      background-color: rgb(230, 240, 240);
-      color: rgb(11, 22, 22);
-      padding: 10px;
-    }
+      <h2>Topics</h2>
+      <ul>
+        <li><a href="#introduction">Introduction to HTML</a></li>
+        <li><a href="#structure">HTML Document Structure</a></li>
+        <li><a href="#heading">Heading</a></li>
+        <li><a href="#Paragraph">Paragraph</a></li>
+        <li><a href="#Text-formatting">Text Formatting</a></li>
+        <li><a href="#Link">Creating Links</a></li>
+        <li><a href="#Lists">Lists (Ordered and Unordered)</a></li>
+        <li><a href="#images">Adding Images</a></li>
+        <li><a href="#table">Creating Tables</a></li>
+        <li><a href="#Form">HTML Forms</a></li>
+        <li><a href="#Multimedia">Embedding Multimedia (Audio & Video)</a></li>
+        <li><a href="#semantic">Semantic HTML</a></li>
+      </ul>
+      <hr />
 
-    .container {
-      max-width: 1400px;
-      margin: auto;
-
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-    <h1 style="">HTML Tutorial</h1>
-    <p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
-
-    <h2>Topics</h2>
-    <ul>
-      <li><a href="#introduction">Introduction to HTML</a></li>
-      <li><a href="#structure">HTML Document Structure</a></li>
-      <li><a href="#heading">Heading</a></li>
-      <li><a href="#Paragraph">Paragraph</a></li>
-      <li><a href="#Text-formatting">Text Formatting</a></li>
-      <li><a href="#Link">Creating Links</a></li>
-      <li><a href="#Lists">Lists (Ordered and Unordered)</a></li>
-      <li><a href="#images">Adding Images</a></li>
-      <li><a href="#table">Creating Tables</a></li>
-      <li><a href="#Form">HTML Forms</a></li>
-      <li><a href="#Multimedia">Embedding Multimedia (Audio & Video)</a></li>
-      <li><a href="#semantic">Semantic HTML</a></li>
-    </ul>
-    <hr>
-
-    <h2 id="introduction">Introduction to HTML</h2>
-    <pre>
+      <h2 id="introduction">Introduction to HTML</h2>
+      <pre>
         - HTML stands for Hyper Text Markup Language
         - HTML is the standard markup language for creating Web pages
         - HTML describes the structure of a Web page
@@ -96,11 +94,11 @@
         - HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages
         - HTML is not a programming language, but a markup language
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <h2 id="structure">HTML Document Structure</h2>
-    <p>An HTML document has the following basic structure...</p>
-    <pre>
+      <a href="index.html">top</a>
+      <hr />
+      <h2 id="structure">HTML Document Structure</h2>
+      <p>An HTML document has the following basic structure...</p>
+      <pre>
         คำอธิบาย:
         &lt;!DOCTYPE html&gt;: ระบุว่าเป็นเอกสาร HTML5
         &lt;html&gt;: เป็นรากของเอกสาร HTML ทั้งหมด
@@ -116,12 +114,12 @@
         ตัวอย่าง: &lt;h1&gt;Hello, World!&lt;/h1&gt;
                 &lt;img src="image.jpg" alt="A description of the image"&gt;
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <h2 id="heading">Heading</h2>
-    <a href="W02_01_heading.html">workshop</a>
-    <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
-    <pre>
+      <a href="index.html">top</a>
+      <hr />
+      <h2 id="heading">Heading</h2>
+      <a href="W02_01_heading.html">workshop</a>
+      <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
+      <pre>
         - &lt;h1&gt;: Heading 1
         - &lt;h2&gt;: Heading 2
         - &lt;h3&gt;: Heading 3
@@ -129,22 +127,22 @@
         - &lt;h5&gt;: Heading 5
         - &lt;h6&gt;: Heading 6
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <h2 id="Paragraph">Paragraph</h2>
-    <a href="W04_01_paragraph.html">workshop</a>
-    
-    <p>HTML paragraphs are defined with the &lt;p&gt; tag...</p>
-    <pre>
+      <a href="index.html">top</a>
+      <hr />
+      <h2 id="Paragraph">Paragraph</h2>
+      <a href="W04_01_paragraph.html">workshop</a>
+
+      <p>HTML paragraphs are defined with the &lt;p&gt; tag...</p>
+      <pre>
         - &lt;p&gt;: Paragraph
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <h2 id="Text-formatting">Text Formatting</h2>
-    <a href="W04_02_formatting.html">workshop</a>
-    
-    <p>HTML provides various elements to format text...</p>
-    <pre>
+      <a href="index.html">top</a>
+      <hr />
+      <h2 id="Text-formatting">Text Formatting</h2>
+      <a href="W04_02_formatting.html">workshop</a>
+
+      <p>HTML provides various elements to format text...</p>
+      <pre>
         - &lt;h1&gt; to &lt;h6&gt;: Headings
         - &lt;p&gt;: Paragraph
         - &lt;pre&gt;: Preformatted text
@@ -167,13 +165,13 @@
         - &lt;q&gt;: Inline quotation
         - &lt;code&gt;: Code snippet
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <h2 id="Link">Creating Links</h2>
-    <a href="W04_03_links.html">workshop</a>
-   
-    <p>HTML links are defined with the &lt;a&gt; tag...</p>
-    <pre>
+      <a href="index.html">top</a>
+      <hr />
+      <h2 id="Link">Creating Links</h2>
+      <a href="W04_03_links.html">workshop</a>
+
+      <p>HTML links are defined with the &lt;a&gt; tag...</p>
+      <pre>
         - &lt;a href="url" target=""&gt;Link text&lt;/a&gt;
         - The href attribute specifies the URL of the page the link goes to
         - The target attribute specifies where to open the linked document
@@ -195,12 +193,15 @@
             - Use the download attribute to create a download link
             - Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <h2 id="Lists">Lists (Ordered and Unordered)</h2>
-    <p>workshop</p>
-    <p>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
-    <pre>
+      <a href="index.html">top</a>
+      <hr />
+      <h2 id="Lists">Lists (Ordered and Unordered)</h2>
+      <p>workshop</p>
+      <p>
+        HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
+        tags...
+      </p>
+      <pre>
         - &lt;ul&gt;: Unordered list
         - &lt;ol&gt;: Ordered list
         - &lt;li&gt;: List item
@@ -242,12 +243,12 @@
             - Example: &lt;ol style="list-style-type: upper-roman;"&gt;
             - Example: &lt;ol style="list-style-type: lower-roman;"&gt;
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <h2 id="images">Adding Images</h2>
-    <p>workshop</p>
-    <p>HTML images are defined with the &lt;img&gt; tag...</p>
-    <pre>
+      <a href="index.html">top</a>
+      <hr />
+      <h2 id="images">Adding Images</h2>
+      <p>workshop</p>
+      <p>HTML images are defined with the &lt;img&gt; tag...</p>
+      <pre>
         - &lt;img src="url" alt="description"&gt;
         - The src attribute specifies the URL of the image
         - The alt attribute provides a description of the image
@@ -290,23 +291,27 @@
                     object-fit: cover;
                 }
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <h2 id="table">Creating Tables</h2>
-    <a href="W08_table.html">workshop1</a>
-    <a href="W08_table-layout.html">workshop2</a>
-    <p>HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
-    <pre>
+      <a href="index.html">top</a>
+      <hr />
+      <h2 id="table">Creating Tables</h2>
+      <a href="W08_table.html">workshop1</a>
+      <a href="W08_table-layout.html">workshop2</a>
+      <a href="HW08_tablelayout.html">workshop3</a>
+      <p>
+        HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;,
+        and &lt;td&gt; tags...
+      </p>
+      <pre>
         - &lt;table&gt;: Table
         - &lt;tr&gt;: Table row
         - &lt;th&gt;: Table header
         - &lt;td&gt;: Table data/cell
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <h2 id="Form">HTML Forms</h2>
-    <p>HTML forms are defined with the &lt;form&gt; tag...</p>
-    <pre>
+      <a href="index.html">top</a>
+      <hr />
+      <h2 id="Form">HTML Forms</h2>
+      <p>HTML forms are defined with the &lt;form&gt; tag...</p>
+      <pre>
         - &lt;form&gt;: Form
         - &lt;input&gt;: Input field
         - &lt;textarea&gt;: Text area
@@ -314,19 +319,19 @@
         - &lt;select&gt;: Dropdown list
         - &lt;option&gt;: Option in a dropdown list
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <h2 id="Multimedia">Embedding Multimedia (Audio & Video)</h2>
-    <p>HTML multimedia elements include &lt;audio&gt; and &lt;video&gt;...</p>
-    <pre>
+      <a href="index.html">top</a>
+      <hr />
+      <h2 id="Multimedia">Embedding Multimedia (Audio & Video)</h2>
+      <p>HTML multimedia elements include &lt;audio&gt; and &lt;video&gt;...</p>
+      <pre>
         - &lt;audio&gt;: Audio player
         - &lt;video&gt;: Video player
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <h2 id="semantic">Semantic HTML</h2>
-    <p>Semantic HTML elements clearly define the content of a web page...</p>
-    <pre>
+      <a href="index.html">top</a>
+      <hr />
+      <h2 id="semantic">Semantic HTML</h2>
+      <p>Semantic HTML elements clearly define the content of a web page...</p>
+      <pre>
         - &lt;header&gt;: Defines a header for a document or section
         - &lt;nav&gt;: Defines navigation links
         - &lt;section&gt;: Defines a section in a document
@@ -334,21 +339,15 @@
         - &lt;aside&gt;: Defines content aside from the page content
         - &lt;footer&gt;: Defines a footer for a document or section
       </pre>
-    <a href="index.html">top</a>
-    <hr>
-    <a href="https://www.w3schools.com/">Learn more about HTML</a>
+      <a href="index.html">top</a>
+      <hr />
+      <a href="https://www.w3schools.com/">Learn more about HTML</a>
+    </div>
 
-  </div>
-
-  <footer>
-
-    <p>&copy; 2024 HTML Tutorial by [Phutarit]</p>
-  </footer>
-
-</body>
-
+    <footer>
+      <p>&copy; 2024 HTML Tutorial by [Phutarit]</p>
+    </footer>
+  </body>
 </html>
 
-W3Schools.com
-
-W3Schools.com
+W3Schools.com W3Schools.com
