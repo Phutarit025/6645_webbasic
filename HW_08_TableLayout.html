@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f0ecec;
+      }
+      .header {
+        background-color: #160d0d;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 24px;
+      }
+      .container {
+        display: flex;
+        width: 90%;
+        margin: 20px 0;
+      }
+      .menu {
+        flex: 1;
+        background-color: #91fc0f;
+        padding: 10px;
+        text-align: center;
+      }
+      .menu ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .menu ul li {
+        margin: 10px 0;
+        padding: 5px 0;
+      }
+      .content {
+        flex: 3;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 10px;
+      }
+      .content img {
+        width: 100%;
+        height: auto;
+        background-color: #ddd;
+      }
+      .paragraph {
+        text-align: center;
+        margin: 20px;
+        padding: 10px;
+        background-color: #0f0a0a67;
+      }
+      .footer {
+        background-color: #114fec;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+      }
+      ul {
+        text-align: left;
+        margin-left: auto;
+        list-style: circle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header"><img src="newsmessi.png.png" alt="" /></div>
+
+    <div class="container">
+      <div class="menu">
+        <ul>
+          <li>ตลาดนักเตะ</li>
+          <li>อาการบาดเจ็บ</li>
+          <li>การย้ายทีม</li>
+          <li>ข่าวกีฬา</li>
+          <li><a href="index.html">Back to home</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <img src="mesinter7.jpg" alt="Example" />
+        <img src="mesinter8.webp" alt="Example" />
+        <img src="mesinter9.webp" alt="Example" />
+        <img src="mesinter4.jpg" alt="Example" />
+        <img src="mesinter5.webp" alt="Example" />
+        <img src="mesinter6.webp" alt="Example" />
+      </div>
+    </div>
+
+    <div class="paragraph">
+      <p>
+        สาเหตุที่เป็นเช่นนั้นก็มีอยู่หลากหลายประการด้วยกัน
+        เริ่มจากการที่เหล่าบรรณาธิการของ ฟรองซ์ ฟุตบอล
+        และหนังสือพิมพ์ในประเทศฝรั่งเศส ผู้มีอำนาจในการคัดเลือกรายชื่อ
+        นั้นมองว่ามีนักเตะคนอื่นๆ ทำผลงานได้ดีกว่า เมสซี่กดไป 22 ประตูกับอีก 13
+        แอสซิสต์จากการลงสนามทุกรายการให้กับ อินเตอร์ ไมอามี
+        แต่ทว่าสิ่งหนึ่งที่ทำให้ตัวเลขดังกล่าวไม่ได้มีน้ำหนักให้พิจารณามากเท่าที่ควรก็คือการที่เวที
+        เมเจอร์ลีก ซอคเกอร์ ของสหรัฐอเมริกา ไม่ได้มีความยากเท่ากับลีกใหญ่ๆ
+        ในยุโรปถ้าให้พูดง่ายๆ ก็คือทีมงานผู้ที่มีสิทธิ์คัดสรรรายชื่อนักเตะ 30
+        คนสุดท้ายนั้นมองว่ามีนักเตะหลายคนทำผลงานได้ดีกว่า เมสซี
+        แถมยังค้าแข้งในลีกที่มีการแข่งขันเข้มข้นกว่าอีกด้วย
+      </p>
+    </div>
+
+    <div class="footer">
+      นายภูธฤทธิ์ ศรีสุข 664230025 66/45 เทคโนโลยีสารสนเทศ
+      วิทยาศาสตร์และเทคโนโลยีมหาวิทยาลัยราชภัฏนครปฐม
+    </div>
+  </body>
+</html>
