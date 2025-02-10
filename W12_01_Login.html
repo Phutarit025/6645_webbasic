@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+       body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: rgb(223,8,8);
+        background: linear-gradient(90deg, rgba(223,8,8,1) 42%, rgba(9,90,126,1) 53%, rgba(0,212,255,1) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+  
+        .thasadith-regular {
+  font-family: "Thasadith", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.thasadith-bold {
+  font-family: "Thasadith", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.thasadith-regular-italic {
+  font-family: "Thasadith", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.thasadith-bold-italic {
+  font-family: "Thasadith", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+       }
+       .container{
+        background-color: white;
+        width: 700px;
+        border-radius: 8px;
+        display: flex;
+        overflow: hidden;
+       
+       }
+       .left-side{
+        background-image: url("fp.jpg");
+        background-size: 100%;
+        color: rgb(255, 0, 0);
+        background-position: center;
+        padding: 40px;
+        background-color: rgba(red, green, blue, alpha);
+        background-blend-mode: darken;
+        text-align: center;
+        text-transform: uppercase;
+        width: 60%;
+       
+
+        
+       }
+       .right-side{
+        padding: 40px;
+        width: 40%;
+        form{
+            
+            label{
+                display: block;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+            input{
+                width: 100%;
+                box-sizing: border-box;
+                padding: 8px;
+                margin-bottom: auto;
+            }
+            button{
+                width: 100%;
+                padding: 8px;
+                background-color: brown;
+                border: none;
+                color: aliceblue;
+                font-size: 16px;
+                cursor: pointer;
+                margin-top: 8px;
+                text-align: center;
+            }
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h1>Information Technology</h1>
+            <p>ยินดีต้อนรับเข้าสู่เว็ปไซต์การเรียนการสอนวิชาการ ออกเเบบเเละพัฒนาเว็บไซต์</p>
+        </div>
+        <div class="right-side">
+            <h2>Login</h2>
+            <from action="" method="post">
+                <label for="">Username</label>
+                <input type="text" name="username" i="username" required>
+                <label for="">password</label>
+                <input type="text" name="password" i="password" required>
+                <button type="submit">Login</button>
+            </from>
+            <p>Forget <a href="#">Password?</a></p>
+            <p>Don't have an account? <a href="">Register</a></p>
+            <a href="index.html">back to home</a>
+        </div>
+
+
+    </div>
+</body>
+</html>
