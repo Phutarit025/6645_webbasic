@@ -106,7 +106,7 @@
         </div>
         <div class="right-side">
             <h2>Login</h2>
-            <from action="" method="post">
+            <from action="" id="loginForm" method="post">
                 <label for="">Username</label>
                 <input type="text" name="username" i="username" required>
                 <label for="">password</label>
@@ -120,5 +120,32 @@
 
 
     </div>
+    <script>
+        // เพิ่ม event listener ให้กับฟอร์มที่มี id เป็น "loginForm"
+        // เมื่อผู้ใช้กด submit จะเรียกใช้ฟังก์ชันที่กำหนด
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // ป้องกันการโหลดหน้าใหม่เมื่อกดปุ่ม submit
+
+            // ดึงค่าที่ผู้ใช้ป้อนจาก input field (username และ password) และตัดช่องว่างด้านหน้า/หลังออก
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let errorMsg = document.getElementById("errorMsg"); // อ้างอิงถึง div ที่ใช้แสดงข้อความ error
+
+            // ตรวจสอบว่าผู้ใช้กรอกข้อมูลครบหรือไม่
+            if (username === "" || password === "") {
+                errorMsg.textContent = "กรุณากรอก Username และ Password"; // แสดงข้อความแจ้งเตือน
+                return; // ออกจากฟังก์ชันทันที ไม่ดำเนินการตรวจสอบต่อ
+            }
+
+            // ตรวจสอบว่าข้อมูลที่ป้อนตรงกับค่าที่กำหนดไว้หรือไม่ (username: "admin", password: "1234")
+            if (username === "admin" && password === "1111") {
+                //alert("เข้าสู่ระบบสำเร็จ!"); // แจ้งเตือนผู้ใช้ว่าล็อกอินสำเร็จ
+                window.location.href = "W13_01_webresponsive.html"; // เปลี่ยนหน้าไปยังเป้าหมาย"
+            } else {
+                errorMsg.textContent = "Username หรือ Password ไม่ถูกต้อง"; // แสดงข้อความ error เมื่อป้อนข้อมูลผิด
+            }
+        });
+    </script>
+
 </body>
 </html>
