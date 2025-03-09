@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bootstrap</title>
+    <!-- <link rel="stylesheet" href="csss/bootstrap/bootstrap.min.css"> -->
+
+    <!-- CDN:Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .container {
+        background-color: rgb(137, 67, 125);
+        /* text-align: center; */
+        padding: 15px;
+        margin: auto;
+        color: rgb(68, 0, 255);
+      }
+      ul {
+        text-align: left;
+      }
+
+      .container-fluid {
+        background-color: turquoise;
+        text-align: center;
+        padding: 15px;
+        margin: auto;
+        color: chocolate;
+      }
+      ul {
+        text-align: left;
+      }
+      row {
+        text-align: center;
+      }
+      .back-home {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #f03aed;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      }
+      .back-home:hover {
+        background-color: #74037c;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bootstrap Intro</h1>
+    <hr />
+    <h2>เปรียบเทียบ .container vs .container-fluid</h2>
+
+    <!-- .container -->
+    <div class="container">
+      <h1>container</h1>
+      <p>
+        กำหนดค่า property เพิ่มเติมในการจัดการ sytle โดนไม่ใช่ class จาก
+        bootstrap
+      </p>
+      <ul>
+        <li>background-color</li>
+        <li>text-alisn</li>
+        <li>padding</li>
+        <li>margin</li>
+        <li>color</li>
+      </ul>
+    </div>
+    <hr />
+
+    <!-- .container-fluid -->
+    <div class="container-fluid">
+      <h1>container-fluid</h1>
+      <p>
+        กำหนดค่า property เพิ่มเติมในการจัดการ sytle โดนไม่ใช่ class จาก
+        bootstrap
+      </p>
+      <ul>
+        <li>background-color</li>
+        <li>text-alisn</li>
+        <li>padding</li>
+        <li>margin</li>
+        <li>color</li>
+      </ul>
+    </div>
+
+    <!-- bootatrap class-->
+    <h1>การใช้งานคำสั่งจากBootatrap</h1>
+    <div class="container bg-secondary text-white text-center p-5 mp-5">
+      <h1>container</h1>
+      <p>
+        กำหนดค่า property เพิ่มเติมในการจัดการ sytle โดนไม่ใช่ class จาก
+        bootstrap
+      </p>
+      <ul>
+        <li>background-color => bg-dark</li>
+        <li>text-alisn => text-center</li>
+        <li>padding => p-5</li>
+        <li>margin => my-5</li>
+        <li>color => text-info</li>
+      </ul>
+    </div>
+    <hr />
+
+    <!-- Grid basic -->
+    <div class="container-fluid bg-dark text-light text-center p-2 mp-4">
+      <h1>Grid basic</h1>
+      <p>แบ่งคอลัมน์</p>
+    </div>
+    <div class="row">
+      <div class="col-2 bg-danger">sunday</div>
+      <div class="col-2 bg-warning">monday</div>
+      <div class="col-4 bg-secondary">tuesday</div>
+      <div class="col-4 bg-success">wednesday</div>
+    </div>
+    <hr />
+
+    <!-- grid & card & button -->
+    <div class="container-fluid bg-secondary text-light text-center p-2 mp-4">
+      <h1>grid & button</h1>
+    </div>
+    <br />
+
+    <!-- container  -->
+    <div class="container">
+      <!-- spilt 3 columm -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h3>colu 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
+                pariatur.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h3>colu 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
+                pariatur.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h3>colu 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
+                pariatur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h3>colu 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
+                pariatur.
+              </p>
+              <button type="button" class="btu-Somewhere btn btn-primary">
+                Go Somewhere
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h3>colu 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
+                pariatur.
+              </p>
+              <button type="button" class="btu-Somewhere btn btn-outline-dark">
+                Go Somewhere
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h3>colu 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
+                pariatur.
+              </p>
+              <div class="d-grid gap-3">
+                <button
+                  type="button"
+                  class="btu-Somewhere btn btn-danger disabled"
+                >
+                  Go Somewhere
+                </button>
+                <button
+                  type="button"
+                  class="btu-Somewhere btn btn-outline-secondary"
+                >
+                  Go Somewhere
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <img src="/images/rabbit3.jpg" alt="" />
+            <div class="card-body">
+              <h3>colu 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
+                pariatur.
+              </p>
+              <button type="button" class="btu-Somewhere btn btn-primary">
+                Go Somewhere
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <img src="/images/rabbit3.jpg" alt="" />
+            <div class="card-body">
+              <h3>colu 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
+                pariatur.
+              </p>
+              <button type="button" class="btu-Somewhere btn btn-outline-dark">
+                Go Somewhere
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <img src="/images/rabbit3.jpg" alt="" />
+            <div class="card-body">
+              <h3>colu 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
+                pariatur.
+              </p>
+              <div class="d-grid gap-3">
+                <button type="button" class="btu-Somewhere btn btn-danger">
+                  Go Somewhere
+                </button>
+                <button
+                  type="button"
+                  class="btu-Somewhere btn btn-outline-secondary"
+                >
+                  Go Somewhere
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <a href="index.html" class="back-home">Back to home</a>
+    <!-- <script src="Javascnipt/bootstrap/bootstrap.bundle.min.js"></script> -->
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
