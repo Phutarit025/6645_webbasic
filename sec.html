@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>📅 นัดเปิดพรีเมียร์ลีก 2024/25 – นัดแรกของทุกทีม</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        background: #f2f2f2;
+      }
+      h1 {
+        text-align: center;
+        color: #0a0f5e;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+      th {
+        background: #0a0f5e;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📅 รายการแข่งขัน – พรีเมียร์ลีก 2024/25</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ทีม</th>
+          <th>สัปดาห์ที่1</th>
+          <th>บ้าน/เยือน</th>
+          <th>คู่แข่ง</th>
+          <th>เวลา (UK)</th>
+        </tr>
+      </thead>
+      <tbody id="first-match-table"></tbody>
+    </table>
+
+    <script>
+      const fixtures = [
+        { home: "Manchester United", away: "Fulham", time: "20:00" },
+        { home: "Ipswich Town", away: "Liverpool", time: "12:30" },
+        { home: "Arsenal", away: "Wolverhampton Wanderers", time: "15:00" },
+        { home: "Everton", away: "Brighton & Hove Albion", time: "15:00" },
+        { home: "Newcastle United", away: "Southampton", time: "15:00" },
+        { home: "Nottingham Forest", away: "AFC Bournemouth", time: "15:00" },
+        { home: "West Ham United", away: "Aston Villa", time: "17:30" },
+        { home: "Brentford", away: "Crystal Palace", time: "14:00 (18 ส.ค.)" },
+        { home: "Chelsea", away: "Manchester City", time: "16:30" },
+        {
+          home: "Leicester City",
+          away: "Tottenham Hotspur",
+          time: "20:00 (19 ส.ค.)",
+        },
+      ];
+
+      const teams = [
+        "Manchester United",
+        "Fulham",
+        "Ipswich Town",
+        "Liverpool",
+        "Arsenal",
+        "Wolverhampton Wanderers",
+        "Everton",
+        "Brighton & Hove Albion",
+        "Newcastle United",
+        "Southampton",
+        "Nottingham Forest",
+        "AFC Bournemouth",
+        "West Ham United",
+        "Aston Villa",
+        "Brentford",
+        "Crystal Palace",
+        "Chelsea",
+        "Manchester City",
+        "Leicester City",
+        "Tottenham Hotspur",
+      ];
+
+      const tbody = document.getElementById("first-match-table");
+
+      teams.forEach((team) => {
+        const match = fixtures.find((m) => m.home === team || m.away === team);
+        const row = document.createElement("tr");
+        if (match) {
+          const isHome = match.home === team;
+          row.innerHTML = `
+          <td>${team}</td>
+          <td>นัด 1</td>
+          <td>${isHome ? "เหย้า" : "เยือน"}</td>
+          <td>${isHome ? match.away : match.home}</td>
+          <td>${match.time}</td>
+        `;
+        } else {
+          row.innerHTML = `<td>${team}</td><td colspan="4">– ยังไม่พบโปรแกรม</td>`;
+        }
+        tbody.appendChild(row);
+      });
+    </script>
+    <a href="firstpig.html">back</a>
+  </body>
+</html>

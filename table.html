@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>⚽ ผลการแข่งขันนัดแรก พรีเมียร์ลีก 2024/25</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f0f0f0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #003366;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+      th {
+        background: #003366;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background: #f9f9f9;
+      }
+      .winner {
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>⚽ ผลการแข่งขันนัดแรก พรีเมียร์ลีก 2024/25</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>วัน</th>
+          <th>ทีมเหย้า</th>
+          <th>สกอร์</th>
+          <th>ทีมเยือน</th>
+          <th>ผล</th>
+        </tr>
+      </thead>
+      <tbody id="results-body"></tbody>
+    </table>
+
+    <script>
+      const matchResults = [
+        {
+          date: "16 ส.ค. 2024",
+          home: "Manchester United",
+          away: "Fulham",
+          homeScore: 2,
+          awayScore: 1,
+        },
+        {
+          date: "17 ส.ค. 2024",
+          home: "Ipswich Town",
+          away: "Liverpool",
+          homeScore: 0,
+          awayScore: 3,
+        },
+        {
+          date: "17 ส.ค. 2024",
+          home: "Arsenal",
+          away: "Wolves",
+          homeScore: 1,
+          awayScore: 1,
+        },
+        {
+          date: "17 ส.ค. 2024",
+          home: "Everton",
+          away: "Brighton",
+          homeScore: 2,
+          awayScore: 2,
+        },
+        {
+          date: "17 ส.ค. 2024",
+          home: "Newcastle",
+          away: "Southampton",
+          homeScore: 3,
+          awayScore: 0,
+        },
+        {
+          date: "17 ส.ค. 2024",
+          home: "Nottingham Forest",
+          away: "Bournemouth",
+          homeScore: 1,
+          awayScore: 2,
+        },
+        {
+          date: "17 ส.ค. 2024",
+          home: "West Ham",
+          away: "Aston Villa",
+          homeScore: 0,
+          awayScore: 2,
+        },
+        {
+          date: "18 ส.ค. 2024",
+          home: "Brentford",
+          away: "Crystal Palace",
+          homeScore: 2,
+          awayScore: 2,
+        },
+        {
+          date: "18 ส.ค. 2024",
+          home: "Chelsea",
+          away: "Manchester City",
+          homeScore: 1,
+          awayScore: 3,
+        },
+        {
+          date: "19 ส.ค. 2024",
+          home: "Leicester City",
+          away: "Tottenham",
+          homeScore: 1,
+          awayScore: 2,
+        },
+      ];
+
+      const tbody = document.getElementById("results-body");
+
+      matchResults.forEach((match) => {
+        let resultText = "เสมอ";
+        if (match.homeScore > match.awayScore) {
+          resultText = `<span class="winner">${match.home}</span> ชนะ`;
+        } else if (match.homeScore < match.awayScore) {
+          resultText = `<span class="winner">${match.away}</span> ชนะ`;
+        }
+
+        const row = document.createElement("tr");
+        row.innerHTML = `
+        <td>${match.date}</td>
+        <td>${match.home}</td>
+        <td>${match.homeScore} - ${match.awayScore}</td>
+        <td>${match.away}</td>
+        <td>${resultText}</td>
+      `;
+        tbody.appendChild(row);
+      });
+    </script>
+    <a href="firstpig.html">back</a>
+  </body>
+</html>

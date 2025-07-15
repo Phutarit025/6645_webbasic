@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>เปรียบเทียบดาวซัลโว พรีเมียร์ลีก 2024/25</title>
+    <style>
+      body {
+        font-family: Tahoma, sans-serif;
+        padding: 20px;
+        background-color: #f8f8f8;
+      }
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+      }
+      input {
+        margin-bottom: 15px;
+        padding: 8px;
+        width: 100%;
+        max-width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #ccc;
+      }
+      table {
+        width: 90%;
+        margin: auto;
+        border-collapse: collapse;
+        background-color: white;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+      th {
+        background-color: #2980b9;
+        color: white;
+        cursor: pointer;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>เปรียบเทียบนักเตะดาวซัลโว พรีเมียร์ลีก 2024/25</h1>
+    <input
+      type="text"
+      id="searchInput"
+      onkeyup="searchTable()"
+      placeholder="ค้นหาชื่อนักเตะ หรือชื่อทีม..."
+    />
+
+    <table id="scorersTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">ทีม</th>
+          <th onclick="sortTable(1)">นักเตะ</th>
+          <th onclick="sortTable(2)">จำนวนประตู</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Liverpool</td>
+          <td>Mohamed Salah</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>Newcastle United</td>
+          <td>Alexander Isak</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <td>Manchester City</td>
+          <td>Erling Haaland</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>Brentford</td>
+          <td>Bryan Mbeumo</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Nottingham Forest</td>
+          <td>Chris Wood</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Brentford</td>
+          <td>Yoane Wissa</td>
+          <td>19</td>
+        </tr>
+        <tr>
+          <td>Aston Villa</td>
+          <td>Ollie Watkins</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>Wolves</td>
+          <td>Matheus Cunha</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>Wolves</td>
+          <td>Jørgen Strand Larsen</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>Chelsea</td>
+          <td>Cole Palmer</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>Crystal Palace</td>
+          <td>Jean‑Philippe Mateta</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>Liverpool</td>
+          <td>Luis Díaz</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>West Ham</td>
+          <td>Jarrod Bowen</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>Bournemouth</td>
+          <td>Justin Kluivert</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Ipswich Town</td>
+          <td>Liam Delap</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Fulham</td>
+          <td>Raúl Jiménez</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Tottenham</td>
+          <td>Brennan Johnson</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>Brentford</td>
+          <td>Kevin Schade</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>Brighton</td>
+          <td>João Pedro</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Chelsea</td>
+          <td>Nicolas Jackson</td>
+          <td>10</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      function searchTable() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let rows = document.querySelectorAll("#scorersTable tbody tr");
+        rows.forEach((row) => {
+          let text = row.textContent.toLowerCase();
+          row.style.display = text.includes(input) ? "" : "none";
+        });
+      }
+
+      function sortTable(colIndex) {
+        const table = document.getElementById("scorersTable");
+        let rows = Array.from(table.rows).slice(1);
+        let switching = true;
+        let direction = "asc";
+        let switchCount = 0;
+
+        while (switching) {
+          switching = false;
+          for (let i = 1; i < rows.length - 1; i++) {
+            let x = rows[i].getElementsByTagName("TD")[colIndex];
+            let y = rows[i + 1].getElementsByTagName("TD")[colIndex];
+            let shouldSwitch = false;
+
+            if (direction === "asc") {
+              shouldSwitch =
+                colIndex === 2
+                  ? parseInt(x.innerHTML) > parseInt(y.innerHTML)
+                  : x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase();
+            } else {
+              shouldSwitch =
+                colIndex === 2
+                  ? parseInt(x.innerHTML) < parseInt(y.innerHTML)
+                  : x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase();
+            }
+
+            if (shouldSwitch) {
+              rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+              switching = true;
+              switchCount++;
+              break;
+            }
+          }
+
+          if (switchCount === 0 && direction === "asc") {
+            direction = "desc";
+            switching = true;
+          }
+        }
+      }
+    </script>
+    <a href="firstpig.html">back</a>
+  </body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-football insight</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #2c3e50;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #3498db;
+      font-weight: 600;
+      padding: 8px 12px;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      border-radius: 4px;
+    }
+
+    nav ul li a:hover {
+      color: #ffffff;
+      background-color: #3498db;
+    }
+
+    main {
+      padding: 40px 0;
+      min-height: 500px;
+      background-color: #ffffff;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    main p {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .content-section {
+      padding: 30px;
+      margin-bottom: 20px;
+      background-color: #fcfcfc;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+      text-align: center;
+    }
+
+    .content-section h2 {
+      color: #2c3e50;
+      font-size: 2em;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .add-team-form {
+      border: 1px solid #e0e0e0;
+      padding: 20px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .add-team-form h3 {
+      color: #34495e;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .selected-team-preview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 25px;
+      padding: 15px;
+      border: 2px dashed #a0a0a0;
+      border-radius: 12px;
+      background-color: #f5f5f5;
+      min-width: 180px;
+      transition: all 0.3s ease;
+    }
+
+    .selected-team-preview img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #3498db;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+    }
+
+    .selected-team-preview h4 {
+      margin: 0;
+      font-size: 1.3em;
+      color: #2c3e50;
+    }
+
+    .team-selection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 15px;
+      margin-bottom: 25px;
+      width: 100%;
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 10px;
+      border: 1px solid #eee;
+      border-radius: 5px;
+      background-color: #f8f8f8;
+    }
+
+    .team-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .team-option:hover {
+      border-color: #3498db;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-option.selected {
+      border-color: #27ae60;
+      box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.5);
+      background-color: #e6ffe6;
+    }
+
+    .team-option img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 8px;
+      border: 1px solid #eee;
+    }
+
+    .team-option span {
+      font-size: 0.9em;
+      font-weight: 500;
+      color: #555;
+      text-align: center;
+    }
+
+    button#add-selected-team-btn {
+      background-color: #27ae60;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+      font-weight: 600;
+    }
+
+    button#add-selected-team-btn:hover {
+      background-color: #229a55;
+    }
+
+    .teams-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .team-card {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .team-card .team-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 2px solid #ddd;
+    }
+
+    .team-card h4 {
+      margin: 5px 0 0 0;
+      color: #333;
+      font-size: 1.1em;
+    }
+
+    .no-teams-message {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: #888;
+      font-style: italic;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      nav ul li a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+      }
+
+      .add-team-form {
+        padding: 15px;
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <div class="container">
+        <h1>E-football insight</h1>
+        <p>เก็บรวบรวมข้อมูลพรีเมียร์ลีกไว้ที่เดียว</p>
+        <nav>
+          <ul>
+            <li><a href="sec.html">รายการแข่งขัน</a></li>
+            <li><a href="table.html">ผลการแข่งขัน</a></li>
+            <li><a href="jojo.html">ตารางคะแนน</a></li>
+            <li><a href="topscore.html">สถิตินักเตะ</a></li>
+            <li><a href="yoyo.html">เปรียบเทียบนักเตะ</a></li>
+            <li><a href="fav.html">ทีมโปรด</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section id="welcome-section" class="content-section">
+          <h2>ยินดีต้อนรับ</h2>
+          <p>
+            ยินดีต้อนรับสู่ E-football insight
+            แหล่งรวมข้อมูลฟุตบอลพรีเมียร์ลีกครบวงจร
+          </p>
+          <p>เลือกเมนูด้านบนเพื่อดูข้อมูลที่คุณสนใจ</p>
+        </section>
+
+       
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 E-football insight. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
