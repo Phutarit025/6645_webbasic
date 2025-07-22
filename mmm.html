@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>เปรียบเทียบ 20 ดาวซัลโว พรีเมียร์ฯ 2024/25</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        background: #f8f8f8;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background: #ddd;
+      }
+      button {
+        padding: 4px 8px;
+        cursor: pointer;
+      }
+      canvas {
+        display: none;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Top 20 ดาวซัลโว พรีเมียร์ลีก 2024/25</h2>
+    <p>เลือกนักเตะ 2 คน เพื่อเปรียบเทียบสถิติ (ประตู / แอสซิสต์ / เกมที่ลง)</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>นักเตะ</th>
+          <th>ทีม</th>
+          <th>ประตู</th>
+          <th>แอสซิสต์</th>
+          <th>เกม</th>
+          <th>เลือก</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          data-name="Mohamed Salah"
+          data-goals="29"
+          data-assists="18"
+          data-matches="38"
+        >
+          <td>1</td>
+          <td>Mohamed Salah</td>
+          <td>Liverpool</td>
+          <td>29</td>
+          <td>18</td>
+          <td>38</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+
+        <tr
+          data-name="Alexander Isak"
+          data-goals="23"
+          data-assists="6"
+          data-matches="34"
+        >
+          <td>2</td>
+          <td>Alexander Isak</td>
+          <td>Newcastle</td>
+          <td>23</td>
+          <td>6</td>
+          <td>34</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Erling Haaland"
+          data-goals="22"
+          data-assists="3"
+          data-matches="31"
+        >
+          <td>3</td>
+          <td>Erling Haaland</td>
+          <td>Man City</td>
+          <td>22</td>
+          <td>3</td>
+          <td>31</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Bryan Mbeumo"
+          data-goals="20"
+          data-assists="7"
+          data-matches="38"
+        >
+          <td>4</td>
+          <td>Bryan Mbeumo</td>
+          <td>Brentford</td>
+          <td>20</td>
+          <td>7</td>
+          <td>38</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Chris Wood"
+          data-goals="20"
+          data-assists="3"
+          data-matches="35"
+        >
+          <td>5</td>
+          <td>Chris Wood</td>
+          <td>Nottingham Forest</td>
+          <td>20</td>
+          <td>3</td>
+          <td>35</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Yoane Wissa"
+          data-goals="19"
+          data-assists="4"
+          data-matches="36"
+        >
+          <td>6</td>
+          <td>Yoane Wissa</td>
+          <td>Brentford</td>
+          <td>19</td>
+          <td>4</td>
+          <td>36</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Ollie Watkins"
+          data-goals="16"
+          data-assists="5"
+          data-matches="38"
+        >
+          <td>7</td>
+          <td>Ollie Watkins</td>
+          <td>Aston Villa</td>
+          <td>16</td>
+          <td>5</td>
+          <td>38</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Cole Palmer"
+          data-goals="15"
+          data-assists="9"
+          data-matches="36"
+        >
+          <td>8</td>
+          <td>Cole Palmer</td>
+          <td>Chelsea</td>
+          <td>15</td>
+          <td>9</td>
+          <td>36</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Matheus Cunha"
+          data-goals="15"
+          data-assists="3"
+          data-matches="34"
+        >
+          <td>9</td>
+          <td>Matheus Cunha</td>
+          <td>Wolves</td>
+          <td>15</td>
+          <td>3</td>
+          <td>34</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Jean-Philippe Mateta"
+          data-goals="14"
+          data-assists="4"
+          data-matches="37"
+        >
+          <td>10</td>
+          <td>Jean-Philippe Mateta</td>
+          <td>Crystal Palace</td>
+          <td>14</td>
+          <td>4</td>
+          <td>37</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Luis Díaz"
+          data-goals="13"
+          data-assists="6"
+          data-matches="32"
+        >
+          <td>11</td>
+          <td>Luis Díaz</td>
+          <td>Liverpool</td>
+          <td>13</td>
+          <td>6</td>
+          <td>32</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Jarrod Bowen"
+          data-goals="13"
+          data-assists="5"
+          data-matches="37"
+        >
+          <td>12</td>
+          <td>Jarrod Bowen</td>
+          <td>West Ham</td>
+          <td>13</td>
+          <td>5</td>
+          <td>37</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Justin Kluivert"
+          data-goals="12"
+          data-assists="3"
+          data-matches="36"
+        >
+          <td>13</td>
+          <td>Justin Kluivert</td>
+          <td>Bournemouth</td>
+          <td>12</td>
+          <td>3</td>
+          <td>36</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Liam Delap"
+          data-goals="12"
+          data-assists="2"
+          data-matches="31"
+        >
+          <td>14</td>
+          <td>Liam Delap</td>
+          <td>Ipswich</td>
+          <td>12</td>
+          <td>2</td>
+          <td>31</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Raúl Jiménez"
+          data-goals="12"
+          data-assists="4"
+          data-matches="34"
+        >
+          <td>15</td>
+          <td>Raúl Jiménez</td>
+          <td>Fulham</td>
+          <td>12</td>
+          <td>4</td>
+          <td>34</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Brennan Johnson"
+          data-goals="11"
+          data-assists="6"
+          data-matches="33"
+        >
+          <td>16</td>
+          <td>Brennan Johnson</td>
+          <td>Tottenham</td>
+          <td>11</td>
+          <td>6</td>
+          <td>33</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Kevin Schade"
+          data-goals="11"
+          data-assists="2"
+          data-matches="29"
+        >
+          <td>17</td>
+          <td>Kevin Schade</td>
+          <td>Brentford</td>
+          <td>11</td>
+          <td>2</td>
+          <td>29</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="João Pedro"
+          data-goals="10"
+          data-assists="3"
+          data-matches="37"
+        >
+          <td>18</td>
+          <td>João Pedro</td>
+          <td>Brighton</td>
+          <td>10</td>
+          <td>3</td>
+          <td>37</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Nicolas Jackson"
+          data-goals="10"
+          data-assists="4"
+          data-matches="32"
+        >
+          <td>19</td>
+          <td>Nicolas Jackson</td>
+          <td>Chelsea</td>
+          <td>10</td>
+          <td>4</td>
+          <td>32</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+        <tr
+          data-name="Pedro Neto"
+          data-goals="10"
+          data-assists="3"
+          data-matches="34"
+        >
+          <td>20</td>
+          <td>Pedro Neto</td>
+          <td>Wolves</td>
+          <td>10</td>
+          <td>3</td>
+          <td>34</td>
+          <td><button onclick="selectPlayer(this)">เลือก</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <canvas id="comparisonChart" width="600" height="300"></canvas>
+    <button onclick="resetChart()">รีเซ็ต</button>
+
+    <script>
+      let selected = [];
+      let chart = null;
+
+      function selectPlayer(btn) {
+        if (selected.length === 2) {
+          alert("เลือกได้สูงสุด 2 คน");
+          return;
+        }
+        const row = btn.closest("tr");
+        selected.push({
+          name: row.dataset.name,
+          goals: +row.dataset.goals,
+          assists: +row.dataset.assists,
+          matches: +row.dataset.matches,
+        });
+        if (selected.length === 2) drawChart();
+      }
+
+      function drawChart() {
+        const ctx = document.getElementById("comparisonChart").getContext("2d");
+        document.getElementById("comparisonChart").style.display = "block";
+
+        if (chart) {
+          chart.destroy();
+          chart = null;
+        }
+
+        chart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: ["ประตู", "แอสซิสต์", "เกม"],
+            datasets: selected.map((p, i) => ({
+              label: p.name,
+              data: [p.goals, p.assists, p.matches],
+              backgroundColor: i === 0 ? "#3498db" : "#e74c3c",
+            })),
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              title: { display: true, text: "เปรียบเทียบสถิติดาวซัลโว" },
+            },
+          },
+        });
+      }
+
+      function resetChart() {
+        selected = [];
+        if (chart) {
+          chart.destroy();
+          chart = null;
+        }
+        document.getElementById("comparisonChart").style.display = "none";
+      }
+    </script>
+    <a href="firstpig.html">back</a>
+  </body>
+</html>
