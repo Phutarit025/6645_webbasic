@@ -5,7 +5,7 @@
     <title>ตารางคะแนนพรีเมียร์ลีก 2024/25</title>
     <style>
       body {
-        font-family: Tahoma, sans-serif;
+        font-family: Arial, sans-serif;
       }
       table {
         width: 100%;
@@ -13,40 +13,35 @@
       }
       th,
       td {
+        padding: 8px;
         border: 1px solid #ccc;
         text-align: center;
-        padding: 6px;
       }
-      th {
-        background-color: #f2f2f2;
-      }
-      td.team {
-        text-align: left;
-      }
-      .logo {
-        height: 20px;
-        vertical-align: middle;
-        margin-right: 8px;
-      }
-      .ucl {
+      .top4 {
         background-color: #d4edda;
       }
-      .relegated {
+      .bottom3 {
         background-color: #f8d7da;
       }
+      img {
+        height: 20px;
+        vertical-align: middle;
+        margin-right: 6px;
+      }
       .note {
-        margin-top: 10px;
-        font-size: 14px;
+        margin-top: 15px;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
     <h2>ตารางคะแนนพรีเมียร์ลีก 2024/25</h2>
+
     <table>
       <thead>
         <tr>
           <th>อันดับ</th>
-          <th>สโมสร</th>
+          <th>ทีม</th>
           <th>แข่ง</th>
           <th>ชนะ</th>
           <th>เสมอ</th>
@@ -58,12 +53,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="ucl">
+        <tr class="top4">
           <td>1</td>
-          <td class="team">
+          <td>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg"
-              class="logo"
+              alt="Liverpool"
             />ลิเวอร์พูล
           </td>
           <td>38</td>
@@ -75,30 +70,30 @@
           <td>45</td>
           <td>84</td>
         </tr>
-        <tr class="ucl">
+        <tr class="top4">
           <td>2</td>
-          <td class="team">
+          <td>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg"
-              class="logo"
-            />อาร์เซน่อล
+              alt="Arsenal"
+            />อาร์เซนอล
           </td>
           <td>38</td>
           <td>20</td>
           <td>14</td>
           <td>4</td>
           <td>69</td>
-          <td>34</td>
           <td>35</td>
+          <td>34</td>
           <td>74</td>
         </tr>
-        <tr class="ucl">
+        <tr class="top4">
           <td>3</td>
-          <td class="team">
+          <td>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg"
-              class="logo"
-            />แมนฯซิตี้
+              alt="Man City"
+            />แมนฯ ซิตี้
           </td>
           <td>38</td>
           <td>21</td>
@@ -109,12 +104,12 @@
           <td>28</td>
           <td>71</td>
         </tr>
-        <tr class="ucl">
+        <tr class="top4">
           <td>4</td>
-          <td class="team">
+          <td>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg"
-              class="logo"
+              alt="Chelsea"
             />เชลซี
           </td>
           <td>38</td>
@@ -128,33 +123,33 @@
         </tr>
         <tr>
           <td>5</td>
-          <td class="team">
+          <td>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/5/56/Newcastle_United_Logo.svg"
-              class="logo"
+              alt="Newcastle"
             />นิวคาสเซิล
           </td>
           <td>38</td>
           <td>20</td>
           <td>6</td>
           <td>12</td>
-          <td>64</td>
+          <td>68</td>
           <td>47</td>
-          <td>17</td>
+          <td>21</td>
           <td>66</td>
         </tr>
         <tr>
           <td>6</td>
-          <td class="team">
+          <td>
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/f/fc/Aston_Villa_FC_crest_%282016%29.svg"
-              class="logo"
+              src="https://crests.football-data.org/58.svg"
+              alt=""
             />แอสตันวิลลา
           </td>
           <td>38</td>
           <td>19</td>
-          <td>10</td>
           <td>9</td>
+          <td>10</td>
           <td>58</td>
           <td>51</td>
           <td>7</td>
@@ -162,16 +157,13 @@
         </tr>
         <tr>
           <td>7</td>
-          <td class="team">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/e/e2/Nottingham_Forest_F.C._logo.svg"
-              class="logo"
-            />ฟอเรสต์
+          <td>
+            <img src="https://crests.football-data.org/104.svg" alt="" />ฟอเรสต์
           </td>
           <td>38</td>
           <td>19</td>
-          <td>11</td>
           <td>8</td>
+          <td>11</td>
           <td>58</td>
           <td>46</td>
           <td>12</td>
@@ -179,44 +171,44 @@
         </tr>
         <tr>
           <td>8</td>
-          <td class="team">
+          <td>
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/4/4e/Tottenham_Hotspur.svg"
-              class="logo"
+              src="https://crests.football-data.org/397.svg"
+              alt=""
             />ไบรท์ตัน
           </td>
           <td>38</td>
           <td>16</td>
           <td>13</td>
           <td>9</td>
-          <td>66</td>
+          <td>68</td>
           <td>59</td>
-          <td>7</td>
+          <td>9</td>
           <td>61</td>
         </tr>
         <tr>
           <td>9</td>
-          <td class="team">
+          <td>
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/3/3e/AFC_Bournemouth_crest.svg"
-              class="logo"
+              src="https://upload.wikimedia.org/wikipedia/en/e/e5/AFC_Bournemouth_%282013%29.svg"
+              alt="Bournemouth"
             />บอร์นมัธ
           </td>
           <td>38</td>
           <td>15</td>
           <td>11</td>
           <td>12</td>
-          <td>60</td>
-          <td>48</td>
+          <td>58</td>
+          <td>46</td>
           <td>12</td>
           <td>56</td>
         </tr>
         <tr>
           <td>10</td>
-          <td class="team">
+          <td>
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/6/60/Brentford_FC_crest.svg"
-              class="logo"
+              src="https://crests.football-data.org/402.svg"
+              alt=""
             />เบรนท์ฟอร์ด
           </td>
           <td>38</td>
@@ -230,11 +222,8 @@
         </tr>
         <tr>
           <td>11</td>
-          <td class="team">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/e/e0/Fulham_FC_%28shield%29.svg"
-              class="logo"
-            />ฟูแล่ม
+          <td>
+            <img src="https://crests.football-data.org/63.svg" alt="" />ฟูแล่ม
           </td>
           <td>38</td>
           <td>15</td>
@@ -247,10 +236,10 @@
         </tr>
         <tr>
           <td>12</td>
-          <td class="team">
+          <td>
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/b/bf/Crystal_Palace_FC_logo_%282013%29.svg"
-              class="logo"
+              src="https://crests.football-data.org/354.svg"
+              alt=""
             />คริสตัลพาเลซ
           </td>
           <td>38</td>
@@ -264,27 +253,27 @@
         </tr>
         <tr>
           <td>13</td>
-          <td class="team">
+          <td>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/7c/Everton_FC_logo.svg"
-              class="logo"
+              alt="Everton"
             />เอฟเวอร์ตัน
           </td>
           <td>38</td>
           <td>11</td>
           <td>15</td>
           <td>12</td>
-          <td>42</td>
           <td>44</td>
+          <td>46</td>
           <td>-2</td>
           <td>48</td>
         </tr>
         <tr>
           <td>14</td>
-          <td class="team">
+          <td>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/c/c2/West_Ham_United_FC_logo.svg"
-              class="logo"
+              alt="West Ham"
             />เวสต์แฮม
           </td>
           <td>38</td>
@@ -298,10 +287,10 @@
         </tr>
         <tr>
           <td>15</td>
-          <td class="team">
+          <td>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg"
-              class="logo"
+              alt="Man Utd"
             />แมนยู
           </td>
           <td>38</td>
@@ -315,10 +304,10 @@
         </tr>
         <tr>
           <td>16</td>
-          <td class="team">
+          <td>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/f/fc/Wolverhampton_Wanderers.svg"
-              class="logo"
+              alt="Wolves"
             />วูล์ฟแฮมป์ตัน
           </td>
           <td>38</td>
@@ -332,10 +321,10 @@
         </tr>
         <tr>
           <td>17</td>
-          <td class="team">
+          <td>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/b/b4/Tottenham_Hotspur.svg"
-              class="logo"
+              alt="Spurs"
             />สเปอร์ส
           </td>
           <td>38</td>
@@ -347,12 +336,12 @@
           <td>-1</td>
           <td>38</td>
         </tr>
-        <tr class="relegated">
+        <tr class="bottom3">
           <td>18</td>
-          <td class="team">
+          <td>
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/f/fd/Leicester_City_crest.svg"
-              class="logo"
+              src="https://upload.wikimedia.org/wikipedia/en/2/2d/Leicester_City_crest.svg"
+              alt="Leicester"
             />เลสเตอร์
           </td>
           <td>38</td>
@@ -360,17 +349,17 @@
           <td>7</td>
           <td>25</td>
           <td>38</td>
-          <td>63</td>
-          <td>-25</td>
+          <td>80</td>
+          <td>-42</td>
           <td>25</td>
         </tr>
-        <tr class="relegated">
+        <tr class="bottom3">
           <td>19</td>
-          <td class="team">
+          <td>
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/1/11/Leeds_United_Logo.svg"
-              class="logo"
-            />ลีดส์
+              src="https://crests.football-data.org/387.svg"
+              alt="Ipswich"
+            />อิปสวิช
           </td>
           <td>38</td>
           <td>4</td>
@@ -381,12 +370,12 @@
           <td>-46</td>
           <td>22</td>
         </tr>
-        <tr class="relegated">
+        <tr class="bottom3">
           <td>20</td>
-          <td class="team">
+          <td>
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/0/0c/Southampton_FC_crest.svg"
-              class="logo"
+              src="https://crests.football-data.org/340.svg"
+              alt=""
             />เซาแธมป์ตัน
           </td>
           <td>38</td>
@@ -401,9 +390,7 @@
       </tbody>
     </table>
 
-    <div class="note">
-      <p><strong>UCL</strong> = ผ่านเข้าไปเล่นยูฟ่าแชมเปียนส์ลีก</p>
-      <p><strong>ตกชั้น</strong> = ทีมที่หล่นชั้นจากพรีเมียร์ลีก</p>
-    </div>
+    <p class="note">✅ ทีมอันดับ 1–4 ได้ไปเล่น UEFA Champions League</p>
+    <p class="note">❌ ทีมอันดับ 18–20 ตกชั้นไปเล่น EFL Championship</p>
   </body>
 </html>
