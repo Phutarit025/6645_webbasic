@@ -31,6 +31,9 @@
         <li><a href="W01_01phpbasic.php">Intro php</a></li>
         <li><a href="W02_01_oddevenNumber.php">Odd-even-number</a></li>
         <li><a href="W02_02_calculate.php">calculate Grade</a></li>
+        <li><a href="W06_loopProduct.php">showproduct</a></li>
+        <li><a href=""></a>connect database</li>
+        <li><a href=""></a>Show product (fromdatabase)</li>
 
     </ul>
 
