@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⚽ เกมฟุตบอล 2 ผู้เล่น</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap"
+    />
+    <style>
+      :root {
+        --primary-color: #2e7d32; /* สีเขียวเข้ม */
+        --secondary-color: #4caf50; /* สีเขียวสว่าง */
+        --accent-color: #ff9800; /* สีส้ม */
+        --background-light: #f0fdf4; /* พื้นหลังสีอ่อน */
+        --background-dark: #e0f2f1; /* พื้นหลังสีเข้มขึ้น */
+        --text-color: #333;
+        --border-color: #ccc;
+        --card-bg: #ffffff;
+      }
+      body {
+        font-family: "Kanit", sans-serif;
+        background-color: var(--background-light);
+        margin: 0;
+        padding: 20px;
+        color: var(--text-color);
+        text-align: center;
+      }
+      h1,
+      h2,
+      h3 {
+        color: var(--primary-color);
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      #selection-screen,
+      #battle-screen {
+        max-width: 1000px;
+        margin: auto;
+        padding: 25px;
+        background-color: var(--card-bg);
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        border: 2px solid var(--secondary-color);
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .player-list,
+      .team {
+        flex: 1;
+        background-color: var(--background-dark);
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+      .player-list {
+        max-height: 400px;
+        overflow-y: auto;
+        border: 1px solid var(--border-color);
+      }
+      .player {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        border-radius: 5px;
+        text-align: left;
+      }
+      .player:hover {
+        background-color: #e8f5e9;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .team h3 {
+        margin-top: 0;
+        border-bottom: 2px solid var(--secondary-color);
+        padding-bottom: 5px;
+      }
+      .team-player {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 8px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+        font-weight: bold;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        margin: 10px;
+        text-transform: uppercase;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #start-game {
+        background-color: var(--accent-color);
+        color: white;
+      }
+      #start-game:disabled {
+        background-color: #b0bec5;
+        cursor: not-allowed;
+      }
+      #start-game:hover:not(:disabled) {
+        background-color: #e65100;
+        transform: scale(1.05);
+      }
+      #battle-screen {
+        display: none;
+        text-align: center;
+      }
+      #result {
+        font-size: 1.5em;
+        margin-top: 20px;
+      }
+      #result h3 {
+        font-size: 2em;
+        color: #d32f2f;
+      }
+      #result .winner {
+        color: #2e7d32;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      .restart-btn {
+        background-color: #039be5;
+        color: white;
+      }
+      .restart-btn:hover {
+        background-color: #0277bd;
+        transform: scale(1.05);
+      }
+      .menu-btn {
+        background-color: #ef5350;
+        color: white;
+      }
+      .menu-btn:hover {
+        background-color: #c62828;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>⚽ เกมฟุตบอล 2 ผู้เล่น</h1>
+
+    <div id="selection-screen">
+      <h2>สร้างทีมของคุณ</h2>
+      <div class="container">
+        <div class="player-list" id="player-list"></div>
+        <div class="team" id="team1">
+          <h3>ทีม 1</h3>
+          <div class="selected"></div>
+        </div>
+        <div class="team" id="team2">
+          <h3>ทีม 2</h3>
+          <div class="selected"></div>
+        </div>
+      </div>
+      <button id="start-game" disabled>
+        เริ่มการแข่งขัน <span style="font-size: 1.2em">▶️</span>
+      </button>
+    </div>
+
+    <div id="battle-screen">
+      <h2>🎮 ผลการแข่งขัน</h2>
+      <div id="result"></div>
+      <button onclick="restartGame()" class="restart-btn">
+        เริ่มเกมใหม่ 🔄
+      </button>
+      <button onclick="goToMenu()" class="menu-btn">
+        กลับไปหน้าเลือกโหมด 🚪
+      </button>
+    </div>
+
+    <script>
+      const players = [];
+      const team1 = [],
+        team2 = [];
+      const playerIds = [
+        276, 278, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292,
+        293, 294, 295, 296, 297, 298, 300, 302, 305, 308, 310, 315, 320, 325,
+        330, 335,
+      ];
+
+      async function fetchPlayers() {
+        for (let id of playerIds) {
+          try {
+            const res = await fetch(
+              `https://api-football-v1.p.rapidapi.com/v3/players?id=${id}&season=2020`,
+              {
+                method: "GET",
+                headers: {
+                  "X-RapidAPI-Key":
+                    "e80aa2edc5msha00ac44ae47cf26p17b63ajsn694a49625495",
+                  "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
+                },
+              }
+            );
+
+            const data = await res.json();
+            if (data.response.length === 0) continue;
+            const player = data.response[0].player;
+
+            players.push({
+              id: player.id,
+              name: player.name,
+              age: player.age,
+              height: parseInt(player.height),
+              nationality: player.nationality,
+              performance: Math.floor(Math.random() * 100) + 1,
+            });
+          } catch (err) {
+            console.error("โหลดนักเตะล้มเหลว:", err);
+          }
+        }
+        renderPlayerList();
+      }
+
+      function renderPlayerList() {
+        const list = document.getElementById("player-list");
+        list.innerHTML = "";
+        players.forEach((p) => {
+          const div = document.createElement("div");
+          div.className = "player";
+          div.innerHTML = `
+                  <div>${p.name} (${p.nationality})</div>
+                  <small>อายุ: ${p.age}, สูง: ${p.height} ซม.</small>
+              `;
+          div.onclick = () => selectPlayer(p, div);
+          list.appendChild(div);
+        });
+      }
+
+      function selectPlayer(p, element) {
+        if (team1.includes(p) || team2.includes(p)) return;
+
+        if (team1.length < 5) {
+          team1.push(p);
+          element.style.backgroundColor = "#dce775";
+          element.style.pointerEvents = "none"; // ปิดการคลิกซ้ำ
+        } else if (team2.length < 5) {
+          team2.push(p);
+          element.style.backgroundColor = "#ffab91";
+          element.style.pointerEvents = "none"; // ปิดการคลิกซ้ำ
+        }
+
+        renderSelected();
+        document.getElementById("start-game").disabled = !(
+          team1.length === 5 && team2.length === 5
+        );
+      }
+
+      function renderSelected() {
+        document.querySelector("#team1 .selected").innerHTML = "";
+        team1.forEach((p) => {
+          const div = document.createElement("div");
+          div.className = "team-player";
+          div.innerHTML = `<span>${p.name}</span><span>พลัง: ${calcPower(
+            p
+          )}</span>`;
+          document.querySelector("#team1 .selected").appendChild(div);
+        });
+
+        document.querySelector("#team2 .selected").innerHTML = "";
+        team2.forEach((p) => {
+          const div = document.createElement("div");
+          div.className = "team-player";
+          div.style.backgroundColor = "#ef5350"; // สีแดงสำหรับทีม 2
+          div.innerHTML = `<span>${p.name}</span><span>พลัง: ${calcPower(
+            p
+          )}</span>`;
+          document.querySelector("#team2 .selected").appendChild(div);
+        });
+      }
+
+      function calcPower(player) {
+        return Math.floor(
+          player.age * 0.4 + player.height * 0.3 + player.performance * 0.3
+        );
+      }
+
+      function calcTeamPower(team) {
+        return team.reduce((sum, p) => sum + calcPower(p), 0);
+      }
+
+      document.getElementById("start-game").onclick = () => {
+        const power1 = calcTeamPower(team1);
+        const power2 = calcTeamPower(team2);
+        const resultDiv = document.getElementById("result");
+        let result = `
+              <p><strong>พลังรวมทีม 1:</strong> <span style="color: var(--primary-color);">${power1}</span></p>
+              <p><strong>พลังรวมทีม 2:</strong> <span style="color: #ef5350;">${power2}</span></p>
+              <hr style="border-top: 1px dashed #ccc; margin: 20px 0;">
+          `;
+        if (power1 > power2) {
+          result += "<h3 class='winner'>🏆 ทีม 1 ชนะ! 🎉</h3>";
+        } else if (power2 > power1) {
+          result +=
+            "<h3 class='winner' style='color: #ef5350;'>🏆 ทีม 2 ชนะ! 🎉</h3>";
+        } else {
+          result += "<h3 style='color: #616161;'>🤝 เสมอกัน!</h3>";
+        }
+        resultDiv.innerHTML = result;
+
+        document.getElementById("selection-screen").style.display = "none";
+        document.getElementById("battle-screen").style.display = "block";
+      };
+
+      function restartGame() {
+        team1.length = 0;
+        team2.length = 0;
+        document.getElementById("selection-screen").style.display = "block";
+        document.getElementById("battle-screen").style.display = "none";
+        document.getElementById("start-game").disabled = true;
+        renderPlayerList(); // โหลดรายชื่อนักเตะใหม่เพื่อรีเซ็ต
+        renderSelected();
+      }
+
+      function goToMenu() {
+        location.reload();
+      }
+
+      fetchPlayers();
+    </script>
+  </body>
+</html>
+```
