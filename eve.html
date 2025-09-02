@@ -19,6 +19,59 @@
         --bad: #ef4444;
         --text: #e7edf6;
       }
+      /* ===================== Responsive overrides ===================== */
+
+/* จอ ≤1200px: คอลัมน์หลักเหลือ 1, ปรับหัวข้อแถบติด */
+@media (max-width: 1200px) {
+  .grid-3 { grid-template-columns: 1fr; }
+  .sticky-head { top: 58px; }
+}
+
+/* จอ ≤992px: ย่อการ์ดผู้เล่น/โลโก้, กระดานเหลือ 3 คอลัมน์, สรุปผลซ้อนบรรทัด */
+@media (max-width: 992px) {
+  .logo-picker { grid-template-columns: repeat(4, 1fr); }
+  .players-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+  .formation { grid-template-columns: repeat(3, 1fr); }
+
+  /* แถวสรุปผล: วางเป็นคอลัมน์เดียว */
+  .row2 { grid-template-columns: 1fr; }
+  .row2 > div:nth-child(2) { order: 3; margin: 8px 0; } /* แถบเปรียบเทียบไปอยู่กลาง */
+}
+
+/* จอ ≤768px: ปรับขนาดฟอนต์/ภาพ, ปุ่มเต็มบรรทัด, กระดานเหลือ 2 คอลัมน์ */
+@media (max-width: 768px) {
+  header .container { padding: 10px 12px; }
+  .container { padding: 12px; }
+  h1 { font-size: 18px; }
+
+  .logo-pick img { width: 32px; height: 32px; }
+  .avatar { width: 40px; height: 40px; }
+
+  /* ปุ่มให้กดง่ายขึ้น */
+  button { width: 100%; padding: 10px 12px; }
+  .seg { width: 100%; }
+  .seg button { flex: 1; }
+
+  .chip, .badge { padding: 4px 8px; }
+
+  .players-grid { grid-template-columns: 1fr 1fr; }
+  .formation { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* จอ ≤560px: เหลือ 1 คอลัมน์เกือบทั้งหมด, ลด padding ให้พอดีหน้าจอ */
+@media (max-width: 560px) {
+  .logo-picker { grid-template-columns: repeat(3, 1fr); }
+  .players-grid { grid-template-columns: 1fr; }
+  .summary-card { padding: 12px; }
+  .p-card { padding: 8px; }
+}
+
+/* มือถือ (touch) ตัด sticky ออกเพื่อเลื่อนง่ายขึ้น */
+@media (hover: none) and (pointer: coarse) {
+  .sticky-head { position: static; }
+  #teamsPlayers { max-height: none; }
+}
+
       * { box-sizing: border-box; }
       body {
         margin: 0; color: var(--text); font-family: "Kanit", system-ui, Roboto;
@@ -576,3 +629,4 @@
     </script>
   </body>
 </html>
+
