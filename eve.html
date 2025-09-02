@@ -4,484 +4,219 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>EPL Draft Duel — โหมดสมจริง (FPL รายสัปดาห์)</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;800&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --bg: #0a0f1f;
+        --bg: #070b16;
+        --panel: #0d1324;
+        --soft: #111a2f;
         --ring: #223047;
-        --muted: #9aa4b2;
+        --muted: #a9b3c3;
         --pri: #22d3ee;
         --pri2: #818cf8;
         --ok: #34d399;
         --warn: #f59e0b;
         --bad: #ef4444;
+        --text: #e7edf6;
       }
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
       body {
-        margin: 0;
-        color: #e5e7eb;
-        font-family: "Kanit", system-ui, Roboto;
-        background: radial-gradient(
-            1000px 700px at 15% -10%,
-            #1f2937 0%,
-            #0f172a 50%,
-            #0a0f1f 100%
-          )
-          fixed;
+        margin: 0; color: var(--text); font-family: "Kanit", system-ui, Roboto;
+        background: radial-gradient(1100px 800px at 10% -10%, #1b2440 0%, #0f1733 45%, #070b16 100%) fixed;
         min-height: 100svh;
       }
       header {
-        position: sticky;
-        top: 0;
-        padding: 14px 16px;
-        border-bottom: 1px solid var(--ring);
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.03),
-          rgba(255, 255, 255, 0)
-        );
-        backdrop-filter: blur(6px);
-        z-index: 5;
+        position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--ring);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(8px);
       }
-      .container {
-        max-width: 1320px;
-        margin: 0 auto;
-        padding: 16px;
-      }
-      h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      .grid {
-        display: grid;
-        gap: 14px;
-      }
-      .grid-3 {
-        grid-template-columns: 1fr 1.3fr 1fr;
-      }
+      .container { max-width: 1320px; margin: 0 auto; padding: 14px 16px; }
+      h1 { margin: 0; font-size: 20px; }
+      .grid { display: grid; gap: 14px; }
+      .grid-3 { grid-template-columns: 300px 1fr 380px; }
+      @media (max-width: 1200px) { .grid-3 { grid-template-columns: 1fr; } }
       .card {
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.03),
-          rgba(255, 255, 255, 0.01)
-        );
-        border: 1px solid var(--ring);
-        border-radius: 14px;
-        padding: 12px;
+        background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
+        border: 1px solid var(--ring); border-radius: 16px; padding: 12px;
       }
+      .small { font-size: 12px; color: var(--muted); }
       button {
-        cursor: pointer;
-        border: 1px solid #0ea5e9;
+        cursor: pointer; border: 1px solid #0ea5e9;
         background: linear-gradient(180deg, #1d4ed8, #0ea5e9);
-        font-weight: 800;
-        border-radius: 10px;
-        padding: 10px 12px;
+        font-weight: 800; border-radius: 12px; padding: 10px 14px; color: #fff;
       }
-      button.ghost {
-        background: #0b1220;
-        border: 1px solid #334155;
-      }
-      .small {
-        font-size: 12px;
-        color: #9aa4b2;
-      }
-      .logo-picker {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 8px;
-      }
-      .logo-pick {
-        border: 1px solid #2a3650;
-        border-radius: 10px;
-        padding: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #0b1220;
-        cursor: pointer;
-      }
-      .logo-pick img {
-        width: 36px;
-        height: 36px;
-      }
-      .crest {
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        border: 1px solid #2a3650;
-        overflow: hidden;
-      }
-      .crest img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .team-section {
-        border: 1px solid #2a3650;
-        border-radius: 14px;
-        padding: 10px;
-        background: #0b1220;
-      }
-      .players-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 10px;
-      }
-      .p-card {
-        border: 1px solid #223047;
-        border-radius: 14px;
-        padding: 10px;
-        background: #0a1120;
-      }
-      .p-head {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-      }
-      .avatar {
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        border: 1px solid #334155;
-        overflow: hidden;
-      }
-      .avatar img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .bar {
-        height: 8px;
-        background: #0f172a;
-        border: 1px solid #263149;
-        border-radius: 999px;
-        overflow: hidden;
-      }
-      .bar > span {
-        display: block;
-        height: 100%;
-        background: linear-gradient(90deg, var(--pri), var(--pri2));
-      }
-      .formation {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-      }
-      .slot {
-        min-height: 96px;
-        border: 1px dashed #2b3650;
-        border-radius: 12px;
-        padding: 8px;
-        background: #0b1220;
-      }
-      .slot.fill {
-        border: 1px solid #2dd4bf;
-      }
-      .slot.wrong {
-        box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
-      }
-      .sum {
-        font-weight: 800;
-        font-size: 22px;
-      }
-      .mask {
-        filter: blur(6px);
-        opacity: 0.7;
-        user-select: none;
-      }
+      button.ghost { background: var(--panel); border: 1px solid #334155; }
+      button.ghost.sel { outline: 2px solid var(--pri); }
       .chip {
-        display: inline-flex;
-        gap: 6px;
-        align-items: center;
-        background: #0b1220;
-        border: 1px solid #2a3650;
-        border-radius: 999px;
-        padding: 5px 8px;
+        display: inline-flex; gap: 6px; align-items: center;
+        background: var(--panel); border: 1px solid #2a3650; border-radius: 999px; padding: 6px 10px;
       }
-      .pill {
-        border: 1px solid #334155;
-        border-radius: 999px;
-        padding: 4px 8px;
+      .badge {
+        display: inline-flex; align-items: center; gap: 6px;
+        background: #0b1220; border: 1px solid #344155; border-radius: 10px; padding: 4px 8px;
       }
-      .hidden {
-        display: none !important;
+      .logo-picker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+      .logo-pick {
+        border: 1px solid #2a3650; border-radius: 12px; padding: 6px;
+        display: flex; align-items: center; justify-content: center; background: #0b1220;
+        cursor: pointer; transition: transform .08s;
       }
-      @media (max-width: 1100px) {
-        .grid-3 {
-          grid-template-columns: 1fr;
-        }
+      .logo-pick:hover { transform: translateY(-2px); }
+      .logo-pick img { width: 38px; height: 38px; }
+      .crest { width: 30px; height: 30px; border-radius: 50%; border: 1px solid #2a3650; overflow: hidden; }
+      .crest img { width: 100%; height: 100%; object-fit: cover; }
+      .team-section { border: 1px solid #2a3650; border-radius: 14px; padding: 10px; background: #0b1220; }
+      .players-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+      .p-card { border: 1px solid #223047; border-radius: 14px; padding: 10px; background: #0a1120; }
+      .p-head { display: flex; gap: 10px; align-items: center; }
+      .avatar { width: 46px; height: 46px; border-radius: 50%; border: 1px solid #334155; overflow: hidden; }
+      .avatar img { width: 100%; height: 100%; object-fit: cover; }
+      .bars { display: grid; gap: 6px; margin-top: 6px; }
+      .bar { height: 8px; background: #0f172a; border: 1px solid #263149; border-radius: 999px; overflow: hidden; }
+      .bar > span { display: block; height: 100%; background: linear-gradient(90deg, var(--pri), var(--pri2)); }
+      .formation { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+      .slot { min-height: 92px; border: 1px dashed #2b3650; border-radius: 12px; padding: 8px; background: #0b1220; }
+      .slot.fill { border: 1px solid #2dd4bf; }
+      .slot.wrong { box-shadow: 0 0 0 3px rgba(245,158,11,.25); }
+      .sum { font-weight: 800; font-size: 22px; }
+      .mask { filter: blur(6px); opacity: .7; user-select: none; }
+      .sticky-head {
+        position: sticky; top: 68px; z-index: 5;
+        background: linear-gradient(180deg, rgba(13,19,36,.95), rgba(13,19,36,.8));
+        border: 1px solid #23324b; border-radius: 12px; padding: 8px; margin-bottom: 10px; backdrop-filter: blur(4px);
       }
-      /* หน้าสรุป */
+      .seg { display: inline-flex; background: #0e162b; border: 1px solid #2a395b; border-radius: 10px; overflow: hidden; }
+      .seg button { border: none; background: transparent; padding: 8px 12px; }
+      .seg button.active { background: #163056; }
       #summaryView {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.75);
-        backdrop-filter: blur(4px);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        padding: 16px;
+        position: fixed; inset: 0; background: rgba(0,0,0,.75); backdrop-filter: blur(4px);
+        display: none; align-items: center; justify-content: center; padding: 16px;
       }
-      .summary-card {
-        max-width: 1100px;
-        width: 100%;
-        background: #0b1220;
-        border: 1px solid #2a3650;
-        border-radius: 16px;
-        padding: 16px;
+      .summary-card { max-width: 1100px; width: 100%; background: #0b1220; border: 1px solid #2a3650; border-radius: 16px; padding: 16px; }
+      .row2 { display: grid; grid-template-columns: 1fr 220px 1fr; gap: 10px; align-items: center; }
+      .diffbar { height: 8px; background: #0f172a; border: 1px solid #263149; border-radius: 999px; overflow: hidden; }
+      .diffA { height: 100%; float: right; background: linear-gradient(90deg, #34d399, #22c55e); }
+      .diffB { height: 100%; background: linear-gradient(90deg, #ef4444, #f97316); }
+      .footer-hint {
+        position: sticky; bottom: 0; margin-top: 10px;
+        background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.006));
+        border: 1px dashed #30415f; border-radius: 12px; padding: 8px;
       }
-      .row2 {
-        display: grid;
-        grid-template-columns: 1fr 200px 1fr;
-        gap: 10px;
-        align-items: center;
-      }
-      .diffbar {
-        height: 8px;
-        background: #0f172a;
-        border: 1px solid #263149;
-        border-radius: 999px;
-        overflow: hidden;
-      }
-      .diffA {
-        height: 100%;
-        float: right;
-        background: linear-gradient(90deg, #34d399, #22c55e);
-      }
-      .diffB {
-        height: 100%;
-        background: linear-gradient(90deg, #ef4444, #f97316);
-      }
+      .err { color: #fecaca; }
     </style>
   </head>
   <body>
     <header>
-      <div
-        class="container"
-        style="
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 10px;
-          flex-wrap: wrap;
-        "
-      >
+      <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
         <h1>⚽ EPL Draft Duel — โหมดสมจริง (FPL รายสัปดาห์)</h1>
-        <div style="display: flex; gap: 8px; align-items: center">
-          <span class="chip"
-            >GW ล่าสุด: <b id="labGW" style="margin-left: 6px">—</b></span
-          >
-          <span class="chip"
-            >อัปเดต: <span id="labUpd" style="margin-left: 6px">—</span></span
-          >
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+          <span class="chip">GW ล่าสุด: <b id="labGW" style="margin-left: 6px">—</b></span>
+          <span class="chip">อัปเดต: <span id="labUpd" style="margin-left: 6px">—</span></span>
+          <span class="badge">A เปลี่ยนทีมข้อมูลเหลือ <b id="quotaA">3</b></span>
+          <span class="badge">B เปลี่ยนทีมข้อมูลเหลือ <b id="quotaB">3</b></span>
           <button id="btnReload" class="ghost">รีโหลดข้อมูล</button>
         </div>
       </div>
     </header>
 
     <main class="container grid grid-3" id="mainView">
-      <!-- ซ้าย: เลือกโลโก้โชว์ (A/B) + เลือกทีมข้อมูลให้ฝั่งที่กำลังใช้งาน -->
+      <!-- ซ้าย: โลโก้โชว์ + เลือกฝั่งที่กำลังตั้งตรา -->
       <section class="card">
-        <h3 style="margin: 0 0 6px">โลโก้พรีเมียร์ลีก</h3>
-        <div class="small">
-          คลิกที่โลโก้ซ้ายเพื่อ <b>ตั้งตราทีม (โชว์)</b> ให้ฝั่งที่เลือกด้านล่าง
+        <h3 style="margin:0 0 6px">โลโก้พรีเมียร์ลีก (สำหรับโชว์บนกระดาน)</h3>
+        <div class="small">เลือกฝั่งที่จะตั้งตรา → คลิกโลโก้ด้านล่าง</div>
+        <div style="display:flex;gap:8px;margin:8px 0">
+          <button id="btnCrestA" class="ghost sel" onclick="setCrestSide('A')">ตั้งตราให้ทีม A</button>
+          <button id="btnCrestB" class="ghost" onclick="setCrestSide('B')">ตั้งตราให้ทีม B</button>
         </div>
-        <div id="logoGrid" class="logo-picker" style="margin-top: 8px"></div>
-        <hr style="border-color: #2a3650; opacity: 0.4; margin: 12px 0" />
-        <div class="small">
-          โหมดเลือกข้อมูล: ตอนนี้กำลังเลือกให้ทีม <b id="activeSide">A</b>.
-          คลิกโลโก้ <b>ด้านขวา</b> เพื่อดึง 11 ตัวล่าสุดของทีมนั้น
-          (จำกัดเปลี่ยนทีมข้อมูลฝั่งละ 3 ครั้ง)
-        </div>
-        <div style="display: flex; gap: 8px; margin-top: 8px">
-          <button class="ghost" onclick="setActiveDataSide('A')">
-            กำลังเลือกให้ทีม A
-          </button>
-          <button class="ghost" onclick="setActiveDataSide('B')">
-            กำลังเลือกให้ทีม B
-          </button>
-        </div>
-        <div class="small" style="margin-top: 8px">
-          โควตาเปลี่ยนทีมข้อมูล: A <span id="quotaA">3</span> ครั้ง • B
-          <span id="quotaB">3</span> ครั้ง
-        </div>
-        <hr style="border-color: #2a3650; opacity: 0.4; margin: 12px 0" />
-        <div class="small">
-          เลือกตราทีมที่จะ <b>โชว์</b> บนกระดาน (ไม่เกี่ยวกับทีมข้อมูล)
-        </div>
-        <div
-          style="display: flex; gap: 8px; align-items: center; margin-top: 6px"
-        >
-          <button class="ghost" onclick="openCrestPicker('A')">
-            เลือกโลโก้ทีม A</button
-          ><span id="crestA" class="crest" title="โลโก้ทีม A"></span>
-        </div>
-        <div
-          style="display: flex; gap: 8px; align-items: center; margin-top: 6px"
-        >
-          <button class="ghost" onclick="openCrestPicker('B')">
-            เลือกโลโก้ทีม B</button
-          ><span id="crestB" class="crest" title="โลโก้ทีม B"></span>
+        <div id="logoGrid" class="logo-picker" style="margin-top:8px"></div>
+        <div class="footer-hint small">
+          <div>ตราโชว์ ≠ ทีมข้อมูล (ใช้เพื่อความสวยงามเท่านั้น)</div>
+          <div style="display:flex;gap:8px;align-items:center;margin-top:6px">
+            <span>ตราปัจจุบัน:</span>
+            <span class="crest" id="crestA" title="โลโก้ทีม A"></span><span class="small">ทีม A</span>
+            <span class="crest" id="crestB" title="โลโก้ทีม B" style="margin-left:10px"></span><span class="small">ทีม B</span>
+          </div>
         </div>
       </section>
 
-      <!-- กลาง: เลือกทีมข้อมูล + แสดงผู้เล่น XI จาก snapshot -->
+      <!-- กลาง: เลือกทีมข้อมูล + XI ล่าสุด -->
       <section class="card">
-        <div
-          style="
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          "
-        >
-          <h3 style="margin: 0">ทีมข้อมูล (ดึงจาก FPL สัปดาห์ล่าสุด)</h3>
-          <div class="small">ฝั่งกำลังเลือก: <b id="labPickSide">A</b></div>
+        <div class="sticky-head">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="display:flex;align-items:center;gap:8px">
+              <b>ทีมข้อมูลจาก GW ล่าสุด</b>
+              <span class="small">คลิกโลโก้ทีมเพื่อแสดง XI ที่ลงสนามจริง</span>
+            </div>
+            <div class="seg" role="tablist" aria-label="เลือกฝั่งที่จะรับนักเตะ">
+              <button id="segA" class="active" onclick="setActiveDataSide('A')">เลือกให้ทีม A</button>
+              <button id="segB" onclick="setActiveDataSide('B')">เลือกให้ทีม B</button>
+            </div>
+          </div>
+          <div id="dataLogos" class="logo-picker" style="margin-top:8px"></div>
         </div>
-        <div id="dataLogos" class="logo-picker" style="margin-top: 8px"></div>
-        <div
-          id="teamsPlayers"
-          style="
-            display: grid;
-            gap: 12px;
-            max-height: 58vh;
-            overflow: auto;
-            margin-top: 8px;
-          "
-        ></div>
-        <div class="small" id="progress" style="margin-top: 6px"></div>
+
+        <div id="teamsPlayers" style="display:grid;gap:12px;max-height:60vh;overflow:auto;margin-top:8px"></div>
+        <div class="small" id="progress" style="margin-top:6px">กำลังโหลดข้อมูล…</div>
       </section>
 
-      <!-- ขวา: กระดาน 2 ฝั่ง -->
+      <!-- ขวา: กระดานทีม A/B -->
       <section class="card">
-        <div
-          style="
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          "
-        >
-          <b>ทีม A</b>
-          <span>รวมพลัง: <span id="sumA" class="sum mask">ซ่อนอยู่</span></span>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <b>ทีม A</b><span>รวมพลัง: <span id="sumA" class="sum mask">ซ่อนอยู่</span></span>
         </div>
         <div class="formation" id="formA"></div>
-        <div
-          style="
-            display: flex;
-            gap: 8px;
-            justify-content: flex-end;
-            margin-top: 6px;
-          "
-        >
-          <button
-            class="ghost"
-            id="btnConfirmA"
-            disabled
-            onclick="confirmTeam('A')"
-          >
-            ยืนยันทีม A
-          </button>
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:6px">
+          <button class="ghost" id="btnConfirmA" disabled onclick="confirmTeam('A')">ยืนยันทีม A</button>
         </div>
 
-        <hr style="border-color: #2a3650; opacity: 0.4; margin: 10px 0" />
+        <hr style="border-color:#2a3650;opacity:.4;margin:10px 0" />
 
-        <div
-          style="
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          "
-        >
-          <b>ทีม B</b>
-          <span>รวมพลัง: <span id="sumB" class="sum mask">ซ่อนอยู่</span></span>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <b>ทีม B</b><span>รวมพลัง: <span id="sumB" class="sum mask">ซ่อนอยู่</span></span>
         </div>
         <div class="formation" id="formB"></div>
-        <div
-          style="
-            display: flex;
-            gap: 8px;
-            justify-content: flex-end;
-            margin-top: 6px;
-          "
-        >
-          <button
-            class="ghost"
-            id="btnConfirmB"
-            disabled
-            onclick="confirmTeam('B')"
-          >
-            ยืนยันทีม B
-          </button>
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:6px">
+          <button class="ghost" id="btnConfirmB" disabled onclick="confirmTeam('B')">ยืนยันทีม B</button>
         </div>
 
-        <div
-          style="
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-            margin-top: 12px;
-          "
-        >
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:12px">
           <button id="btnBattle" disabled onclick="battle()">แข่งขัน</button>
           <button class="ghost" onclick="resetBoards()">ล้างกระดาน</button>
         </div>
-        <div id="result" class="small" style="margin-top: 8px"></div>
+        <div id="result" class="small" style="margin-top:8px"></div>
       </section>
     </main>
 
-    <!-- หน้าเฉลยสรุป -->
+    <!-- สรุปผลการแข่งขัน -->
     <section id="summaryView">
       <div class="summary-card">
-        <div
-          style="
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-          "
-        >
-          <h3 style="margin: 0">
-            สรุปผลการแข่งขัน (GW <span id="sumGW">—</span>)
-          </h3>
-          <div class="small">กดปุ่มปิดเพื่อกลับไปหน้าจัดทีม</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+          <h3 style="margin:0">สรุปผลการแข่งขัน (GW <span id="sumGW">—</span>)</h3>
+          <div class="small">ปิดเพื่อกลับไปหน้าจัดทีม</div>
         </div>
-        <div
-          style="display: flex; gap: 12px; align-items: center; margin: 8px 0"
-        >
+        <div style="display:flex;gap:12px;align-items:center;margin:8px 0">
           <span class="crest" id="sumCrestA"></span>
           <b id="sumNameA">ทีม A</b>
-          <span class="pill">รวม: <b id="sumTotalA">0</b></span>
-          <span style="margin: 0 8px">VS</span>
-          <span class="pill">รวม: <b id="sumTotalB">0</b></span>
+          <span class="badge">รวม: <b id="sumTotalA">0</b></span>
+          <span style="margin:0 8px">VS</span>
+          <span class="badge">รวม: <b id="sumTotalB">0</b></span>
           <b id="sumNameB">ทีม B</b>
           <span class="crest" id="sumCrestB"></span>
-          <div style="margin-left: auto">
-            <button class="ghost" onclick="closeSummary()">ปิด</button>
-          </div>
+          <div style="margin-left:auto"><button class="ghost" onclick="closeSummary()">ปิด</button></div>
         </div>
-        <div
-          id="sumRows"
-          style="display: grid; gap: 6px; margin-top: 8px"
-        ></div>
+        <div id="sumRows" style="display:grid;gap:6px;margin-top:8px"></div>
       </div>
     </section>
 
-    <div
-      id="status"
-      class="small"
-      style="position: fixed; right: 12px; bottom: 12px; display: none"
-    ></div>
+    <div id="status" class="small" style="position:fixed;right:12px;bottom:12px;display:none"></div>
 
     <script>
-      // ===== พาธไฟล์ snapshot ที่ workflow เขียนทุกวันอังคาร =====
-      const SNAPSHOT_PATH = "./public/data/fpl_current.json";
+      // --- พาธไฟล์ (รองรับทั้ง GitHub Pages และรันโลคัล) ---
+      const BASE = (location.hostname.endsWith('github.io'))
+        ? location.pathname.replace(/\/[^\/]*$/, '')
+        : '.';
+      const SNAPSHOT_PATH = `${BASE}/public/data/fpl_current.json`;
 
-      // ===== กำหนดกติกา/ฟอร์เมชัน =====
       const FORMATION = [
         { id: "GK", expect: "Goalkeeper" },
         { id: "RB", expect: "Defender" },
@@ -495,86 +230,70 @@
         { id: "ST", expect: "Attacker" },
         { id: "LW", expect: "Attacker" },
       ];
-      const WRONG_POS_PENALTY = 0.7; // -30% หากลงผิดตำแหน่ง
-      const DATA_SWITCH_LIMIT = 3; // จำกัดเปลี่ยน "ทีมข้อมูล" ฝั่งละ 3 ครั้ง
+      const WRONG_POS_PENALTY = 0.7;
+      const DATA_SWITCH_LIMIT = 3;
 
-      // ===== สถานะเกม =====
       const state = {
-        fpl: {
-          teams: [],
-          playersPlayed: [],
-          xiByTeam: {},
-          gw: null,
-          updatedAt: null,
-        },
-        crestPickSide: "A", // ตอนนี้เลือกโลโก้โชว์ให้ฝั่งไหน
-        dataPickSide: "A", // ตอนนี้เลือก "ทีมข้อมูล" ให้ฝั่งไหน
-        dataTeamOf: { A: null, B: null }, // ทีมข้อมูลปัจจุบันของแต่ละฝั่ง
+        fpl: { teams: [], playersPlayed: [], playersById: {}, xiByTeam: {}, gw: null, updatedAt: null },
+        crestSide: "A",
+        dataPickSide: "A",
+        dataTeamOf: { A: null, B: null },
         dataSwitchQuota: { A: DATA_SWITCH_LIMIT, B: DATA_SWITCH_LIMIT },
-        // รายชื่อ XI ล่าสุดที่แสดงในคอลัมน์กลาง (ของทีมข้อมูลที่เลือก)
         currentXI: [],
-        // กระดาน
         A: FORMATION.map((x) => ({ ...x, player: null })),
         B: FORMATION.map((x) => ({ ...x, player: null })),
         confirmed: { A: false, B: false },
         crestImg: { A: "", B: "" },
       };
 
-      // ===== UI helpers =====
       const statusEl = document.getElementById("status");
       const showStatus = (msg, ms = 2200) => {
         statusEl.style.display = "block";
         statusEl.textContent = msg || "";
         if (ms) setTimeout(() => (statusEl.style.display = "none"), ms);
       };
-      const clamp = (v, min = 0, max = 100) =>
-        Math.max(min, Math.min(max, +v || 0));
+      const clamp = (v, min = 0, max = 100) => Math.max(min, Math.min(max, +v || 0));
 
-      // ===== โหลด snapshot ทุกวันอังคาร =====
       async function loadSnapshot() {
         try {
-          const r = await fetch(SNAPSHOT_PATH + "?t=" + Date.now(), {
-            cache: "no-cache",
-          });
-          if (!r.ok) throw new Error("HTTP " + r.status);
+          const r = await fetch(SNAPSHOT_PATH + `?t=${Date.now()}`, { cache: "no-store" });
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+
+          const ct = (r.headers.get('content-type') || '').toLowerCase();
+          if (!ct.includes('application/json')) {
+            const sample = await r.text();
+            throw new Error('ไฟล์ที่ได้ไม่ใช่ JSON (ตัวอย่าง): ' + sample.slice(0, 120));
+          }
           const j = await r.json();
-          // สร้างดัชนี playersById
+
           const playersById = {};
-          (j.players_played || []).forEach((p) => {
-            playersById[p.id] = p;
-          });
+          (j.players_played || []).forEach((p) => (playersById[p.id] = p));
 
           state.fpl.teams = j.teams || [];
           state.fpl.playersPlayed = j.players_played || [];
           state.fpl.playersById = playersById;
           state.fpl.xiByTeam = j.xiByTeam || {};
           state.fpl.gw = j.gw || "-";
-          state.fpl.updatedAt = j.generated_at || "—";
+          state.fpl.updatedAt = j.generated_at || "-";
 
-          // UI ป้าย GW/เวลา
           document.getElementById("labGW").textContent = state.fpl.gw;
-          document.getElementById("labUpd").textContent = new Date(
-            state.fpl.updatedAt
-          ).toLocaleString("th-TH", { hour12: false });
+          document.getElementById("labUpd").textContent =
+            state.fpl.updatedAt ? new Date(state.fpl.updatedAt).toLocaleString("th-TH", { hour12: false }) : "—";
 
-          renderLogoGrids(); // ทั้งฝั่งโชว์ และฝั่งทีมข้อมูล
-          document.getElementById("progress").textContent =
-            "เลือกโลโก้ทีมข้อมูลด้านบนเพื่อดู 11 ตัวล่าสุด";
+          renderLogoGrids();
+          document.getElementById("progress").innerHTML =
+            'เลือกโลโก้ทีมข้อมูลด้านบนเพื่อดู 11 ตัวล่าสุด <span class="small">(หากว่างเปล่า ให้ตรวจไฟล์ <code>public/data/fpl_current.json</code>)</span>';
         } catch (e) {
-          document.getElementById("progress").textContent =
-            "โหลดไม่ได้: ยังไม่มีไฟล์ data — กรุณาเปิดแท็บ Actions แล้วกดรัน workflow เพื่อสร้างไฟล์";
+          document.getElementById("progress").innerHTML =
+            '<span class="err">โหลดไม่ได้:</span> ยังไม่มีไฟล์ data — ไปที่แท็บ <b>Actions</b> แล้วรัน workflow เพื่อสร้างไฟล์';
           console.error(e);
+          alert("โหลดข้อมูลไม่สำเร็จ:\n" + e.message);
         }
       }
 
-      // ===== เรนเดอร์โลโก้ (ฝั่งโชว์ + ทีมข้อมูล) =====
       function renderLogoGrids() {
-        const logos = state.fpl.teams.map((t) => ({
-          id: t.id,
-          name: t.name,
-          png: t.badge,
-        }));
-        // ซ้าย: โลโก้สำหรับ "โชว์" บนกระดาน (กดปุ่ม เลือกฝั่ง A/B ก่อน)
+        const logos = state.fpl.teams.map((t) => ({ id: t.id, name: t.name, png: t.badge || t.logo || "" }));
+
         const left = document.getElementById("logoGrid");
         left.innerHTML = "";
         logos.forEach((t) => {
@@ -583,16 +302,13 @@
           d.title = t.name;
           d.innerHTML = `<img src="${t.png}" alt="${t.name}">`;
           d.onclick = () => {
-            const side = state.crestPickSide;
-            document.getElementById(
-              side === "A" ? "crestA" : "crestB"
-            ).innerHTML = `<img src="${t.png}" alt="${t.name}">`;
-            state.crestImg[side] = t.png;
+            const s = state.crestSide;
+            document.getElementById(s === "A" ? "crestA" : "crestB").innerHTML = `<img src="${t.png}" alt="${t.name}">`;
+            state.crestImg[s] = t.png;
           };
           left.appendChild(d);
         });
 
-        // กลาง: โลโก้สำหรับ "ทีมข้อมูล" (จำกัดเปลี่ยนฝั่งละ 3 ครั้ง)
         const right = document.getElementById("dataLogos");
         right.innerHTML = "";
         logos.forEach((t) => {
@@ -605,19 +321,20 @@
         });
       }
 
-      function openCrestPicker(side) {
-        state.crestPickSide = side;
-        showStatus(`กำลังเลือกตราโชว์ของทีม ${side} (คลิกโลโก้ทางซ้าย)`);
+      function setCrestSide(side) {
+        state.crestSide = side;
+        document.getElementById('btnCrestA').classList.toggle('sel', side === 'A');
+        document.getElementById('btnCrestB').classList.toggle('sel', side === 'B');
+        showStatus(`ตั้งตราโชว์ให้ทีม ${side} — คลิกโลโก้ได้เลย`);
       }
       function setActiveDataSide(side) {
         state.dataPickSide = side;
-        document.getElementById("activeSide").textContent = side;
-        document.getElementById("labPickSide").textContent = side;
-        showStatus(`กำลังดึงทีมข้อมูลให้ฝั่ง ${side}`);
+        document.getElementById("segA").classList.toggle("active", side === "A");
+        document.getElementById("segB").classList.toggle("active", side === "B");
+        showStatus(`กำลังเลือกทีมข้อมูลให้ฝั่ง ${side}`);
       }
 
       function selectDataTeam(side, teamId) {
-        // หากเลือกทีมเดิม ไม่หักโควตา
         if (state.dataTeamOf[side] !== teamId) {
           if (state.dataSwitchQuota[side] <= 0) {
             showStatus(`ทีม ${side} ใช้โควตาเปลี่ยนทีมข้อมูลครบแล้ว`, 2500);
@@ -625,77 +342,52 @@
           }
           state.dataSwitchQuota[side]--;
           state.dataTeamOf[side] = teamId;
-          document.getElementById("quotaA").textContent =
-            state.dataSwitchQuota.A;
-          document.getElementById("quotaB").textContent =
-            state.dataSwitchQuota.B;
+          document.getElementById("quotaA").textContent = state.dataSwitchQuota.A;
+          document.getElementById("quotaB").textContent = state.dataSwitchQuota.B;
         }
         renderXI(teamId);
       }
 
       function renderXI(teamId) {
         const ids = state.fpl.xiByTeam[teamId] || [];
-        const players = ids
-          .map((id) => state.fpl.playersById[id])
-          .filter(Boolean);
+        const players = ids.map((id) => state.fpl.playersById[id]).filter(Boolean);
         state.currentXI = players;
-        const teamName =
-          (state.fpl.teams.find((t) => t.id === teamId) || {}).name || "—";
+
+        const teamObj = state.fpl.teams.find((t) => t.id === teamId) || {};
+        const teamName = teamObj.name || "—";
 
         const box = document.getElementById("teamsPlayers");
         box.innerHTML = "";
-
         const sec = document.createElement("div");
         sec.className = "team-section";
-        sec.innerHTML = `<div class="team-header" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-        <div class="crest"><img src="${
-          (state.fpl.teams.find((t) => t.id === teamId) || {}).badge || ""
-        }"/></div>
-        <b>${teamName}</b><span class="small" style="margin-left:auto">11 ตัวล่าสุดที่ลงสนาม (GW ${
-          state.fpl.gw
-        })</span>
-      </div>
-      <div class="players-grid"></div>`;
+        sec.innerHTML = `
+          <div class="team-header" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <div class="crest"><img src="${teamObj.badge || ""}"></div>
+            <b>${teamName}</b>
+            <span class="small" style="margin-left:auto">11 ตัวล่าสุดที่ลงสนาม (GW ${state.fpl.gw})</span>
+          </div>
+          <div class="players-grid"></div>`;
         const grid = sec.querySelector(".players-grid");
 
         players.forEach((p) => {
+          const P = p.powers_gw || { ATT: 0, CRE: 0, DEF: 0, FIT: 0, CTRL: 0, TOTAL: 0 };
+          const bar = (label, val) =>
+            `<div><div class="small" style="display:flex;justify-content:space-between"><span>${label}</span><span>${Math.round(val)}</span></div><div class="bar"><span style="width:${clamp(val)}%"></span></div></div>`;
           const card = document.createElement("div");
           card.className = "p-card";
-          const P = p.powers_gw || {
-            ATT: 0,
-            CRE: 0,
-            DEF: 0,
-            FIT: 0,
-            CTRL: 0,
-            TOTAL: 0,
-          };
-          const bar = (label, val) =>
-            `<div style="margin-top:4px"><div class="small" style="display:flex;justify-content:space-between"><span>${label}</span><span>${Math.round(
-              val
-            )}</span></div><div class="bar"><span style="width:${clamp(
-              val
-            )}%"></span></div></div>`;
           card.innerHTML = `
-          <div class="p-head">
-            <div class="avatar"><img src="${
-              p.photo
-            }" onerror="this.src='https://static.api-football.com/players/players.webp'"></div>
-            <div><div style="font-weight:700">${
-              p.name
-            }</div><div class="small">${p.team} • ${p.role}</div></div>
-            <div style="margin-left:auto;text-align:right"><div style="font-size:22px;font-weight:800">${
-              P.TOTAL
-            }</div><div class="small">POWER</div></div>
-          </div>
-          ${bar("ATT", P.ATT)}${bar("CRE", P.CRE)}${bar("DEF", P.DEF)}${bar(
-            "FIT",
-            P.FIT
-          )}${bar("CTRL", P.CTRL)}
-          <div style="display:flex;gap:8px;margin-top:8px">
-            <button class="ghost">+ ทีม A</button>
-            <button class="ghost">+ ทีม B</button>
-          </div>
-        `;
+            <div class="p-head">
+              <div class="avatar"><img src="${p.photo}" onerror="this.src='https://static.api-football.com/players/players.webp'"></div>
+              <div><div style="font-weight:700">${p.name}</div><div class="small">${p.team} • ${p.role}</div></div>
+              <div style="margin-left:auto;text-align:right"><div style="font-size:22px;font-weight:800">${P.TOTAL}</div><div class="small">POWER</div></div>
+            </div>
+            <div class="bars">
+              ${bar("ATT", P.ATT)}${bar("CRE", P.CRE)}${bar("DEF", P.DEF)}${bar("FIT", P.FIT)}${bar("CTRL", P.CTRL)}
+            </div>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button class="ghost">+ ทีม A</button>
+              <button class="ghost">+ ทีม B</button>
+            </div>`;
           const btns = card.querySelectorAll("button");
           btns[0].onclick = () => quickAdd("A", p);
           btns[1].onclick = () => quickAdd("B", p);
@@ -703,32 +395,20 @@
         });
 
         box.appendChild(sec);
-        document.getElementById(
-          "progress"
-        ).textContent = `แสดงผู้เล่นของ ${teamName}`;
+        document.getElementById("progress").textContent = `แสดงผู้เล่นของ ${teamName}`;
       }
 
-      function isRoleMatch(expect, role) {
-        if (expect === "Goalkeeper") return role === "Goalkeeper";
-        if (expect === "Defender") return role === "Defender";
-        if (expect === "Midfielder") return role === "Midfielder";
-        if (expect === "Attacker") return role === "Attacker";
-        return false;
-      }
+      const isRoleMatch = (expect, role) =>
+        (expect === "Goalkeeper" && role === "Goalkeeper") ||
+        (expect === "Defender" && role === "Defender") ||
+        (expect === "Midfielder" && role === "Midfielder") ||
+        (expect === "Attacker" && role === "Attacker");
 
       function applyPenalty(player, isWrong) {
         const f = isWrong ? WRONG_POS_PENALTY : 1;
-        const P = player.powers_gw || {
-          ATT: 0,
-          CRE: 0,
-          DEF: 0,
-          FIT: 0,
-          CTRL: 0,
-        };
-        return Math.round(
-          (P.ATT * f + P.CRE * f + P.DEF * f + P.FIT * f + P.CTRL * f) / 5
-        );
-      }
+        const P = player.powers_gw || { ATT: 0, CRE: 0, DEF: 0, FIT: 0, CTRL: 0 };
+        return Math.round((P.ATT*f + P.CRE*f + P.DEF*f + P.FIT*f + P.CTRL*f) / 5);
+        }
 
       function renderBoard(side, rootId) {
         const team = side === "A" ? state.A : state.B;
@@ -739,135 +419,69 @@
           const wrong = has && !isRoleMatch(slot.expect, slot.player.role);
           const d = document.createElement("div");
           d.className = `slot ${has ? "fill" : ""} ${wrong ? "wrong" : ""}`;
-          d.innerHTML = `<div class="small" style="opacity:.8">${slot.id} (${
-            slot.expect
-          })</div>
-          ${
-            has
-              ? `
-          <div style="display:flex;gap:8px;align-items:center;margin-top:6px">
-            <div class="avatar" style="width:38px;height:38px"><img src="${
-              slot.player.photo
-            }"></div>
-            <div>
-              <div style="font-weight:700">${slot.player.name}</div>
-              <div class="small">${slot.player.role}${
-                  wrong
-                    ? ' • <span style="color:#fecaca">ผิดตำแหน่ง</span>'
-                    : ""
-                }</div>
-              <div class="small">Power: ${slot.player.adjTotal}</div>
-            </div>
-            <!-- ไม่มีปุ่มเอาออก เพื่อความยุติธรรม -->
-          </div>`
-              : `<div class="small" style="opacity:.7">กด + จากรายการตรงกลางเพื่อเพิ่ม</div>`
-          }`;
-          // ไม่รองรับ drop ทับถ้าช่องมีแล้ว (กันเปลี่ยนใจหลังเห็นอีกฝั่ง)
-          d.addEventListener("dragover", (e) => {
-            if (!has) e.preventDefault();
-          });
-          d.addEventListener("drop", (e) => {
-            if (has) return;
-            e.preventDefault();
-            const data = JSON.parse(
-              e.dataTransfer.getData("text/plain") || "{}"
-            );
-            const p = state.fpl.playersById[data.pid];
-            if (p) place(side, idx, p);
-          });
+          d.innerHTML = `<div class="small" style="opacity:.8">${slot.id} (${slot.expect})</div>
+            ${
+              has
+                ? `<div style="display:flex;gap:8px;align-items:center;margin-top:6px">
+                    <div class="avatar" style="width:38px;height:38px"><img src="${slot.player.photo}"></div>
+                    <div>
+                      <div style="font-weight:700">${slot.player.name}</div>
+                      <div class="small">${slot.player.role}${wrong ? ' • <span style="color:#fecaca">ผิดตำแหน่ง</span>' : ""}</div>
+                      <div class="small">Power: ${slot.player.adjTotal}</div>
+                    </div>
+                  </div>`
+                : `<div class="small" style="opacity:.7">กด + จากรายการตรงกลางเพื่อเพิ่ม</div>`
+            }`;
           root.appendChild(d);
         });
         refreshSums();
-        document.getElementById(
-          side === "A" ? "btnConfirmA" : "btnConfirmB"
-        ).disabled = !team.every((x) => !!x.player);
-        document.getElementById("btnBattle").disabled = !(
-          state.confirmed.A && state.confirmed.B
-        );
+        document.getElementById(side === "A" ? "btnConfirmA" : "btnConfirmB").disabled =
+          !team.every((x) => !!x.player);
+        document.getElementById("btnBattle").disabled = !(state.confirmed.A && state.confirmed.B);
       }
 
       function place(side, idx, player) {
-        if (state.confirmed[side]) {
-          showStatus(`ทีม ${side} ถูกล็อกแล้ว`);
-          return;
-        }
-        // กันซ้ำข้ามทีม
-        const duplicated = [...state.A, ...state.B].some(
-          (s) => s.player && s.player.id === player.id
-        );
-        if (duplicated) {
-          showStatus("ผู้เล่นคนนี้ถูกเลือกไปแล้ว");
-          return;
-        }
+        if (state.confirmed[side]) { showStatus(`ทีม ${side} ถูกล็อกแล้ว`); return; }
+        const duplicated = [...state.A, ...state.B].some((s) => s.player && s.player.id === player.id);
+        if (duplicated) { showStatus("ผู้เล่นคนนี้ถูกเลือกไปแล้ว"); return; }
 
         const team = side === "A" ? state.A : state.B;
-        if (team[idx].player) {
-          showStatus("ช่องนี้มีผู้เล่นแล้ว");
-          return;
-        }
+        if (team[idx].player) { showStatus("ช่องนี้มีผู้เล่นแล้ว"); return; }
 
         const wrong = !isRoleMatch(team[idx].expect, player.role);
         const adj = applyPenalty(player, wrong);
-        team[idx].player = {
-          ...player,
-          id: player.id,
-          role: player.role,
-          photo: player.photo,
-          name: player.name,
-          adjTotal: adj,
-          wrong,
-        };
-
+        team[idx].player = { ...player, adjTotal: adj, wrong };
         renderBoard("A", "formA");
         renderBoard("B", "formB");
       }
 
       function quickAdd(side, player) {
-        if (state.confirmed[side]) {
-          showStatus(`ทีม ${side} ถูกล็อกแล้ว`);
-          return;
-        }
-        // กันซ้ำข้ามทีม
-        const duplicated = [...state.A, ...state.B].some(
-          (s) => s.player && s.player.id === player.id
-        );
-        if (duplicated) {
-          showStatus("ผู้เล่นคนนี้ถูกเลือกไปแล้ว");
-          return;
-        }
+        if (state.confirmed[side]) { showStatus(`ทีม ${side} ถูกล็อกแล้ว`); return; }
+        const duplicated = [...state.A, ...state.B].some((s) => s.player && s.player.id === player.id);
+        if (duplicated) { showStatus("ผู้เล่นคนนี้ถูกเลือกไปแล้ว"); return; }
 
         const team = side === "A" ? state.A : state.B;
-        let idx = team.findIndex(
-          (s) => !s.player && isRoleMatch(s.expect, player.role)
-        );
+        let idx = team.findIndex((s) => !s.player && isRoleMatch(s.expect, player.role));
         if (idx < 0) idx = team.findIndex((s) => !s.player);
-        if (idx < 0) return showStatus(`ทีม ${side} ครบ 11 แล้ว`);
+        if (idx < 0) { showStatus(`ทีม ${side} ครบ 11 แล้ว`); return; }
         place(side, idx, player);
       }
 
       function refreshSums() {
-        const sumA = state.A.reduce(
-          (s, x) => s + (x.player ? x.player.adjTotal : 0),
-          0
-        );
-        const sumB = state.B.reduce(
-          (s, x) => s + (x.player ? x.player.adjTotal : 0),
-          0
-        );
+        const sumA = state.A.reduce((s, x) => s + (x.player ? x.player.adjTotal : 0), 0);
+        const sumB = state.B.reduce((s, x) => s + (x.player ? x.player.adjTotal : 0), 0);
         const elA = document.getElementById("sumA");
         const elB = document.getElementById("sumB");
-        elA.textContent =
-          state.confirmed.A && state.confirmed.B ? sumA : "ซ่อนอยู่";
-        elB.textContent =
-          state.confirmed.A && state.confirmed.B ? sumB : "ซ่อนอยู่";
-        elA.classList.toggle("mask", !(state.confirmed.A && state.confirmed.B));
-        elB.classList.toggle("mask", !(state.confirmed.A && state.confirmed.B));
+        const unlocked = state.confirmed.A && state.confirmed.B;
+        elA.textContent = unlocked ? sumA : "ซ่อนอยู่";
+        elB.textContent = unlocked ? sumB : "ซ่อนอยู่";
+        elA.classList.toggle("mask", !unlocked);
+        elB.classList.toggle("mask", !unlocked);
       }
 
       function confirmTeam(side) {
         const team = side === "A" ? state.A : state.B;
-        if (!team.every((x) => !!x.player))
-          return showStatus(`ทีม ${side} ยังไม่ครบ 11`);
+        if (!team.every((x) => !!x.player)) { showStatus(`ทีม ${side} ยังไม่ครบ 11`); return; }
         state.confirmed[side] = true;
         showStatus(`ล็อกทีม ${side} แล้ว`);
         renderBoard("A", "formA");
@@ -892,23 +506,16 @@
       }
 
       function battle() {
-        const cntA = state.A.filter((s) => s.player).length,
-          cntB = state.B.filter((s) => s.player).length;
-        if (cntA < 11 || cntB < 11) return alert("ต้องครบ 11 คนทั้งสองทีม");
-        if (!(state.confirmed.A && state.confirmed.B))
-          return alert("ต้องกดยืนยันทั้งสองทีมก่อน");
+        const cntA = state.A.filter((s) => s.player).length, cntB = state.B.filter((s) => s.player).length;
+        if (cntA < 11 || cntB < 11) { alert("ต้องครบ 11 คนทั้งสองทีม"); return; }
+        if (!(state.confirmed.A && state.confirmed.B)) { alert("ต้องกดยืนยันทั้งสองทีมก่อน"); return; }
 
         const totalA = state.A.reduce((s, x) => s + x.player.adjTotal, 0);
         const totalB = state.B.reduce((s, x) => s + x.player.adjTotal, 0);
-        const resEl = document.getElementById("result");
-        resEl.textContent =
-          totalA > totalB
-            ? `ทีม A ชนะ ${totalA} ต่อ ${totalB}`
-            : totalB > totalA
-            ? `ทีม B ชนะ ${totalB} ต่อ ${totalA}`
-            : `เสมอ ${totalA} ต่อ ${totalB}`;
-
-        // เปิดหน้าเฉลยแบบตำแหน่งต่อ-ตำแหน่ง
+        document.getElementById("result").textContent =
+          totalA > totalB ? `ทีม A ชนะ ${totalA} ต่อ ${totalB}`
+          : totalB > totalA ? `ทีม B ชนะ ${totalB} ต่อ ${totalA}`
+          : `เสมอ ${totalA} ต่อ ${totalB}`;
         openSummary(totalA, totalB);
       }
 
@@ -916,92 +523,54 @@
         document.getElementById("sumGW").textContent = state.fpl.gw || "-";
         document.getElementById("sumTotalA").textContent = totalA;
         document.getElementById("sumTotalB").textContent = totalB;
-        document.getElementById("sumCrestA").innerHTML = state.crestImg.A
-          ? `<img src="${state.crestImg.A}">`
-          : "";
-        document.getElementById("sumCrestB").innerHTML = state.crestImg.B
-          ? `<img src="${state.crestImg.B}">`
-          : "";
+        document.getElementById("sumCrestA").innerHTML = state.crestImg.A ? `<img src="${state.crestImg.A}">` : "";
+        document.getElementById("sumCrestB").innerHTML = state.crestImg.B ? `<img src="${state.crestImg.B}">` : "";
 
         const rows = document.getElementById("sumRows");
         rows.innerHTML = "";
         for (let i = 0; i < FORMATION.length; i++) {
-          const slotA = state.A[i],
-            slotB = state.B[i];
-          const a = slotA.player,
-            b = slotB.player;
-          const av = a ? a.adjTotal : 0,
-            bv = b ? b.adjTotal : 0;
-          const diff = av - bv;
-          const abs = Math.min(100, Math.abs(diff));
+          const a = state.A[i].player, b = state.B[i].player;
+          const av = a ? a.adjTotal : 0, bv = b ? b.adjTotal : 0;
+          const diff = av - bv, abs = Math.min(100, Math.abs(diff));
           const row = document.createElement("div");
           row.className = "row2";
           row.innerHTML = `
-          <div style="display:flex;gap:8px;align-items:center">
-            <div class="avatar" style="width:40px;height:40px">${
-              a ? `<img src="${a.photo}">` : ""
-            }</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <div class="avatar" style="width:40px;height:40px">${a ? `<img src="${a.photo}">` : ""}</div>
+              <div>
+                <div style="font-weight:700">${a ? a.name : "—"}</div>
+                <div class="small">${FORMATION[i].id} (${FORMATION[i].expect}) • ${a ? a.role : "-"}</div>
+                <div class="small">Power: ${av}</div>
+              </div>
+            </div>
             <div>
-              <div style="font-weight:700">${a ? a.name : "—"}</div>
-              <div class="small">${FORMATION[i].id} (${
-            FORMATION[i].expect
-          }) • ${a ? a.role : "-"}</div>
-              <div class="small">Power: ${av}</div>
+              <div class="small" style="text-align:center;margin-bottom:4px">ต่างกัน ${diff > 0 ? `+${diff}` : diff} แต้ม</div>
+              <div class="diffbar">${diff >= 0
+                ? `<div class="diffA" style="width:${abs}%"></div>`
+                : `<div class="diffB" style="width:${abs}%"></div>`}
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="small" style="text-align:center;margin-bottom:4px">ต่างกัน ${
-              diff > 0 ? `+${diff}` : diff
-            } แต้ม</div>
-            <div class="diffbar">
-              ${
-                diff >= 0
-                  ? `<div class="diffA" style="width:${abs}%;"></div>`
-                  : `<div class="diffB" style="width:${abs}%;"></div>`
-              }
-            </div>
-          </div>
-          <div style="display:flex;gap:8px;align-items:center;justify-content:flex-end">
-            <div>
-              <div style="font-weight:700;text-align:right">${
-                b ? b.name : "—"
-              }</div>
-              <div class="small" style="text-align:right">${FORMATION[i].id} (${
-            FORMATION[i].expect
-          }) • ${b ? b.role : "-"}</div>
-              <div class="small" style="text-align:right">Power: ${bv}</div>
-            </div>
-            <div class="avatar" style="width:40px;height:40px">${
-              b ? `<img src="${b.photo}">` : ""
-            }</div>
-          </div>
-        `;
+            <div style="display:flex;gap:8px;align-items:center;justify-content:flex-end">
+              <div>
+                <div style="font-weight:700;text-align:right">${b ? b.name : "—"}</div>
+                <div class="small" style="text-align:right">${FORMATION[i].id} (${FORMATION[i].expect}) • ${b ? b.role : "-"}</div>
+                <div class="small" style="text-align:right">Power: ${bv}</div>
+              </div>
+              <div class="avatar" style="width:40px;height:40px">${b ? `<img src="${b.photo}">` : ""}</div>
+            </div>`;
           rows.appendChild(row);
         }
         document.getElementById("summaryView").style.display = "flex";
       }
-      function closeSummary() {
-        document.getElementById("summaryView").style.display = "none";
-      }
+      const closeSummary = () => (document.getElementById("summaryView").style.display = "none");
 
-      // ===== Boot =====
       document.getElementById("btnReload").onclick = loadSnapshot;
-      document.getElementById("sumNameA").textContent = "ทีม A";
-      document.getElementById("sumNameB").textContent = "ทีม B";
-      document.getElementById("quotaA").textContent = state.dataSwitchQuota.A;
-      document.getElementById("quotaB").textContent = state.dataSwitchQuota.B;
 
-      // เรนเดอร์กระดานว่าง + โหลด snapshot
       (function init() {
-        // สร้างพื้นที่กระดาน
-        const makeBoard = (side, root) => {
-          const team = side === "A" ? state.A : state.B;
-          team.forEach((_, i) => {}); // placeholder
-          renderBoard(side, root);
-        };
-        makeBoard("A", "formA");
-        makeBoard("B", "formB");
+        renderBoard("A", "formA");
+        renderBoard("B", "formB");
         setActiveDataSide("A");
+        setCrestSide("A");
         loadSnapshot();
       })();
     </script>
