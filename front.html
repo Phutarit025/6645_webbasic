@@ -102,6 +102,32 @@
       }
     </style>
   </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      try {
+        // ถ้า workflow เขียนไฟล์ไว้ที่ public/data/fpl_current.json
+        const res = await fetch(
+          "./public/data/fpl_current.json?ts=" + Date.now(),
+          { cache: "no-cache" }
+        );
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
+
+        // เก็บไว้ใช้ต่อในเกม
+        window.__FPL_CURRENT__ = data;
+
+        // ตัวอย่างการใช้งาน: เอา XI ของทีม (เช่น อาร์เซนอล team_id=1)
+        // const xiIds = data.xiByTeam[1] || [];
+        // const xi = xiIds.map(id => data.players_played.find(p => p.id === id)).filter(Boolean);
+        // renderXI(xi); // เรียกฟังก์ชันเรนเดอร์ของคุณ
+
+        console.log("Loaded FPL snapshot (GW", data.gw + "):", data);
+      } catch (err) {
+        console.error("โหลด fpl_current.json ไม่สำเร็จ:", err);
+        // ถ้ายังไม่มีไฟล์ (ยังไม่เคยรัน workflow) จะ 404 — ให้ไปกด Run workflow ในแท็บ Actions ก่อน
+      }
+    });
+  </script>
   <body>
     <div class="container-fluid py-5">
       <h1>เลือกโหมดการเล่น</h1>
