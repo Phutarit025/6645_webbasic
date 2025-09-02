@@ -1,4 +1,4 @@
-name: .github/workflows/fpl-weekly-single.yml
+name: name: FPL Weekly (Single File)
 
 on:
   schedule:
@@ -30,4 +30,5 @@ jobs:
         with:
           commit_message: "chore(data): update FPL current snapshot (Tuesday run)"
           file_pattern: "public/data/fpl_current.json"
+
 
