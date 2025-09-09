@@ -368,6 +368,10 @@
         align-items: center;
         margin-top: 6px;
       }
+      .slot > :nth-child(n + 3) {
+        display: none !important;
+      }
+
       .avatar.sm {
         width: 38px;
         height: 38px;
@@ -1034,51 +1038,43 @@
         team.forEach((slot) => {
           const has = !!slot.player;
           const wrong = has && !isRoleMatch(slot.expect, slot.player.role);
+
           const d = document.createElement("div");
           d.className = `slot ${has ? "fill" : ""} ${wrong ? "wrong" : ""}`;
 
-          // จัดตำแหน่งตามแผน 4-3-3
+          // วางตำแหน่งตามแผน 4-3-3
           const pos = LAYOUT_433[slot.id];
           if (pos) {
             d.style.gridColumn = `${pos.c} / span ${pos.span || 2}`;
             d.style.gridRow = `${pos.r}`;
           }
 
-          // แสดงป้ายตำแหน่ง + โปรไฟล์นักเตะ (ไม่ซ่อน)
+          // ✅ แสดงเฉพาะป้ายตำแหน่ง + รูปนักเตะ (ถ้ามี)
           d.innerHTML = `
-      <div class="small" style="opacity:.8">${slot.id} (${slot.expect})</div>
+      <div class="small pos-label" style="text-align:center;font-weight:800;opacity:.9">
+        ${slot.id}
+      </div>
       ${
         has
           ? `
-            <div class="pl" style="display:flex;gap:8px;align-items:center;margin-top:6px">
-              <div class="avatar sm" style="width:38px;height:38px;border-radius:50%;overflow:hidden;border:1px solid #334155">
-                <img src="${slot.player.photo}" alt="${slot.player.name}"
-                     onerror="this.src='https://static.api-football.com/players/players.webp'">
-              </div>
-              <div style="min-width:0">
-                <div class="name" style="font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px">
-                  ${slot.player.name}
-                </div>
-                <div class="small">
-                  ${slot.player.role}
-                  ${
-                    wrong
-                      ? ' • <span style="color:#fecaca">ผิดตำแหน่ง</span>'
-                      : ""
-                  }
-                </div>
-              </div>
-              <div class="pow" style="margin-left:auto;text-align:right">
-                <div class="powv" style="font-size:18px;font-weight:800">${
-                  slot.player.adjTotal ?? 0
-                }</div>
-                <div class="small">PWR</div>
-              </div>
+            <div class="avatar sm" style="width:38px;height:38px;border-radius:50%;overflow:hidden;border:1px solid #334155;margin:6px auto 0">
+              <img src="${slot.player.photo}" alt="${slot.player.name}"
+                   onerror="this.src='https://static.api-football.com/players/players.webp'"
+                   style="width:100%;height:100%;object-fit:cover">
             </div>
           `
-          : `<div class="small" style="opacity:.7">กด + จากรายการตรงกลางเพื่อเพิ่ม</div>`
+          : `
+            <div class="avatar sm" style="width:38px;height:38px;border-radius:50%;overflow:hidden;border:1px dashed #334155;opacity:.35;margin:6px auto 0"></div>
+          `
       }
     `;
+
+          // จัดให้อยู่กึ่งกลางช่อง
+          d.style.display = "flex";
+          d.style.flexDirection = "column";
+          d.style.alignItems = "center";
+          d.style.justifyContent = "center";
+
           root.appendChild(d);
         });
 
@@ -1092,7 +1088,7 @@
       }
 
       function place(side, idx, player) {
-        if (state.confirmed[side]) {
+        if (state.confirmed[side]) {  
           showStatus(`ทีม ${side} ถูกล็อกแล้ว`);
           return;
         }
