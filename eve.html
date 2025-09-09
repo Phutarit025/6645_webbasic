@@ -790,6 +790,53 @@
 
       /* ===== FPL -> Power(0..100) mapping ===== */
       // คีย์ที่พบบ่อยในสแน็ปช็อต FPL/สถิติ
+      /* ===== FPL -> Power(0..100) mapping ===== */
+      // วางฟังก์ชัน 2 ตัวนี้ไว้ตรงนี้ (ต้องอยู่ก่อน async function loadSnapshot)
+
+      function buildMinMax(players = []) {
+        // เผื่ออนาคตอยาก normalize ค่าตามทั้งลีก
+        // ตอนนี้ให้ช่วง 0..100 ไว้ก่อน (ไม่บังคับใช้จริง)
+        return {
+          ATT: { min: 0, max: 100 },
+          CRE: { min: 0, max: 100 },
+          DEF: { min: 0, max: 100 },
+          FIT: { min: 0, max: 100 },
+          CTRL: { min: 0, max: 100 },
+          TOTAL: { min: 0, max: 100 },
+        };
+      }
+
+      function powersFromFPL(p, mm) {
+        // mm ยังไม่ใช้ในสูตรนี้
+        const gs = +(p.gw_stats?.goals ?? 0);
+        const as = +(p.gw_stats?.assists ?? 0);
+        const sh = +(p.gw_stats?.shots ?? p.gw_stats?.total_shots ?? 0);
+        const sv = +(p.gw_stats?.saves ?? 0);
+        const gc = +(p.gw_stats?.gc ?? p.gw_stats?.goals_conceded ?? 0);
+        const cs = +(p.gw_stats?.cs ?? p.gw_stats?.clean_sheets ?? 0);
+        const thr = +(p.gw_stats?.threat ?? 0);
+        const cre = +(p.gw_stats?.creativity ?? 0);
+        const inf = +(p.gw_stats?.influence ?? 0);
+        const y = +(p.gw_stats?.yellow ?? p.gw_stats?.yellow_cards ?? 0);
+        const r = +(p.gw_stats?.red ?? p.gw_stats?.red_cards ?? 0);
+        const m = +(p.minutes ?? p.gw_stats?.minutes ?? 0);
+
+        const per90 = (v, mins) => ((+v || 0) * 90) / Math.max(1, +mins || 0);
+        const g90 = per90(gs, m);
+        const a90 = per90(as, m);
+        const sh90 = per90(sh, m);
+        const sv90 = per90(sv, m);
+        const gc90 = per90(gc, m);
+
+        const ATT = clamp(60 * g90 + 25 * a90 + 5 * sh90 + 0.06 * thr);
+        const CRE = clamp(30 * a90 + 0.6 * cre + 0.1 * inf);
+        const DEF = clamp(18 * cs + 10 * sv90 - 8 * gc90 + 0.06 * inf);
+        const FIT = clamp(Math.min(1, m / 90) * 100);
+        const CTRL = clamp(90 - (2 * y + 8 * r));
+        const TOTAL = Math.round((ATT + CRE + DEF + FIT + CTRL) / 5);
+
+        return { ATT, CRE, DEF, FIT, CTRL, TOTAL };
+      }
 
       const state = {
         fpl: {
@@ -817,6 +864,7 @@
         statusEl.textContent = msg || "";
         if (ms) setTimeout(() => (statusEl.style.display = "none"), ms);
       };
+
       const clamp = (v, min = 0, max = 100) =>
         Math.max(min, Math.min(max, +v || 0));
 
