@@ -361,28 +361,39 @@
       .slot.wrong {
         box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
       }
-      /* โชว์เฉพาะบรรทัดแรก (ป้ายตำแหน่ง) ในแต่ละช่อง */
-      /* ซ่อนทุก element ภายใน .slot ที่ไม่ใช่ชิ้นแรก (เผื่อกรณีเผลอมี element อื่นหลุดมา) */
-      .slot > :not(:first-child) {
-        display: none !important;
-      }
-
-      /* จัดป้ายตำแหน่งให้อ่านง่าย */
-      .slot {
+      /* แสดงโปรไฟล์ในช่องตำแหน่งแบบกระชับ */
+      .slot .pl {
         display: flex;
+        gap: 8px;
         align-items: center;
-        justify-content: center;
+        margin-top: 6px;
       }
-      .slot .small {
-        text-align: center;
-        font-weight: 800;
-        opacity: 0.9;
+      .avatar.sm {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid #334155;
       }
-
-      .pos-label {
+      .slot .name {
+        font-weight: 700;
+        max-width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .slot .pow {
+        margin-left: auto;
+        text-align: right;
+      }
+      .slot .powv {
+        font-size: 18px;
         font-weight: 800;
-        opacity: 0.9;
-        text-align: center;
+      }
+      @media (max-width: 560px) {
+        .slot .name {
+          max-width: 90px;
+        }
       }
 
       .sum {
@@ -1020,20 +1031,54 @@
         const root = document.getElementById(rootId);
         root.innerHTML = "";
 
-        team.forEach((slot, idx) => {
+        team.forEach((slot) => {
           const has = !!slot.player;
           const wrong = has && !isRoleMatch(slot.expect, slot.player.role);
           const d = document.createElement("div");
           d.className = `slot ${has ? "fill" : ""} ${wrong ? "wrong" : ""}`;
 
+          // จัดตำแหน่งตามแผน 4-3-3
           const pos = LAYOUT_433[slot.id];
           if (pos) {
             d.style.gridColumn = `${pos.c} / span ${pos.span || 2}`;
             d.style.gridRow = `${pos.r}`;
           }
 
-          // เหลือแค่ป้ายตำแหน่ง
-          d.innerHTML = `<div class="small pos-label">${slot.id}</div>`;
+          // แสดงป้ายตำแหน่ง + โปรไฟล์นักเตะ (ไม่ซ่อน)
+          d.innerHTML = `
+      <div class="small" style="opacity:.8">${slot.id} (${slot.expect})</div>
+      ${
+        has
+          ? `
+            <div class="pl" style="display:flex;gap:8px;align-items:center;margin-top:6px">
+              <div class="avatar sm" style="width:38px;height:38px;border-radius:50%;overflow:hidden;border:1px solid #334155">
+                <img src="${slot.player.photo}" alt="${slot.player.name}"
+                     onerror="this.src='https://static.api-football.com/players/players.webp'">
+              </div>
+              <div style="min-width:0">
+                <div class="name" style="font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px">
+                  ${slot.player.name}
+                </div>
+                <div class="small">
+                  ${slot.player.role}
+                  ${
+                    wrong
+                      ? ' • <span style="color:#fecaca">ผิดตำแหน่ง</span>'
+                      : ""
+                  }
+                </div>
+              </div>
+              <div class="pow" style="margin-left:auto;text-align:right">
+                <div class="powv" style="font-size:18px;font-weight:800">${
+                  slot.player.adjTotal ?? 0
+                }</div>
+                <div class="small">PWR</div>
+              </div>
+            </div>
+          `
+          : `<div class="small" style="opacity:.7">กด + จากรายการตรงกลางเพื่อเพิ่ม</div>`
+      }
+    `;
           root.appendChild(d);
         });
 
