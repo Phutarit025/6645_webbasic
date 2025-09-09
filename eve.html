@@ -32,6 +32,7 @@
           top: 58px;
         }
       }
+
       @media (max-width: 992px) {
         .logo-picker {
           grid-template-columns: repeat(4, 1fr);
@@ -39,8 +40,10 @@
         .players-grid {
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         }
+        /* ✅ คง 12 คอลัมน์ไว้ และย่อความสูงแถวลง */
         .formation {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(12, 1fr);
+          grid-auto-rows: 76px;
         }
         .row2 {
           grid-template-columns: 1fr;
@@ -50,6 +53,7 @@
           margin: 8px 0;
         }
       }
+
       @media (max-width: 768px) {
         header .container {
           padding: 10px 12px;
@@ -85,10 +89,13 @@
         .players-grid {
           grid-template-columns: 1fr 1fr;
         }
+        /* ✅ คง 12 คอลัมน์ไว้ และย่อความสูงแถวลงอีกนิด */
         .formation {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(12, 1fr);
+          grid-auto-rows: 64px;
         }
       }
+
       @media (max-width: 560px) {
         .logo-picker {
           grid-template-columns: repeat(3, 1fr);
@@ -161,6 +168,7 @@
           grid-template-columns: 1fr;
         }
       }
+
       .card {
         background: linear-gradient(
           180deg,
@@ -191,6 +199,7 @@
       button.ghost.sel {
         outline: 2px solid var(--pri);
       }
+
       .chip {
         display: inline-flex;
         gap: 6px;
@@ -209,6 +218,7 @@
         border-radius: 10px;
         padding: 4px 8px;
       }
+
       .logo-picker {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -232,6 +242,7 @@
         width: 38px;
         height: 38px;
       }
+
       .crest {
         width: 30px;
         height: 30px;
@@ -244,6 +255,7 @@
         height: 100%;
         object-fit: cover;
       }
+
       .team-section {
         border: 1px solid #2a3650;
         border-radius: 14px;
@@ -255,6 +267,7 @@
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         gap: 10px;
       }
+
       .p-card {
         border: 1px solid #223047;
         border-radius: 14px;
@@ -278,6 +291,7 @@
         height: 100%;
         object-fit: cover;
       }
+
       .bars {
         display: grid;
         gap: 6px;
@@ -295,11 +309,45 @@
         height: 100%;
         background: linear-gradient(90deg, var(--pri), var(--pri2));
       }
+
+      /* กระดานจัดทีมแบบ “สนามบอล” + 4-3-3 */
       .formation {
+        position: relative;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(12, 1fr); /* 12 คอลัมน์สำหรับ mapping */
+        grid-auto-rows: 86px; /* ความสูงแต่ละแถวของสนาม */
         gap: 10px;
+        padding: 10px;
+        border-radius: 14px;
+        background: repeating-linear-gradient(
+          0deg,
+          #0e5a2a 0 24px,
+          #0f612d 24px 48px
+        );
+        border: 1px solid #224a33;
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.06);
       }
+      /* เส้นสนาม */
+      .formation::before {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        border: 2px solid rgba(255, 255, 255, 0.18);
+        border-radius: 12px;
+        pointer-events: none;
+      }
+      .formation::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 8px;
+        bottom: 8px;
+        width: 2px;
+        background: rgba(255, 255, 255, 0.18);
+        transform: translateX(-50%);
+        pointer-events: none;
+      }
+
       .slot {
         min-height: 92px;
         border: 1px dashed #2b3650;
@@ -313,6 +361,7 @@
       .slot.wrong {
         box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
       }
+
       .sum {
         font-weight: 800;
         font-size: 22px;
@@ -322,6 +371,7 @@
         opacity: 0.7;
         user-select: none;
       }
+
       .sticky-head {
         position: sticky;
         top: 68px;
@@ -352,6 +402,7 @@
       .seg button.active {
         background: #163056;
       }
+
       #summaryView {
         position: fixed;
         inset: 0;
@@ -370,6 +421,7 @@
         border-radius: 16px;
         padding: 16px;
       }
+
       .row2 {
         display: grid;
         grid-template-columns: 1fr 220px 1fr;
@@ -392,6 +444,7 @@
         height: 100%;
         background: linear-gradient(90deg, #ef4444, #f97316);
       }
+
       .footer-hint {
         position: sticky;
         bottom: 0;
@@ -656,12 +709,15 @@
     ></div>
 
     <script>
+      // ...
       // --- พาธไฟล์ (รองรับทั้ง GitHub Pages และรันโลคัล) ---
       const BASE = location.hostname.endsWith("github.io")
         ? location.pathname.replace(/\/[^\/]*$/, "")
         : ".";
+
       const SNAPSHOT_PATH = `${BASE}/public/data/fpl_current.json`;
 
+      /* ตำแหน่งที่ต้องมีแน่ๆ 11 ช่อง */
       const FORMATION = [
         { id: "GK", expect: "Goalkeeper" },
         { id: "RB", expect: "Defender" },
@@ -675,6 +731,22 @@
         { id: "ST", expect: "Attacker" },
         { id: "LW", expect: "Attacker" },
       ];
+
+      /* mapping วางตำแหน่ง 4-3-3 ให้กริด 12 คอลัมน์ */
+      const LAYOUT_433 = {
+        GK: { c: 6, r: 6, span: 2 },
+        LB: { c: 3, r: 5, span: 2 },
+        LCB: { c: 5, r: 5, span: 2 },
+        RCB: { c: 7, r: 5, span: 2 },
+        RB: { c: 9, r: 5, span: 2 },
+        CM1: { c: 4, r: 4, span: 2 },
+        CAM: { c: 6, r: 4, span: 2 },
+        CM2: { c: 8, r: 4, span: 2 },
+        LW: { c: 3, r: 2, span: 2 },
+        ST: { c: 6, r: 2, span: 2 },
+        RW: { c: 9, r: 2, span: 2 },
+      };
+
       const WRONG_POS_PENALTY = 0.7;
       const DATA_SWITCH_LIMIT = 3;
 
@@ -929,27 +1001,33 @@
           const wrong = has && !isRoleMatch(slot.expect, slot.player.role);
           const d = document.createElement("div");
           d.className = `slot ${has ? "fill" : ""} ${wrong ? "wrong" : ""}`;
+
+          /* 🔧 วางตำแหน่งตามแผน 4-3-3 */
+          const pos = LAYOUT_433[slot.id];
+          if (pos) {
+            d.style.gridColumn = `${pos.c} / span ${pos.span || 2}`;
+            d.style.gridRow = `${pos.r}`;
+          }
+
           d.innerHTML = `<div class="small" style="opacity:.8">${slot.id} (${
             slot.expect
           })</div>
-            ${
-              has
-                ? `<div style="display:flex;gap:8px;align-items:center;margin-top:6px">
-                    <div class="avatar" style="width:38px;height:38px"><img src="${
-                      slot.player.photo
-                    }"></div>
-                    <div>
-                      <div style="font-weight:700">${slot.player.name}</div>
-                      <div class="small">${slot.player.role}${
-                    wrong
-                      ? ' • <span style="color:#fecaca">ผิดตำแหน่ง</span>'
-                      : ""
-                  }</div>
-                      <div class="small">Power: ${slot.player.adjTotal}</div>
-                    </div>
-                  </div>`
-                : `<div class="small" style="opacity:.7">กด + จากรายการตรงกลางเพื่อเพิ่ม</div>`
-            }`;
+      ${
+        has
+          ? `<div style="display:flex;gap:8px;align-items:center;margin-top:6px">
+                <div class="avatar" style="width:38px;height:38px"><img src="${
+                  slot.player.photo
+                }"></div>
+                <div>
+                  <div style="font-weight:700">${slot.player.name}</div>
+                  <div class="small">${slot.player.role}${
+              wrong ? ' • <span style="color:#fecaca">ผิดตำแหน่ง</span>' : ""
+            }</div>
+                  <div class="small">Power: ${slot.player.adjTotal}</div>
+                </div>
+              </div>`
+          : `<div class="small" style="opacity:.7">กด + จากรายการตรงกลางเพื่อเพิ่ม</div>`
+      }`;
           root.appendChild(d);
         });
         refreshSums();
