@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-09-02T07:48:04.201Z",
+  "generated_at": "2025-09-09T02:55:07.897Z",
   "note": "Current snapshot (Tuesday run). Replace weekly.",
   "gw": 3,
   "teams": [
@@ -3361,8 +3361,8 @@
       "id": 252,
       "code": 499309,
       "name": "Marc Guiu Paz",
-      "team_id": 17,
-      "team": "Sunderland",
+      "team_id": 7,
+      "team": "Chelsea",
       "role": "Attacker",
       "minutes": 3,
       "photo": "https://resources.premierleague.com/premierleague/photos/players/110x140/p499309.png",
@@ -9880,7 +9880,7 @@
       236,
       249,
       250,
-      238
+      252
     ],
     "8": [
       253,
@@ -10010,7 +10010,7 @@
       668,
       561,
       560,
-      252
+      544
     ],
     "18": [
       565,
