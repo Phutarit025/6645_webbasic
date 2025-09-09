@@ -10,28 +10,47 @@ const clamp = (v, min=0, max=100) => Math.max(min, Math.min(max, +v||0));
 const per90  = (v, mins) => ((+v||0) * 90) / Math.max(1, +mins||0);
 const roleBy = (t) => ({1:"Goalkeeper",2:"Defender",3:"Midfielder",4:"Attacker"}[t] || "Attacker");
 
-// พลัง "ราย GW" จาก /event/{gw}/live
-function powersFromLive(stats) {
-  const m   = +stats.minutes || 0;
-  const g90 = per90(stats.goals_scored, m);
-  const a90 = per90(stats.assists, m);
-  const sh90= per90(stats.total_shots ?? stats.shots ?? 0, m);
-  const sv90= per90(stats.saves, m);
-  const gc90= per90(stats.goals_conceded, m);
-  const cs  = +stats.clean_sheets || 0;
+// === NEW: น้ำหนัก TOTAL ตามตำแหน่ง (role-aware) ==========================
+const ROLE_TOTAL_WEIGHTS = {
+  Goalkeeper: { ATT: 0.10, CRE: 0.10, DEF: 0.45, FIT: 0.25, CTRL: 0.10 },
+  Defender:   { ATT: 0.18, CRE: 0.12, DEF: 0.40, FIT: 0.20, CTRL: 0.10 },
+  Midfielder: { ATT: 0.28, CRE: 0.27, DEF: 0.15, FIT: 0.20, CTRL: 0.10 },
+  Attacker:   { ATT: 0.42, CRE: 0.23, DEF: 0.05, FIT: 0.20, CTRL: 0.10 },
+};
 
-  const infl= parseFloat(stats.influence ?? 0);
-  const crea= parseFloat(stats.creativity ?? 0);
-  const thr = parseFloat(stats.threat ?? 0);
-  const y   = +stats.yellow_cards || 0;
-  const r   = +stats.red_cards || 0;
+// พลัง "ราย GW" จาก /event/{gw}/live (role-aware)
+// UPDATED: รับ role และคำนวณ TOTAL ด้วยน้ำหนักตามตำแหน่ง
+function powersFromLive(stats, role="Attacker") {
+  const m    = +stats.minutes || 0;
+  const g90  = per90(stats.goals_scored, m);
+  const a90  = per90(stats.assists, m);
+  const sh90 = per90(stats.total_shots ?? stats.shots ?? 0, m);
+  const sv90 = per90(stats.saves, m);
+  const gc90 = per90(stats.goals_conceded, m);
+  const cs   = +stats.clean_sheets || 0;
 
-  const ATT  = clamp(60*g90 + 25*a90 + 5*sh90 + 0.06*thr);
-  const CRE  = clamp(30*a90 + 0.6*crea + 0.1*infl);
-  const DEF  = clamp(18*cs + 10*sv90 - 8*gc90 + 0.06*infl);
-  const FIT  = clamp(Math.min(1, m/90) * 100);
-  const CTRL = clamp(90 - (2*y + 8*r));
-  const TOTAL= Math.round((ATT+CRE+DEF+FIT+CTRL)/5);
+  const infl = parseFloat(stats.influence ?? 0);
+  const crea = parseFloat(stats.creativity ?? 0);
+  const thr  = parseFloat(stats.threat ?? 0);
+  const y    = +stats.yellow_cards || 0;
+  const r    = +stats.red_cards || 0;
+  const pm   = +stats.penalties_missed || 0;
+  const og   = +stats.own_goals || 0;
+  const penSaved = +stats.penalties_saved || 0; // เผื่อ GK
+
+  // 5 แกนหลัก (สเกลให้อยู่ 0-100 ด้วย clamp)
+  const ATT  = clamp(62*g90 + 26*a90 + 5*sh90 + 0.06*thr);              // จบสกอร์/คุกคาม
+  const CRE  = clamp(28*a90 + 0.65*crea + 0.10*infl);                   // สร้างสรรค์เกม
+  const DEF  = clamp(20*cs + 11*sv90 + 6*penSaved - 7*gc90 + 0.06*infl);// เกมรับ (GK เด่นที่ saves)
+  const FIT  = clamp(Math.min(1, m/90) * 100);                          // ความฟิต (นาที/90)
+  const CTRL = clamp(95 - (2*y + 8*r + 5*pm + 6*og));                   // วินัย/คุมเกม
+
+  // TOTAL ตามตำแหน่ง
+  const w = ROLE_TOTAL_WEIGHTS[role] || ROLE_TOTAL_WEIGHTS.Attacker;
+  const TOTAL = Math.round(
+    ATT*w.ATT + CRE*w.CRE + DEF*w.DEF + FIT*w.FIT + CTRL*w.CTRL
+  );
+
   return { ATT, CRE, DEF, FIT, CTRL, TOTAL };
 }
 
@@ -69,7 +88,10 @@ async function main(){
       const base = playersIdx[e.id] || {};
       const team = teamsIdx[base.team] || {};
       const role = roleBy(base.element_type);
-      const pow  = powersFromLive(e.stats||{});
+
+      // UPDATED: ส่ง role เข้าไปคำนวณ
+      const pow  = powersFromLive(e.stats||{}, role);
+
       return {
         id: e.id,
         code: base.code,
@@ -87,6 +109,9 @@ async function main(){
           saves: +e.stats.saves || 0,
           yellow: +e.stats.yellow_cards || 0,
           red: +e.stats.red_cards || 0,
+          penalties_missed: +e.stats.penalties_missed || 0,
+          penalties_saved: +e.stats.penalties_saved || 0,
+          own_goals: +e.stats.own_goals || 0,
           influence: parseFloat(e.stats.influence || 0),
           creativity: parseFloat(e.stats.creativity || 0),
           threat: parseFloat(e.stats.threat || 0),
