@@ -361,6 +361,29 @@
       .slot.wrong {
         box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
       }
+      /* โชว์เฉพาะบรรทัดแรก (ป้ายตำแหน่ง) ในแต่ละช่อง */
+      /* ซ่อนทุก element ภายใน .slot ที่ไม่ใช่ชิ้นแรก (เผื่อกรณีเผลอมี element อื่นหลุดมา) */
+      .slot > :not(:first-child) {
+        display: none !important;
+      }
+
+      /* จัดป้ายตำแหน่งให้อ่านง่าย */
+      .slot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slot .small {
+        text-align: center;
+        font-weight: 800;
+        opacity: 0.9;
+      }
+
+      .pos-label {
+        font-weight: 800;
+        opacity: 0.9;
+        text-align: center;
+      }
 
       .sum {
         font-weight: 800;
@@ -996,40 +1019,24 @@
         const team = side === "A" ? state.A : state.B;
         const root = document.getElementById(rootId);
         root.innerHTML = "";
+
         team.forEach((slot, idx) => {
           const has = !!slot.player;
           const wrong = has && !isRoleMatch(slot.expect, slot.player.role);
           const d = document.createElement("div");
           d.className = `slot ${has ? "fill" : ""} ${wrong ? "wrong" : ""}`;
 
-          /* 🔧 วางตำแหน่งตามแผน 4-3-3 */
           const pos = LAYOUT_433[slot.id];
           if (pos) {
             d.style.gridColumn = `${pos.c} / span ${pos.span || 2}`;
             d.style.gridRow = `${pos.r}`;
           }
 
-          d.innerHTML = `<div class="small" style="opacity:.8">${slot.id} (${
-            slot.expect
-          })</div>
-      ${
-        has
-          ? `<div style="display:flex;gap:8px;align-items:center;margin-top:6px">
-                <div class="avatar" style="width:38px;height:38px"><img src="${
-                  slot.player.photo
-                }"></div>
-                <div>
-                  <div style="font-weight:700">${slot.player.name}</div>
-                  <div class="small">${slot.player.role}${
-              wrong ? ' • <span style="color:#fecaca">ผิดตำแหน่ง</span>' : ""
-            }</div>
-                  <div class="small">Power: ${slot.player.adjTotal}</div>
-                </div>
-              </div>`
-          : `<div class="small" style="opacity:.7">กด + จากรายการตรงกลางเพื่อเพิ่ม</div>`
-      }`;
+          // เหลือแค่ป้ายตำแหน่ง
+          d.innerHTML = `<div class="small pos-label">${slot.id}</div>`;
           root.appendChild(d);
         });
+
         refreshSums();
         document.getElementById(
           side === "A" ? "btnConfirmA" : "btnConfirmB"
