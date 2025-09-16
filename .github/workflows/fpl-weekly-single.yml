@@ -16,15 +16,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1) ดึงสคริปต์จาก main
       - name: Checkout main
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-          path: main
-          token: ${{ secrets.GITHUB_TOKEN }}
-          persist-credentials: true
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -32,67 +28,16 @@ jobs:
           node-version: "20"
 
       - name: Build latest FPL snapshot
-        working-directory: main
         run: |
           node scripts/build-fpl.mjs
           echo "----- preview -----"
           head -n 30 public/data/fpl_current.json || true
 
-      # 2) ดึงสาขาที่เว็บใช้
-      - name: Checkout gh-pages
-        uses: actions/checkout@v4
+      - name: Deploy data to gh-pages/public/data
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          ref: gh-pages
-          fetch-depth: 0
-          path: site
-          token: ${{ secrets.GITHUB_TOKEN }}
-          persist-credentials: true
-
-      # 3) คัดลอกไฟล์ไปยัง gh-pages
-      - name: Copy JSON into gh-pages
-        run: |
-          mkdir -p site/public/data
-          cp -f main/public/data/fpl_current.json site/public/data/fpl_current.json
-
-      # 4) คอมมิตเมื่อเปลี่ยนจริง แล้วพุช
-      - name: Commit & push if changed (gh-pages)
-        working-directory: site
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-        run: |
-          # กัน git safe.directory
-          git config --global --add safe.directory "$(pwd)"
-
-          # ตั้ง remote ให้ใช้ token ชัดๆ (กัน credential หาย)
-          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git"
-
-          # ถ้ายังไม่มีสาขา gh-pages บน remote ให้สร้าง
-          git fetch origin || true
-          if ! git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
-            echo "gh-pages does not exist on remote, creating..."
-            git checkout --orphan gh-pages
-            mkdir -p public/data
-            echo '{}' > public/data/fpl_current.json
-            git add public/data/fpl_current.json
-            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-              commit -m "chore: init gh-pages [skip ci]"
-            git push -u origin gh-pages
-          else
-            # ดึงฐานให้ใหม่สุด (พยายาม ff-only ถ้าไม่ได้ค่อย rebase)
-            git checkout gh-pages
-            git pull --ff-only origin gh-pages || git pull --rebase origin gh-pages
-          fi
-
-          # ไม่มีการเปลี่ยนไฟล์ก็จบ
-          if git diff --quiet HEAD -- public/data/fpl_current.json; then
-            echo "No changes in gh-pages/public/data/fpl_current.json"
-            exit 0
-          fi
-
-          # commit + push
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/fpl_current.json
-          git commit -m "chore(data): refresh fpl_current.json [skip ci]"
-          git push origin HEAD:gh-pages
+          branch: gh-pages
+          folder: public/data
+          target-folder: public/data
+          clean: false
+          commit-message: "chore(data): refresh fpl_current.json [skip ci]"
