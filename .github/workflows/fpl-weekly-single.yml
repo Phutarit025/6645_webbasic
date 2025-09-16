@@ -46,16 +46,28 @@ jobs:
           mkdir -p site/public/data
           cp -f main/public/data/fpl_current.json site/public/data/fpl_current.json
 
-      # 4) คอมมิตเฉพาะเมื่อไฟล์เปลี่ยนจริง
+      # 4) คอมมิตเฉพาะเมื่อไฟล์เปลี่ยนจริง + ดึงรีโมตก่อนพุช
       - name: Commit & push if changed (gh-pages)
         working-directory: site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if git diff --quiet -- public/data/fpl_current.json; then
+          # อัปเดตฐานให้ใหม่สุดก่อน
+          git fetch origin gh-pages
+          git checkout gh-pages
+          # พยายาม fast-forward ก่อน ถ้าไม่ได้ค่อย rebase
+          git pull --ff-only origin gh-pages || git pull --rebase origin gh-pages
+
+          # ไฟล์ไม่เปลี่ยนก็จบ
+          if git diff --quiet HEAD -- public/data/fpl_current.json; then
             echo "No changes in gh-pages/public/data/fpl_current.json"
             exit 0
           fi
+
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/data/fpl_current.json
           git commit -m "chore(data): refresh fpl_current.json [skip ci]"
-          git push
+
+          # พุช ถ้าโดนปฏิเสธเพราะมี commit ใหม่ ก็ rebase แล้วพุชอีกครั้ง
+          git push origin HEAD:gh-pages || (git pull --rebase origin gh-pages && git push origin HEAD:gh-pages)
