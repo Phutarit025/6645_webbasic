@@ -12,9 +12,7 @@ const clamp = (v, min = 0, max = 100) => Math.max(min, Math.min(max, +v || 0));
 const per90  = (v, mins) => ((+v || 0) * 90) / Math.max(1, +mins || 0);
 const roleBy = (t) => ({ 1: "Goalkeeper", 2: "Defender", 3: "Midfielder", 4: "Attacker" }[t] || "Attacker");
 
-/**
- * ดึง JSON พร้อม retry/backoff และรองรับ 429 (Retry-After)
- */
+/** ดึง JSON พร้อม retry/backoff และรองรับ 429 (Retry-After) */
 async function fetchJson(url, tries = 5) {
   let lastErr;
   for (let i = 1; i <= tries; i++) {
@@ -22,12 +20,10 @@ async function fetchJson(url, tries = 5) {
       const r = await fetch(url, {
         headers: {
           "cache-control": "no-cache",
-          // UA เฉพาะกิจ เพื่อหลีกเลี่ยงบางเซิร์ฟเวอร์บล็อก UA ว่างๆ
           "user-agent": "gh-actions-fpl-snapshot/1.0 (+github)"
         }
       });
 
-      // ถูก rate-limit: เคารพ Retry-After แล้วลองใหม่
       if (r.status === 429) {
         const ra = r.headers.get("retry-after");
         const wait = Math.min(30000, (ra ? (+ra * 1000) : 0) || 3000 * i);
@@ -98,13 +94,12 @@ function powersFromLive(stats, role = "Attacker") {
   return { ATT, CRE, DEF, FIT, CTRL, TOTAL };
 }
 
-/* ============ เลือก GW: เอาที่กำลังเล่นก่อน, ไม่งั้นล่าสุดที่ปิด ============ */
+/* ============ เลือก GW: ล่าสุดที่ "finished && data_checked" ก่อน ============ */
 function pickGW(events) {
-  const cur = (events || []).find((e) => e.is_current);
-  if (cur) return cur.id;
-  const done = (events || []).filter((e) => e.finished && e.data_checked);
-  if (done.length) return done.sort((a, b) => b.id - a.id)[0].id;
-  return events?.[0]?.id ?? 1;
+  const done = (events || []).filter(e => e.finished && e.data_checked);
+  if (done.length) return done.sort((a,b)=> b.id - a.id)[0].id; // ล่าสุดที่ปิดแล้ว
+  const cur = (events || []).find(e => e.is_current);           // ค่อย fallback มาที่กำลังเล่น
+  return cur ? cur.id : (events?.[0]?.id ?? 1);
 }
 
 /* ================= main ================= */
@@ -115,23 +110,24 @@ async function main() {
   const elems  = boot.elements || [];
 
   const gw = pickGW(events);
-  const gwMeta = events.find((e) => e.id === gw);
-  console.log(`ℹ️ Using GW=${gw} (is_current=${!!gwMeta?.is_current}, finished=${!!gwMeta?.finished}, data_checked=${!!gwMeta?.data_checked})`);
+  const gwMeta = events.find(e => e.id === gw);
+  console.log(`ℹ️ chosen GW=${gw} (finished=${!!gwMeta?.finished}, data_checked=${!!gwMeta?.data_checked}, is_current=${!!gwMeta?.is_current})`);
 
-  const teamsIdx   = Object.fromEntries(teams.map((t) => [t.id, {
+  const teamsIdx   = Object.fromEntries(teams.map(t => [t.id, {
     id: t.id, name: t.name, short_name: t.short_name,
     badge: `https://resources.premierleague.com/premierleague/badges/70/t${t.id}.png`,
   }]));
-  const playersIdx = Object.fromEntries(elems.map((p) => [p.id, p]));
+  const playersIdx = Object.fromEntries(elems.map(p => [p.id, p]));
 
   const [live, fixtures] = await Promise.all([
     fetchJson(FPL_LIVE(gw)),
     fetchJson(FPL_FIX(gw)).catch(() => [])
   ]);
+  console.log(`ℹ️ live.elements length for GW ${gw} = ${(live.elements || []).length}`);
 
   const played = (live.elements || [])
-    .filter((e) => +e.stats?.minutes > 0)
-    .map((e) => {
+    .filter(e => +e.stats?.minutes > 0)
+    .map(e => {
       const base = playersIdx[e.id] || {};
       const team = teamsIdx[base.team] || {};
       const role = roleBy(base.element_type);
@@ -174,17 +170,17 @@ async function main() {
   }
   const xiByTeam = {};
   for (const [tid, arr] of byTeam) {
-    const by = (want) => arr.filter((p) => p.role === want).sort((a, b) => b.minutes - a.minutes);
+    const by = want => arr.filter(p => p.role === want).sort((a,b)=> b.minutes - a.minutes);
     const gk = by("Goalkeeper").slice(0, 1);
     const df = by("Defender").slice(0, 4);
     const mf = by("Midfielder").slice(0, 3);
     const fw = by("Attacker").slice(0, 3);
     let xi = [...gk, ...df, ...mf, ...fw];
     if (xi.length < 11) {
-      const rest = arr.filter((p) => !xi.includes(p)).sort((a, b) => b.minutes - a.minutes);
+      const rest = arr.filter(p => !xi.includes(p)).sort((a,b)=> b.minutes - a.minutes);
       xi = xi.concat(rest.slice(0, 11 - xi.length));
     }
-    xiByTeam[tid] = xi.map((p) => p.id);
+    xiByTeam[tid] = xi.map(p => p.id);
   }
 
   const payload = {
@@ -203,7 +199,7 @@ async function main() {
   console.log("✅ Wrote public/data/fpl_current.json");
 }
 
-main().catch((err) => {
+main().catch(err => {
   console.error("❌ Failed:", err);
   process.exit(1);
 });
