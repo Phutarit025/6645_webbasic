@@ -1,37 +1,52 @@
-name: FPL Weekly (Single File)
+name: Build & Deploy Pages
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 2 * * 2"  # อังคาร 09:00 เวลาไทย (GitHub ใช้ UTC)
-  push:
-    paths:
-      - ".github/workflows/fpl-weekly-single.yml"
-      - "scripts/**"
-      - "public/data/.gitkeep"
+    - cron: '0 16 * * 2'   # ตัวอย่าง: ทุกคืนอังคาร 23:00 ICT
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Use Node.js 20
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
-      - name: Generate current snapshot
-        run: node scripts/fpl_tuesday_single.mjs
+      # ถ้ามี package.json
+      - name: Install deps
+        run: npm ci
 
-      - name: Commit snapshot
-        uses: stefanzweifel/git-auto-commit-action@v5
+      # ✅ สร้างไฟล์สแน็ปช็อตใหม่ทุกครั้ง
+      - name: Generate FPL snapshot
+        run: node scripts/build-fpl.mjs
+
+      # ✅ พิมพ์หัวไฟล์ยืนยันว่าใหม่จริง
+      - name: Show snapshot head
+        run: |
+          ls -la public/data || true
+          head -n 20 public/data/fpl_current.json || true
+          node -e "const j=require('./public/data/fpl_current.json'); console.log('generated_at:', j.generated_at)"
+
+      # ✅ อัปโหลดโฟลเดอร์ที่หน้าเว็บใช้จริง (ให้มี public/data/fpl_current.json อยู่ในนี้)
+      - uses: actions/upload-pages-artifact@v3
         with:
-          commit_message: "chore(data): update FPL current snapshot"
-          file_pattern: "public/data/fpl_current.json"
+          path: .   # หรือ dist ถ้าคุณ build ไปที่ dist
 
-
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
