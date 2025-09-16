@@ -3,11 +3,10 @@ name: Update FPL snapshot
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "0 1 * * 2"   # ทุกวันอังคาร 01:00 UTC = 08:00 น. เวลาไทย (ICT)
-
+    - cron: "0 1 * * 2"   # ทุกวันอังคาร 01:00 UTC = 08:00 น. ICT
 
 permissions:
-  contents: write               # ต้องมีสิทธิ์เขียนไฟล์กลับเข้ารีโป
+  contents: write          # ให้สิทธิ์เขียนไฟล์กลับเข้า repo
 
 jobs:
   build:
@@ -16,25 +15,45 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0        # ให้เห็นไฟล์/ประวัติครบ จะได้ commit ได้
+          fetch-depth: 0
 
-      - name: Setup Node
+      - name: Setup Node 20
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: 20
 
-      # ถ้าไฟล์สคริปต์อยู่ที่ scripts/build-fpl.mjs ตามที่ส่งไว้ ให้รันแบบนี้
-      - name: Build latest FPL snapshot
-        run: node scripts/build-fpl.mjs
-
-      - name: Commit if changed
+      - name: Debug env (optional)
         run: |
-          if git diff --quiet -- public/data/fpl_current.json; then
-            echo "No changes in fpl_current.json"
-            exit 0
+          node -v
+          ls -la
+          echo "Branch: ${{ github.ref_name }}"
+
+      # รันสคริปต์ที่สร้างไฟล์ public/data/fpl_current.json
+      # รองรับชื่อไฟล์สคริปต์ที่เป็นไปได้หลายแบบ (เลือกตัวที่มีอยู่จริง)
+      - name: Build latest FPL snapshot
+        run: |
+          set -e
+          if [ -f scripts/build-fpl.mjs ]; then
+            node scripts/build-fpl.mjs
+          elif [ -f scripts/update-fpl.mjs ]; then
+            node scripts/update-fpl.mjs
+          elif [ -f scripts/fpl_tuesday_single.mjs ]; then
+            node scripts/fpl_tuesday_single.mjs
+          else
+            echo "❌ ไม่พบไฟล์สคริปต์ในโฟลเดอร์ scripts/"
+            ls -R
+            exit 1
           fi
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/fpl_current.json
-          git commit -m "chore(data): refresh fpl_current.json [skip ci]"
-          git push
+
+      - name: Commit & push if changed
+        run: |
+          # มีการเปลี่ยนไฟล์ไหม?
+          if git status --porcelain=1 -- public/data/fpl_current.json | grep -q .; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/data/fpl_current.json
+            git commit -m "chore(data): refresh fpl_current.json [skip ci]"
+            git push
+          else
+            echo "No changes in public/data/fpl_current.json"
+          fi
