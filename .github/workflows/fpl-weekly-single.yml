@@ -1,52 +1,40 @@
-name: Build & Deploy Pages
+name: Update FPL snapshot
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
   schedule:
-    - cron: '0 16 * * 2'   # ตัวอย่าง: ทุกคืนอังคาร 23:00 ICT
+    - cron: "0 1 * * 2"   # ทุกวันอังคาร 01:00 UTC = 08:00 น. เวลาไทย (ICT)
+
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write               # ต้องมีสิทธิ์เขียนไฟล์กลับเข้ารีโป
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          fetch-depth: 0        # ให้เห็นไฟล์/ประวัติครบ จะได้ commit ได้
 
-      # ถ้ามี package.json
-      - name: Install deps
-        run: npm ci
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
-      # ✅ สร้างไฟล์สแน็ปช็อตใหม่ทุกครั้ง
-      - name: Generate FPL snapshot
+      # ถ้าไฟล์สคริปต์อยู่ที่ scripts/build-fpl.mjs ตามที่ส่งไว้ ให้รันแบบนี้
+      - name: Build latest FPL snapshot
         run: node scripts/build-fpl.mjs
 
-      # ✅ พิมพ์หัวไฟล์ยืนยันว่าใหม่จริง
-      - name: Show snapshot head
+      - name: Commit if changed
         run: |
-          ls -la public/data || true
-          head -n 20 public/data/fpl_current.json || true
-          node -e "const j=require('./public/data/fpl_current.json'); console.log('generated_at:', j.generated_at)"
-
-      # ✅ อัปโหลดโฟลเดอร์ที่หน้าเว็บใช้จริง (ให้มี public/data/fpl_current.json อยู่ในนี้)
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .   # หรือ dist ถ้าคุณ build ไปที่ dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          if git diff --quiet -- public/data/fpl_current.json; then
+            echo "No changes in fpl_current.json"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/fpl_current.json
+          git commit -m "chore(data): refresh fpl_current.json [skip ci]"
+          git push
