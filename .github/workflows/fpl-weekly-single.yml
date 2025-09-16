@@ -16,12 +16,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1) เอาสคริปต์จาก main
+      # ✅ checkout ให้เป็น 'main' จริง ๆ (ไม่ใช่ detached)
       - name: Checkout main
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
-          path: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -29,38 +29,19 @@ jobs:
           node-version: "20"
 
       - name: Build latest FPL snapshot
-        working-directory: main
-        run: node scripts/build-fpl.mjs
-
-      # 2) เอาสาขาที่หน้าเว็บใช้ (gh-pages)
-      - name: Checkout gh-pages
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          fetch-depth: 0
-          path: site
-
-      # 3) คัดลอกไฟล์ไปยังที่หน้าเว็บใช้จริง
-      - name: Copy JSON into gh-pages
         run: |
-          mkdir -p site/public/data
-          cp -f main/public/data/fpl_current.json site/public/data/fpl_current.json
+          node scripts/build-fpl.mjs
+          echo "----- preview (head) -----"
+          head -n 25 public/data/fpl_current.json || true
 
-      # 4) คอมมิตเฉพาะเมื่อไฟล์เปลี่ยนจริง + ดึงรีโมตก่อนพุช
-      - name: Commit & push if changed (gh-pages)
-        working-directory: site
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # ✅ commit/push กลับขึ้น main
+      - name: Commit & push if changed (main)
         run: |
-          # อัปเดตฐานให้ใหม่สุดก่อน
-          git fetch origin gh-pages
-          git checkout gh-pages
-          # พยายาม fast-forward ก่อน ถ้าไม่ได้ค่อย rebase
-          git pull --ff-only origin gh-pages || git pull --rebase origin gh-pages
+          # กันกรณีฐานไม่ทัน
+          git pull --rebase origin main || true
 
-          # ไฟล์ไม่เปลี่ยนก็จบ
-          if git diff --quiet HEAD -- public/data/fpl_current.json; then
-            echo "No changes in gh-pages/public/data/fpl_current.json"
+          if git diff --quiet -- public/data/fpl_current.json; then
+            echo "No changes in public/data/fpl_current.json"
             exit 0
           fi
 
@@ -68,6 +49,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/data/fpl_current.json
           git commit -m "chore(data): refresh fpl_current.json [skip ci]"
-
-          # พุช ถ้าโดนปฏิเสธเพราะมี commit ใหม่ ก็ rebase แล้วพุชอีกครั้ง
-          git push origin HEAD:gh-pages || (git pull --rebase origin gh-pages && git push origin HEAD:gh-pages)
+          git push origin HEAD:main
