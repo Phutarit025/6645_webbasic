@@ -1,27 +1,41 @@
 import fs from "node:fs";
 import path from "node:path";
 
-// ===== FPL endpoints (ใส่ตัวกันแคชด้วย ?t=timestamp) ======================
+/* ================= FPL endpoints + กันแคช ================= */
 const stamp = () => `t=${Date.now()}`;
 const FPL_BOOT = `https://fantasy.premierleague.com/api/bootstrap-static/?${stamp()}`;
 const FPL_LIVE = (gw) => `https://fantasy.premierleague.com/api/event/${gw}/live/?${stamp()}`;
 const FPL_FIX  = (gw) => `https://fantasy.premierleague.com/api/fixtures/?event=${gw}&${stamp()}`;
 
-// ===== helpers ===============================================================
-const clamp = (v, min=0, max=100) => Math.max(min, Math.min(max, +v||0));
-const per90  = (v, mins) => ((+v||0) * 90) / Math.max(1, +mins||0);
-const roleBy = (t) => ({1:"Goalkeeper",2:"Defender",3:"Midfielder",4:"Attacker"}[t] || "Attacker");
+/* ================= helpers ================= */
+const clamp = (v, min = 0, max = 100) => Math.max(min, Math.min(max, +v || 0));
+const per90  = (v, mins) => ((+v || 0) * 90) / Math.max(1, +mins || 0);
+const roleBy = (t) => ({ 1: "Goalkeeper", 2: "Defender", 3: "Midfielder", 4: "Attacker" }[t] || "Attacker");
 
-async function fetchJson(url) {
-  const r = await fetch(url, { headers: { "cache-control": "no-cache" } });
-  if (!r.ok) {
-    const text = await r.text().catch(()=> "");
-    throw new Error(`Fetch ${url} -> HTTP ${r.status} ${r.statusText} :: ${text.slice(0,150)}`);
+async function fetchJson(url, tries = 3) {
+  let lastErr;
+  for (let i = 0; i < tries; i++) {
+    try {
+      const r = await fetch(url, { headers: { "cache-control": "no-cache" } });
+      if (!r.ok) {
+        const tx = await r.text().catch(() => "");
+        throw new Error(`HTTP ${r.status} ${r.statusText} :: ${tx.slice(0, 150)}`);
+      }
+      const ct = (r.headers.get("content-type") || "").toLowerCase();
+      if (!ct.includes("application/json")) {
+        const tx = await r.text();
+        throw new Error(`Non-JSON response: ${tx.slice(0, 120)}`);
+      }
+      return await r.json();
+    } catch (e) {
+      lastErr = e;
+      if (i < tries - 1) await new Promise((res) => setTimeout(res, 1000 * (i + 1)));
+    }
   }
-  return r.json();
+  throw lastErr;
 }
 
-// ===== น้ำหนัก TOTAL ตามตำแหน่ง (role-aware) =============================
+/* ============ น้ำหนัก TOTAL ตามตำแหน่ง (role-aware) ============ */
 const ROLE_TOTAL_WEIGHTS = {
   Goalkeeper: { ATT: 0.10, CRE: 0.10, DEF: 0.45, FIT: 0.25, CTRL: 0.10 },
   Defender:   { ATT: 0.18, CRE: 0.12, DEF: 0.40, FIT: 0.20, CTRL: 0.10 },
@@ -29,8 +43,8 @@ const ROLE_TOTAL_WEIGHTS = {
   Attacker:   { ATT: 0.42, CRE: 0.23, DEF: 0.05, FIT: 0.20, CTRL: 0.10 },
 };
 
-// ===== คำนวณพลังราย GW จาก /event/{gw}/live (รองรับ role) ================
-function powersFromLive(stats, role="Attacker") {
+/* ============ คำนวณค่าสมรรถนะราย GW จาก /live (0..100) ============ */
+function powersFromLive(stats, role = "Attacker") {
   const m    = +stats.minutes || 0;
   const g90  = per90(stats.goals_scored, m);
   const a90  = per90(stats.assists, m);
@@ -46,67 +60,62 @@ function powersFromLive(stats, role="Attacker") {
   const r    = +stats.red_cards || 0;
   const pm   = +stats.penalties_missed || 0;
   const og   = +stats.own_goals || 0;
-  const penSaved = +stats.penalties_saved || 0; // GK
+  const penSaved = +stats.penalties_saved || 0; // GK ชอบอันนี้
 
-  // 5 แกนหลัก (0..100)
-  const ATT  = clamp(62*g90 + 26*a90 + 5*sh90 + 0.06*thr);
-  const CRE  = clamp(28*a90 + 0.65*crea + 0.10*infl);
-  const DEF  = clamp(20*cs + 11*sv90 + 6*penSaved - 7*gc90 + 0.06*infl);
-  const FIT  = clamp(Math.min(1, m/90) * 100);
-  const CTRL = clamp(95 - (2*y + 8*r + 5*pm + 6*og));
+  const ATT  = clamp(62 * g90 + 26 * a90 + 5 * sh90 + 0.06 * thr);
+  const CRE  = clamp(28 * a90 + 0.65 * crea + 0.10 * infl);
+  const DEF  = clamp(20 * cs + 11 * sv90 + 6 * penSaved - 7 * gc90 + 0.06 * infl);
+  const FIT  = clamp(Math.min(1, m / 90) * 100);
+  const CTRL = clamp(95 - (2 * y + 8 * r + 5 * pm + 6 * og));
 
   const w = ROLE_TOTAL_WEIGHTS[role] || ROLE_TOTAL_WEIGHTS.Attacker;
-  const TOTAL = Math.round(ATT*w.ATT + CRE*w.CRE + DEF*w.DEF + FIT*w.FIT + CTRL*w.CTRL);
+  const TOTAL = Math.round(ATT * w.ATT + CRE * w.CRE + DEF * w.DEF + FIT * w.FIT + CTRL * w.CTRL);
 
   return { ATT, CRE, DEF, FIT, CTRL, TOTAL };
 }
 
-// ===== เลือก GW: เน้น is_current ก่อน แล้วค่อย fallback ====================
+/* ============ เลือก GW: เอาที่กำลังเล่นก่อน, ไม่งั้นล่าสุดที่ปิด ============ */
 function pickGW(events) {
-  const cur = (events || []).find(e => e.is_current);
-  if (cur) return cur.id; // ใช้ GW ที่กำลังเล่น (จะได้ข้อมูลใหม่/ระหว่างแข่ง)
-  const done = (events || []).filter(e => e.finished && e.data_checked);
-  if (done.length) return done.sort((a,b)=> b.id - a.id)[0].id; // ล่าสุดที่ปิดแล้ว
+  const cur = (events || []).find((e) => e.is_current);
+  if (cur) return cur.id;
+  const done = (events || []).filter((e) => e.finished && e.data_checked);
+  if (done.length) return done.sort((a, b) => b.id - a.id)[0].id;
   return events?.[0]?.id ?? 1;
 }
 
-async function main(){
-  // bootstrap
+/* ================= main ================= */
+async function main() {
   const boot = await fetchJson(FPL_BOOT);
   const events = boot.events || [];
   const teams  = boot.teams  || [];
-  const elems  = boot.elements|| [];
+  const elems  = boot.elements || [];
 
   const gw = pickGW(events);
-  const gwMeta = events.find(e => e.id === gw);
-  console.log(`ℹ️  Using GW=${gw} (is_current=${!!gwMeta?.is_current}, finished=${!!gwMeta?.finished}, data_checked=${!!gwMeta?.data_checked})`);
+  const gwMeta = events.find((e) => e.id === gw);
+  console.log(`ℹ️ Using GW=${gw} (is_current=${!!gwMeta?.is_current}, finished=${!!gwMeta?.finished}, data_checked=${!!gwMeta?.data_checked})`);
 
-  // index
-  const teamsIdx   = Object.fromEntries(teams.map(t => [t.id, {
+  const teamsIdx   = Object.fromEntries(teams.map((t) => [t.id, {
     id: t.id, name: t.name, short_name: t.short_name,
-    badge: `https://resources.premierleague.com/premierleague/badges/70/t${t.id}.png`
+    badge: `https://resources.premierleague.com/premierleague/badges/70/t${t.id}.png`,
   }]));
-  const playersIdx = Object.fromEntries(elems.map(p => [p.id, p]));
+  const playersIdx = Object.fromEntries(elems.map((p) => [p.id, p]));
 
-  // live + fixtures
   const [live, fixtures] = await Promise.all([
     fetchJson(FPL_LIVE(gw)),
-    fetchJson(FPL_FIX(gw)).catch(()=>[])
+    fetchJson(FPL_FIX(gw)).catch(() => []),
   ]);
 
-  // เฉพาะผู้ลงสนามจริง
-  const played = (live.elements||[])
-    .filter(e => +e.stats?.minutes > 0)
-    .map(e => {
+  const played = (live.elements || [])
+    .filter((e) => +e.stats?.minutes > 0)
+    .map((e) => {
       const base = playersIdx[e.id] || {};
       const team = teamsIdx[base.team] || {};
       const role = roleBy(base.element_type);
-      const pow  = powersFromLive(e.stats||{}, role);
-
+      const pow  = powersFromLive(e.stats || {}, role);
       return {
         id: e.id,
         code: base.code,
-        name: `${base.first_name||""} ${base.second_name||base.web_name||""}`.trim(),
+        name: `${base.first_name || ""} ${base.second_name || base.web_name || ""}`.trim(),
         team_id: base.team,
         team: team.name,
         role,
@@ -127,13 +136,13 @@ async function main(){
           creativity: parseFloat(e.stats.creativity || 0),
           threat: parseFloat(e.stats.threat || 0),
           total_points: +e.stats.total_points || 0,
-          bonus: +e.stats.bonus || 0
+          bonus: +e.stats.bonus || 0,
         },
-        powers_gw: pow
+        powers_gw: pow,
       };
     });
 
-  // XI ต่อทีมจากผู้ที่ลงจริง (4-3-3)
+  // XI ต่อทีมแบบ 4-3-3 จากผู้ที่ลงจริง
   const byTeam = new Map();
   for (const p of played) {
     if (!byTeam.has(p.team_id)) byTeam.set(p.team_id, []);
@@ -141,17 +150,17 @@ async function main(){
   }
   const xiByTeam = {};
   for (const [tid, arr] of byTeam) {
-    const by = want => arr.filter(p=>p.role===want).sort((a,b)=> b.minutes - a.minutes);
-    const gk = by("Goalkeeper").slice(0,1);
-    const df = by("Defender").slice(0,4);
-    const mf = by("Midfielder").slice(0,3);
-    const fw = by("Attacker").slice(0,3);
+    const by = (want) => arr.filter((p) => p.role === want).sort((a, b) => b.minutes - a.minutes);
+    const gk = by("Goalkeeper").slice(0, 1);
+    const df = by("Defender").slice(0, 4);
+    const mf = by("Midfielder").slice(0, 3);
+    const fw = by("Attacker").slice(0, 3);
     let xi = [...gk, ...df, ...mf, ...fw];
     if (xi.length < 11) {
-      const rest = arr.filter(p=>!xi.includes(p)).sort((a,b)=> b.minutes - a.minutes);
+      const rest = arr.filter((p) => !xi.includes(p)).sort((a, b) => b.minutes - a.minutes);
       xi = xi.concat(rest.slice(0, 11 - xi.length));
     }
-    xiByTeam[tid] = xi.map(p => p.id);
+    xiByTeam[tid] = xi.map((p) => p.id);
   }
 
   const payload = {
@@ -161,7 +170,7 @@ async function main(){
     teams: Object.values(teamsIdx),
     players_played: played,
     xiByTeam,
-    fixtures
+    fixtures,
   };
 
   const outDir = path.join(process.cwd(), "public", "data");
@@ -170,4 +179,7 @@ async function main(){
   console.log("✅ Wrote public/data/fpl_current.json");
 }
 
-main().catch(err => { console.error("❌ Failed:", err); process.exit(1); });
+main().catch((err) => {
+  console.error("❌ Failed:", err);
+  process.exit(1);
+});
