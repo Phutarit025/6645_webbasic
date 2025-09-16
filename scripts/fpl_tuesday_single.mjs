@@ -1,16 +1,27 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const FPL_BOOT = "https://fantasy.premierleague.com/api/bootstrap-static/";
-const FPL_LIVE = (gw) => `https://fantasy.premierleague.com/api/event/${gw}/live/`;
-const FPL_FIX  = (gw) => `https://fantasy.premierleague.com/api/fixtures/?event=${gw}`;
+// ===== FPL endpoints (ใส่ตัวกันแคชด้วย ?t=timestamp) ======================
+const stamp = () => `t=${Date.now()}`;
+const FPL_BOOT = `https://fantasy.premierleague.com/api/bootstrap-static/?${stamp()}`;
+const FPL_LIVE = (gw) => `https://fantasy.premierleague.com/api/event/${gw}/live/?${stamp()}`;
+const FPL_FIX  = (gw) => `https://fantasy.premierleague.com/api/fixtures/?event=${gw}&${stamp()}`;
 
-// helpers
+// ===== helpers ===============================================================
 const clamp = (v, min=0, max=100) => Math.max(min, Math.min(max, +v||0));
 const per90  = (v, mins) => ((+v||0) * 90) / Math.max(1, +mins||0);
 const roleBy = (t) => ({1:"Goalkeeper",2:"Defender",3:"Midfielder",4:"Attacker"}[t] || "Attacker");
 
-// === NEW: น้ำหนัก TOTAL ตามตำแหน่ง (role-aware) ==========================
+async function fetchJson(url) {
+  const r = await fetch(url, { headers: { "cache-control": "no-cache" } });
+  if (!r.ok) {
+    const text = await r.text().catch(()=> "");
+    throw new Error(`Fetch ${url} -> HTTP ${r.status} ${r.statusText} :: ${text.slice(0,150)}`);
+  }
+  return r.json();
+}
+
+// ===== น้ำหนัก TOTAL ตามตำแหน่ง (role-aware) =============================
 const ROLE_TOTAL_WEIGHTS = {
   Goalkeeper: { ATT: 0.10, CRE: 0.10, DEF: 0.45, FIT: 0.25, CTRL: 0.10 },
   Defender:   { ATT: 0.18, CRE: 0.12, DEF: 0.40, FIT: 0.20, CTRL: 0.10 },
@@ -18,8 +29,7 @@ const ROLE_TOTAL_WEIGHTS = {
   Attacker:   { ATT: 0.42, CRE: 0.23, DEF: 0.05, FIT: 0.20, CTRL: 0.10 },
 };
 
-// พลัง "ราย GW" จาก /event/{gw}/live (role-aware)
-// UPDATED: รับ role และคำนวณ TOTAL ด้วยน้ำหนักตามตำแหน่ง
+// ===== คำนวณพลังราย GW จาก /event/{gw}/live (รองรับ role) ================
 function powersFromLive(stats, role="Attacker") {
   const m    = +stats.minutes || 0;
   const g90  = per90(stats.goals_scored, m);
@@ -36,49 +46,52 @@ function powersFromLive(stats, role="Attacker") {
   const r    = +stats.red_cards || 0;
   const pm   = +stats.penalties_missed || 0;
   const og   = +stats.own_goals || 0;
-  const penSaved = +stats.penalties_saved || 0; // เผื่อ GK
+  const penSaved = +stats.penalties_saved || 0; // GK
 
-  // 5 แกนหลัก (สเกลให้อยู่ 0-100 ด้วย clamp)
-  const ATT  = clamp(62*g90 + 26*a90 + 5*sh90 + 0.06*thr);              // จบสกอร์/คุกคาม
-  const CRE  = clamp(28*a90 + 0.65*crea + 0.10*infl);                   // สร้างสรรค์เกม
-  const DEF  = clamp(20*cs + 11*sv90 + 6*penSaved - 7*gc90 + 0.06*infl);// เกมรับ (GK เด่นที่ saves)
-  const FIT  = clamp(Math.min(1, m/90) * 100);                          // ความฟิต (นาที/90)
-  const CTRL = clamp(95 - (2*y + 8*r + 5*pm + 6*og));                   // วินัย/คุมเกม
+  // 5 แกนหลัก (0..100)
+  const ATT  = clamp(62*g90 + 26*a90 + 5*sh90 + 0.06*thr);
+  const CRE  = clamp(28*a90 + 0.65*crea + 0.10*infl);
+  const DEF  = clamp(20*cs + 11*sv90 + 6*penSaved - 7*gc90 + 0.06*infl);
+  const FIT  = clamp(Math.min(1, m/90) * 100);
+  const CTRL = clamp(95 - (2*y + 8*r + 5*pm + 6*og));
 
-  // TOTAL ตามตำแหน่ง
   const w = ROLE_TOTAL_WEIGHTS[role] || ROLE_TOTAL_WEIGHTS.Attacker;
-  const TOTAL = Math.round(
-    ATT*w.ATT + CRE*w.CRE + DEF*w.DEF + FIT*w.FIT + CTRL*w.CTRL
-  );
+  const TOTAL = Math.round(ATT*w.ATT + CRE*w.CRE + DEF*w.DEF + FIT*w.FIT + CTRL*w.CTRL);
 
   return { ATT, CRE, DEF, FIT, CTRL, TOTAL };
 }
 
-// เลือก GW ล่าสุดที่จบ (finished+data_checked) หรือ fallback -> is_current
-function pickLatestFinishedGW(events) {
-  const done = (events||[]).filter(e => e.finished && e.data_checked);
-  if (done.length) return done.sort((a,b)=> b.id - a.id)[0].id;
-  const cur = (events||[]).find(e => e.is_current);
-  return cur ? cur.id : (events?.[0]?.id ?? 1);
+// ===== เลือก GW: เน้น is_current ก่อน แล้วค่อย fallback ====================
+function pickGW(events) {
+  const cur = (events || []).find(e => e.is_current);
+  if (cur) return cur.id; // ใช้ GW ที่กำลังเล่น (จะได้ข้อมูลใหม่/ระหว่างแข่ง)
+  const done = (events || []).filter(e => e.finished && e.data_checked);
+  if (done.length) return done.sort((a,b)=> b.id - a.id)[0].id; // ล่าสุดที่ปิดแล้ว
+  return events?.[0]?.id ?? 1;
 }
 
 async function main(){
-  const boot = await fetch(FPL_BOOT).then(r=>r.json());
+  // bootstrap
+  const boot = await fetchJson(FPL_BOOT);
   const events = boot.events || [];
   const teams  = boot.teams  || [];
   const elems  = boot.elements|| [];
 
-  const gw = pickLatestFinishedGW(events);
+  const gw = pickGW(events);
+  const gwMeta = events.find(e => e.id === gw);
+  console.log(`ℹ️  Using GW=${gw} (is_current=${!!gwMeta?.is_current}, finished=${!!gwMeta?.finished}, data_checked=${!!gwMeta?.data_checked})`);
 
+  // index
   const teamsIdx   = Object.fromEntries(teams.map(t => [t.id, {
     id: t.id, name: t.name, short_name: t.short_name,
     badge: `https://resources.premierleague.com/premierleague/badges/70/t${t.id}.png`
   }]));
   const playersIdx = Object.fromEntries(elems.map(p => [p.id, p]));
 
+  // live + fixtures
   const [live, fixtures] = await Promise.all([
-    fetch(FPL_LIVE(gw)).then(r=>r.json()),
-    fetch(FPL_FIX(gw)).then(r=>r.json()).catch(()=>[])
+    fetchJson(FPL_LIVE(gw)),
+    fetchJson(FPL_FIX(gw)).catch(()=>[])
   ]);
 
   // เฉพาะผู้ลงสนามจริง
@@ -88,8 +101,6 @@ async function main(){
       const base = playersIdx[e.id] || {};
       const team = teamsIdx[base.team] || {};
       const role = roleBy(base.element_type);
-
-      // UPDATED: ส่ง role เข้าไปคำนวณ
       const pow  = powersFromLive(e.stats||{}, role);
 
       return {
@@ -122,7 +133,7 @@ async function main(){
       };
     });
 
-  // XI ต่อทีมจากผู้ที่ลงจริง
+  // XI ต่อทีมจากผู้ที่ลงจริง (4-3-3)
   const byTeam = new Map();
   for (const p of played) {
     if (!byTeam.has(p.team_id)) byTeam.set(p.team_id, []);
@@ -145,7 +156,7 @@ async function main(){
 
   const payload = {
     generated_at: new Date().toISOString(),
-    note: "Current snapshot (Tuesday run). Replace weekly.",
+    note: "Current snapshot (auto run).",
     gw,
     teams: Object.values(teamsIdx),
     players_played: played,
