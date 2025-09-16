@@ -1,4 +1,4 @@
-name: Update FPL snapshot
+name: Update FPL snapshot (to gh-pages)
 
 on:
   workflow_dispatch: {}
@@ -16,12 +16,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # ✅ checkout ให้เป็น 'main' จริง ๆ (ไม่ใช่ detached)
+      # 1) ดึงสคริปต์จาก main
       - name: Checkout main
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
+          path: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -29,24 +30,37 @@ jobs:
           node-version: "20"
 
       - name: Build latest FPL snapshot
+        working-directory: main
         run: |
           node scripts/build-fpl.mjs
-          echo "----- preview (head) -----"
-          head -n 25 public/data/fpl_current.json || true
+          echo "----- preview -----"
+          head -n 30 public/data/fpl_current.json || true
 
-      # ✅ commit/push กลับขึ้น main
-      - name: Commit & push if changed (main)
+      # 2) ดึงสาขาที่เว็บใช้
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+          path: site
+
+      # 3) คัดลอกไฟล์ไปยัง gh-pages
+      - name: Copy JSON into gh-pages
         run: |
-          # กันกรณีฐานไม่ทัน
-          git pull --rebase origin main || true
+          mkdir -p site/public/data
+          cp -f main/public/data/fpl_current.json site/public/data/fpl_current.json
 
-          if git diff --quiet -- public/data/fpl_current.json; then
-            echo "No changes in public/data/fpl_current.json"
+      # 4) คอมมิตเมื่อเปลี่ยนจริง แล้วพุช
+      - name: Commit & push if changed (gh-pages)
+        working-directory: site
+        run: |
+          git pull --rebase origin gh-pages || true
+          if git diff --quiet HEAD -- public/data/fpl_current.json; then
+            echo "No changes in gh-pages/public/data/fpl_current.json"
             exit 0
           fi
-
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/data/fpl_current.json
           git commit -m "chore(data): refresh fpl_current.json [skip ci]"
-          git push origin HEAD:main
+          git push origin HEAD:gh-pages
