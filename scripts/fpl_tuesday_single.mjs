@@ -12,15 +12,35 @@ const clamp = (v, min = 0, max = 100) => Math.max(min, Math.min(max, +v || 0));
 const per90  = (v, mins) => ((+v || 0) * 90) / Math.max(1, +mins || 0);
 const roleBy = (t) => ({ 1: "Goalkeeper", 2: "Defender", 3: "Midfielder", 4: "Attacker" }[t] || "Attacker");
 
-async function fetchJson(url, tries = 3) {
+/**
+ * ดึง JSON พร้อม retry/backoff และรองรับ 429 (Retry-After)
+ */
+async function fetchJson(url, tries = 5) {
   let lastErr;
-  for (let i = 0; i < tries; i++) {
+  for (let i = 1; i <= tries; i++) {
     try {
-      const r = await fetch(url, { headers: { "cache-control": "no-cache" } });
+      const r = await fetch(url, {
+        headers: {
+          "cache-control": "no-cache",
+          // UA เฉพาะกิจ เพื่อหลีกเลี่ยงบางเซิร์ฟเวอร์บล็อก UA ว่างๆ
+          "user-agent": "gh-actions-fpl-snapshot/1.0 (+github)"
+        }
+      });
+
+      // ถูก rate-limit: เคารพ Retry-After แล้วลองใหม่
+      if (r.status === 429) {
+        const ra = r.headers.get("retry-after");
+        const wait = Math.min(30000, (ra ? (+ra * 1000) : 0) || 3000 * i);
+        console.warn(`429 rate limited, wait ${wait}ms then retry...`);
+        await new Promise(res => setTimeout(res, wait));
+        continue;
+      }
+
       if (!r.ok) {
         const tx = await r.text().catch(() => "");
         throw new Error(`HTTP ${r.status} ${r.statusText} :: ${tx.slice(0, 150)}`);
       }
+
       const ct = (r.headers.get("content-type") || "").toLowerCase();
       if (!ct.includes("application/json")) {
         const tx = await r.text();
@@ -29,7 +49,11 @@ async function fetchJson(url, tries = 3) {
       return await r.json();
     } catch (e) {
       lastErr = e;
-      if (i < tries - 1) await new Promise((res) => setTimeout(res, 1000 * (i + 1)));
+      if (i < tries) {
+        const backoff = Math.min(15000, 500 * i * i); // quadratic backoff
+        console.warn(`fetchJson retry ${i}/${tries - 1} after ${backoff}ms :: ${e.message}`);
+        await new Promise(res => setTimeout(res, backoff));
+      }
     }
   }
   throw lastErr;
@@ -60,7 +84,7 @@ function powersFromLive(stats, role = "Attacker") {
   const r    = +stats.red_cards || 0;
   const pm   = +stats.penalties_missed || 0;
   const og   = +stats.own_goals || 0;
-  const penSaved = +stats.penalties_saved || 0; // GK ชอบอันนี้
+  const penSaved = +stats.penalties_saved || 0; // GK
 
   const ATT  = clamp(62 * g90 + 26 * a90 + 5 * sh90 + 0.06 * thr);
   const CRE  = clamp(28 * a90 + 0.65 * crea + 0.10 * infl);
@@ -102,7 +126,7 @@ async function main() {
 
   const [live, fixtures] = await Promise.all([
     fetchJson(FPL_LIVE(gw)),
-    fetchJson(FPL_FIX(gw)).catch(() => []),
+    fetchJson(FPL_FIX(gw)).catch(() => [])
   ]);
 
   const played = (live.elements || [])
