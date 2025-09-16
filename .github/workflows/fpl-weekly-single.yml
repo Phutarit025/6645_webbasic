@@ -3,57 +3,59 @@ name: Update FPL snapshot
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "0 1 * * 2"   # ทุกวันอังคาร 01:00 UTC = 08:00 น. ICT
+    - cron: "0 1 * * 2"   # อังคาร 08:00 ICT
 
 permissions:
-  contents: write          # ให้สิทธิ์เขียนไฟล์กลับเข้า repo
+  contents: write
+
+concurrency:
+  group: fpl-weekly-single
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      # 1) เอาสคริปต์จาก main
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          path: main
 
-      - name: Setup Node 20
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "20"
 
-      - name: Debug env (optional)
-        run: |
-          node -v
-          ls -la
-          echo "Branch: ${{ github.ref_name }}"
-
-      # รันสคริปต์ที่สร้างไฟล์ public/data/fpl_current.json
-      # รองรับชื่อไฟล์สคริปต์ที่เป็นไปได้หลายแบบ (เลือกตัวที่มีอยู่จริง)
       - name: Build latest FPL snapshot
-        run: |
-          set -e
-          if [ -f scripts/build-fpl.mjs ]; then
-            node scripts/build-fpl.mjs
-          elif [ -f scripts/update-fpl.mjs ]; then
-            node scripts/update-fpl.mjs
-          elif [ -f scripts/fpl_tuesday_single.mjs ]; then
-            node scripts/fpl_tuesday_single.mjs
-          else
-            echo "❌ ไม่พบไฟล์สคริปต์ในโฟลเดอร์ scripts/"
-            ls -R
-            exit 1
-          fi
+        working-directory: main
+        run: node scripts/build-fpl.mjs
 
-      - name: Commit & push if changed
+      # 2) เอาสาขาที่หน้าเว็บใช้ (gh-pages)
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+          path: site
+
+      # 3) คัดลอกไฟล์ไปยังที่หน้าเว็บใช้จริง
+      - name: Copy JSON into gh-pages
         run: |
-          # มีการเปลี่ยนไฟล์ไหม?
-          if git status --porcelain=1 -- public/data/fpl_current.json | grep -q .; then
-            git config user.name  "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add public/data/fpl_current.json
-            git commit -m "chore(data): refresh fpl_current.json [skip ci]"
-            git push
-          else
-            echo "No changes in public/data/fpl_current.json"
+          mkdir -p site/public/data
+          cp -f main/public/data/fpl_current.json site/public/data/fpl_current.json
+
+      # 4) คอมมิตเฉพาะเมื่อไฟล์เปลี่ยนจริง
+      - name: Commit & push if changed (gh-pages)
+        working-directory: site
+        run: |
+          if git diff --quiet -- public/data/fpl_current.json; then
+            echo "No changes in gh-pages/public/data/fpl_current.json"
+            exit 0
           fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/fpl_current.json
+          git commit -m "chore(data): refresh fpl_current.json [skip ci]"
+          git push
