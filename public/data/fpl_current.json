@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-10-28T02:25:00.898Z",
+  "generated_at": "2025-11-04T02:27:56.474Z",
   "note": "Current snapshot (auto run).",
   "gw": 9,
   "teams": [
@@ -11764,7 +11764,7 @@
         }
       ],
       "team_h_difficulty": 2,
-      "team_a_difficulty": 2,
+      "team_a_difficulty": 3,
       "pulse_id": 124877
     },
     {
@@ -12125,7 +12125,7 @@
         }
       ],
       "team_h_difficulty": 2,
-      "team_a_difficulty": 4,
+      "team_a_difficulty": 3,
       "pulse_id": 124875
     },
     {
@@ -12500,7 +12500,7 @@
           ]
         }
       ],
-      "team_h_difficulty": 3,
+      "team_h_difficulty": 2,
       "team_a_difficulty": 4,
       "pulse_id": 124879
     },
@@ -13662,7 +13662,7 @@
         }
       ],
       "team_h_difficulty": 3,
-      "team_a_difficulty": 4,
+      "team_a_difficulty": 5,
       "pulse_id": 124871
     },
     {
@@ -14032,7 +14032,7 @@
         }
       ],
       "team_h_difficulty": 4,
-      "team_a_difficulty": 4,
+      "team_a_difficulty": 3,
       "pulse_id": 124872
     },
     {
@@ -14397,8 +14397,8 @@
           ]
         }
       ],
-      "team_h_difficulty": 3,
-      "team_a_difficulty": 3,
+      "team_h_difficulty": 2,
+      "team_a_difficulty": 4,
       "pulse_id": 124873
     },
     {
@@ -14762,7 +14762,7 @@
         }
       ],
       "team_h_difficulty": 2,
-      "team_a_difficulty": 3,
+      "team_a_difficulty": 2,
       "pulse_id": 124880
     },
     {
