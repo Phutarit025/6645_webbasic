@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-10T03:47:51.369Z",
+  "generated_at": "2026-02-17T03:32:23.728Z",
   "note": "Current snapshot (auto run).",
   "gw": 25,
   "teams": [
@@ -11718,7 +11718,7 @@
         }
       ],
       "team_h_difficulty": 3,
-      "team_a_difficulty": 3,
+      "team_a_difficulty": 4,
       "pulse_id": 125038
     },
     {
@@ -12429,7 +12429,7 @@
         }
       ],
       "team_h_difficulty": 3,
-      "team_a_difficulty": 4,
+      "team_a_difficulty": 3,
       "pulse_id": 125032
     },
     {
@@ -13168,7 +13168,7 @@
           ]
         }
       ],
-      "team_h_difficulty": 2,
+      "team_h_difficulty": 3,
       "team_a_difficulty": 3,
       "pulse_id": 125035
     },
