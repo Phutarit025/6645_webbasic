@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T06:28:59.348Z",
+  "generated_at": "2026-06-23T04:55:30.322Z",
   "note": "Current snapshot (auto run).",
   "gw": 38,
   "teams": [
@@ -11686,7 +11686,7 @@
           ]
         }
       ],
-      "team_h_difficulty": 3,
+      "team_h_difficulty": 4,
       "team_a_difficulty": 4,
       "pulse_id": 125161
     },
