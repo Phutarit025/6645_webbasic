@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T02:15:17.615Z",
+  "generated_at": "2026-09-01T05:58:21.228Z",
   "note": "Current snapshot (auto run).",
   "gw": 1,
   "teams": [
@@ -145,7 +145,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 11.8,
         "creativity": 0,
         "threat": 0,
         "total_points": 6,
@@ -153,11 +153,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 31,
+        "CRE": 1.1800000000000002,
+        "DEF": 31.708,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 48
+        "TOTAL": 49
       }
     },
     {
@@ -180,19 +180,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 6.6,
+        "creativity": 1.8,
+        "threat": 1,
         "total_points": 5,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.06,
+        "CRE": 1.83,
+        "DEF": 20.396,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 37
+        "TOTAL": 38
       }
     },
     {
@@ -215,19 +215,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 11,
+        "creativity": 22.9,
+        "threat": 7,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.42,
+        "CRE": 15.985,
+        "DEF": 20.66,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 33
+        "TOTAL": 37
       }
     },
     {
@@ -250,19 +250,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 26,
+        "creativity": 12.2,
+        "threat": 4,
         "total_points": 9,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 29.25,
-        "CRE": 31.5,
-        "DEF": 20,
+        "ATT": 29.49,
+        "CRE": 42.03,
+        "DEF": 21.56,
         "FIT": 88.88888888888889,
         "CTRL": 95,
-        "TOTAL": 44
+        "TOTAL": 46
       }
     },
     {
@@ -285,16 +285,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 0.4,
+        "creativity": 0.5,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.365,
+        "DEF": 0.024,
         "FIT": 10,
         "CTRL": 95,
         "TOTAL": 12
@@ -320,19 +320,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 33.2,
+        "creativity": 26.8,
+        "threat": 13,
         "total_points": 11,
         "bonus": 2
       },
       "powers_gw": {
-        "ATT": 26,
-        "CRE": 28,
-        "DEF": 20,
+        "ATT": 26.78,
+        "CRE": 48.74,
+        "DEF": 21.992,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 46
+        "TOTAL": 49
       }
     },
     {
@@ -355,16 +355,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 14.4,
+        "creativity": 0.6,
         "threat": 0,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 1.83,
+        "DEF": 20.864,
         "FIT": 100,
         "CTRL": 95,
         "TOTAL": 38
@@ -390,19 +390,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 42.8,
+        "creativity": 26.1,
+        "threat": 33,
         "total_points": 9,
         "bonus": 1
       },
       "powers_gw": {
-        "ATT": 83.28358208955224,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 85.26358208955224,
+        "CRE": 21.245,
+        "DEF": 22.567999999999998,
         "FIT": 74.44444444444444,
         "CTRL": 95,
-        "TOTAL": 51
+        "TOTAL": 57
       }
     },
     {
@@ -425,19 +425,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 6.8,
+        "creativity": 6.4,
+        "threat": 2,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.12,
+        "CRE": 4.84,
+        "DEF": 20.408,
         "FIT": 74.44444444444444,
         "CTRL": 95,
-        "TOTAL": 27
+        "TOTAL": 29
       }
     },
     {
@@ -461,14 +461,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 1.8,
+        "threat": 1,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.06,
+        "CRE": 1.1700000000000002,
         "DEF": 0,
         "FIT": 15.555555555555555,
         "CTRL": 95,
@@ -495,19 +495,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 50.6,
+        "creativity": 41.5,
+        "threat": 31,
         "total_points": 11,
         "bonus": 3
       },
       "powers_gw": {
-        "ATT": 74.39999999999999,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 76.25999999999999,
+        "CRE": 32.035000000000004,
+        "DEF": 23.036,
         "FIT": 83.33333333333334,
         "CTRL": 95,
-        "TOTAL": 50
+        "TOTAL": 60
       }
     },
     {
@@ -530,19 +530,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 9.4,
+        "creativity": 43.1,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 28.955000000000002,
+        "DEF": 0.564,
         "FIT": 24.444444444444443,
         "CTRL": 95,
-        "TOTAL": 14
+        "TOTAL": 22
       }
     },
     {
@@ -565,16 +565,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 3.6,
+        "creativity": 1.2,
+        "threat": 14,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.84,
+        "CRE": 1.1400000000000001,
+        "DEF": 0.216,
         "FIT": 15.555555555555555,
         "CTRL": 95,
         "TOTAL": 13
@@ -600,19 +600,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 3.8,
+        "creativity": 2.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 1.875,
+        "DEF": 0.22799999999999998,
         "FIT": 24.444444444444443,
         "CTRL": 95,
-        "TOTAL": 14
+        "TOTAL": 15
       }
     },
     {
@@ -635,19 +635,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 37.2,
+        "creativity": 13.2,
+        "threat": 25,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 63.5,
+        "CRE": 12.3,
+        "DEF": 22.232,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 57
+        "TOTAL": 60
       }
     },
     {
@@ -670,7 +670,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 28.2,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -678,11 +678,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 5,
+        "CRE": 2.8200000000000003,
+        "DEF": 6.692,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 37
+        "TOTAL": 38
       }
     },
     {
@@ -705,19 +705,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 12,
+        "creativity": 1.1,
         "threat": 0,
         "total_points": -1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 1.9150000000000003,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 29
+        "TOTAL": 30
       }
     },
     {
@@ -740,7 +740,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 2,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -748,8 +748,8 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.2,
+        "DEF": 0.12,
         "FIT": 17.77777777777778,
         "CTRL": 95,
         "TOTAL": 13
@@ -776,14 +776,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 0.7,
         "threat": 0,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.45499999999999996,
         "DEF": 0,
         "FIT": 81.11111111111111,
         "CTRL": 95,
@@ -810,16 +810,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 2.2,
+        "creativity": 0.5,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.545,
+        "DEF": 0.132,
         "FIT": 17.77777777777778,
         "CTRL": 95,
         "TOTAL": 13
@@ -845,15 +845,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 9.2,
+        "creativity": 0.8,
+        "threat": 3,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.18,
+        "CRE": 1.44,
         "DEF": 0,
         "FIT": 90,
         "CTRL": 95,
@@ -880,15 +880,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 1,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 1.8,
+        "creativity": 0.1,
         "threat": 0,
         "total_points": -2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.24500000000000002,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 89,
@@ -915,19 +915,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 48.8,
+        "creativity": 53.5,
+        "threat": 29,
         "total_points": 8,
         "bonus": 1
       },
       "powers_gw": {
-        "ATT": 68.88888888888889,
-        "CRE": 0,
+        "ATT": 70.62888888888888,
+        "CRE": 39.655,
         "DEF": 0,
         "FIT": 90,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 58
       }
     },
     {
@@ -951,18 +951,18 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 16.3,
+        "threat": 8,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.48,
+        "CRE": 10.595,
         "DEF": 0,
         "FIT": 94.44444444444444,
         "CTRL": 95,
-        "TOTAL": 28
+        "TOTAL": 31
       }
     },
     {
@@ -985,16 +985,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 3.2,
+        "creativity": 1.8,
+        "threat": 7,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.42,
+        "CRE": 1.4900000000000002,
+        "DEF": 0.192,
         "FIT": 30,
         "CTRL": 95,
         "TOTAL": 16
@@ -1020,19 +1020,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 5,
+        "creativity": 11.3,
+        "threat": 4,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.24,
+        "CRE": 7.845000000000001,
         "DEF": 0,
         "FIT": 73.33333333333333,
         "CTRL": 95,
-        "TOTAL": 24
+        "TOTAL": 26
       }
     },
     {
@@ -1055,19 +1055,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 1.6,
+        "creativity": 2.4,
+        "threat": 1,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.06,
+        "CRE": 1.7200000000000002,
         "DEF": 0,
         "FIT": 90,
         "CTRL": 93,
-        "TOTAL": 27
+        "TOTAL": 28
       }
     },
     {
@@ -1090,19 +1090,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 9.4,
+        "creativity": 21.4,
+        "threat": 7,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.42,
+        "CRE": 14.85,
         "DEF": 0,
         "FIT": 81.11111111111111,
         "CTRL": 95,
-        "TOTAL": 26
+        "TOTAL": 30
       }
     },
     {
@@ -1125,15 +1125,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 11.2,
+        "creativity": 2.8,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 2.9399999999999995,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -1160,19 +1160,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 10.6,
+        "creativity": 11.6,
+        "threat": 2,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 8.6,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 32
       }
     },
     {
@@ -1195,7 +1195,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 4,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -1203,8 +1203,8 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.4,
+        "DEF": 0.24,
         "FIT": 8.88888888888889,
         "CTRL": 95,
         "TOTAL": 11
@@ -1230,19 +1230,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 1,
+        "creativity": 11,
         "threat": 0,
         "total_points": -2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 7.25,
         "DEF": 0,
         "FIT": 43.333333333333336,
         "CTRL": 87,
-        "TOTAL": 17
+        "TOTAL": 19
       }
     },
     {
@@ -1265,7 +1265,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 36.8,
         "creativity": 0,
         "threat": 0,
         "total_points": 2,
@@ -1273,11 +1273,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 30,
+        "CRE": 3.6799999999999997,
+        "DEF": 32.208,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 48
+        "TOTAL": 49
       }
     },
     {
@@ -1300,15 +1300,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 11.6,
+        "creativity": 0.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 1.355,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -1335,15 +1335,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 15.4,
+        "creativity": 1.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 2.3850000000000002,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -1370,15 +1370,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 7,
+        "creativity": 0.6,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 1.09,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -1405,19 +1405,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 6.2,
+        "creativity": 11.3,
+        "threat": 17,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.02,
+        "CRE": 7.965000000000001,
         "DEF": 0,
         "FIT": 97.77777777777777,
         "CTRL": 95,
-        "TOTAL": 29
+        "TOTAL": 31
       }
     },
     {
@@ -1440,19 +1440,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 40,
+        "creativity": 17.2,
+        "threat": 18,
         "total_points": 10,
         "bonus": 3
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
+        "ATT": 63.08,
+        "CRE": 15.18,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 51
       }
     },
     {
@@ -1475,19 +1475,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 11.4,
+        "creativity": 4.8,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 4.26,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 31
       }
     },
     {
@@ -1510,19 +1510,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 11,
+        "creativity": 14.3,
+        "threat": 17,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 1.02,
+        "CRE": 10.395,
+        "DEF": 20.66,
         "FIT": 82.22222222222221,
         "CTRL": 95,
-        "TOTAL": 29
+        "TOTAL": 32
       }
     },
     {
@@ -1545,19 +1545,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 4.6,
+        "creativity": 2.1,
         "threat": 0,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 1.8250000000000002,
+        "DEF": 20.276,
         "FIT": 83.33333333333334,
         "CTRL": 95,
-        "TOTAL": 29
+        "TOTAL": 30
       }
     },
     {
@@ -1580,15 +1580,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 0.2,
+        "creativity": 0.1,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 0.085,
         "DEF": 0,
         "FIT": 1.1111111111111112,
         "CTRL": 95,
@@ -1615,15 +1615,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 3.6,
+        "creativity": 0.6,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.75,
         "DEF": 0,
         "FIT": 16.666666666666664,
         "CTRL": 95,
@@ -1650,15 +1650,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 2.8,
+        "creativity": 0.6,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.6699999999999999,
         "DEF": 0,
         "FIT": 16.666666666666664,
         "CTRL": 95,
@@ -1685,19 +1685,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 19.4,
+        "creativity": 11.9,
+        "threat": 2,
         "total_points": 4,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 31.62162162162162,
-        "CRE": 34.054054054054056,
-        "DEF": 20,
+        "ATT": 31.741621621621622,
+        "CRE": 43.72905405405405,
+        "DEF": 21.164,
         "FIT": 82.22222222222221,
         "CTRL": 93,
-        "TOTAL": 48
+        "TOTAL": 50
       }
     },
     {
@@ -1720,7 +1720,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 31.4,
         "creativity": 0,
         "threat": 0,
         "total_points": 7,
@@ -1728,11 +1728,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 64,
+        "CRE": 3.14,
+        "DEF": 65.884,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 63
+        "TOTAL": 64
       }
     },
     {
@@ -1755,19 +1755,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 11.6,
+        "creativity": 21.5,
+        "threat": 17,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 1.02,
+        "CRE": 15.135,
+        "DEF": 20.696,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 38
+        "TOTAL": 40
       }
     },
     {
@@ -1790,19 +1790,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 47.2,
+        "creativity": 15.9,
+        "threat": 19,
         "total_points": 10,
         "bonus": 2
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 63.14,
+        "CRE": 15.055000000000001,
+        "DEF": 22.832,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 50
+        "TOTAL": 55
       }
     },
     {
@@ -1825,19 +1825,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 20,
+        "creativity": 0.9,
+        "threat": 35,
         "total_points": 8,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 2.1,
+        "CRE": 2.585,
+        "DEF": 21.2,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 38
+        "TOTAL": 39
       }
     },
     {
@@ -1860,19 +1860,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 33.8,
+        "creativity": 1.5,
+        "threat": 46,
         "total_points": 13,
         "bonus": 1
       },
       "powers_gw": {
-        "ATT": 74.39999999999999,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 77.16,
+        "CRE": 4.355,
+        "DEF": 22.028,
         "FIT": 83.33333333333334,
         "CTRL": 95,
-        "TOTAL": 48
+        "TOTAL": 49
       }
     },
     {
@@ -1896,14 +1896,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 0.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.195,
         "DEF": 0,
         "FIT": 15.555555555555555,
         "CTRL": 95,
@@ -1930,19 +1930,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 14.4,
+        "creativity": 11.8,
+        "threat": 59,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 3.54,
+        "CRE": 9.110000000000001,
+        "DEF": 20.864,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 33
+        "TOTAL": 36
       }
     },
     {
@@ -1965,19 +1965,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 1,
+        "creativity": 30.8,
+        "threat": 15,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.8999999999999999,
+        "CRE": 20.12,
+        "DEF": 20.06,
         "FIT": 73.33333333333333,
         "CTRL": 95,
-        "TOTAL": 27
+        "TOTAL": 33
       }
     },
     {
@@ -2000,19 +2000,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 7.6,
+        "creativity": 26.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 17.855000000000004,
+        "DEF": 0.45599999999999996,
         "FIT": 15.555555555555555,
         "CTRL": 95,
-        "TOTAL": 13
+        "TOTAL": 18
       }
     },
     {
@@ -2035,19 +2035,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 12.6,
+        "creativity": 46.2,
+        "threat": 13,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 35.45454545454545,
-        "CRE": 38.18181818181818,
-        "DEF": 20,
+        "ATT": 36.234545454545454,
+        "CRE": 69.4718181818182,
+        "DEF": 20.756,
         "FIT": 73.33333333333333,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 56
       }
     },
     {
@@ -2070,19 +2070,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 53.2,
+        "creativity": 38.8,
+        "threat": 24,
         "total_points": 9,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 63.44,
+        "CRE": 30.54,
+        "DEF": 23.192,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 50
+        "TOTAL": 59
       }
     },
     {
@@ -2105,16 +2105,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 2.2,
+        "creativity": 0.8,
+        "threat": 3,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.18,
+        "CRE": 0.74,
+        "DEF": 0.132,
         "FIT": 25.555555555555554,
         "CTRL": 95,
         "TOTAL": 15
@@ -2140,15 +2140,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 3.6,
+        "creativity": 1.6,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 1.4000000000000001,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -2175,19 +2175,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 10.6,
+        "creativity": 34.9,
+        "threat": 1,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.06,
+        "CRE": 23.744999999999997,
+        "DEF": 0.636,
         "FIT": 25.555555555555554,
         "CTRL": 95,
-        "TOTAL": 15
+        "TOTAL": 21
       }
     },
     {
@@ -2210,19 +2210,19 @@
         "penalties_missed": 1,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 2.2,
+        "creativity": 4,
+        "threat": 8,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.48,
+        "CRE": 2.8200000000000003,
+        "DEF": 20.132,
         "FIT": 91.11111111111111,
         "CTRL": 90,
-        "TOTAL": 28
+        "TOTAL": 29
       }
     },
     {
@@ -2245,19 +2245,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 2.2,
+        "creativity": 10.3,
+        "threat": 5,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.3,
+        "CRE": 6.915,
+        "DEF": 0.132,
         "FIT": 7.777777777777778,
         "CTRL": 95,
-        "TOTAL": 11
+        "TOTAL": 13
       }
     },
     {
@@ -2280,7 +2280,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 6.6,
         "creativity": 0,
         "threat": 0,
         "total_points": 6,
@@ -2288,8 +2288,8 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 0.66,
+        "DEF": 20.396,
         "FIT": 100,
         "CTRL": 95,
         "TOTAL": 44
@@ -2315,7 +2315,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 14.2,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -2323,8 +2323,8 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 1,
+        "CRE": 1.42,
+        "DEF": 1.8519999999999999,
         "FIT": 100,
         "CTRL": 95,
         "TOTAL": 35
@@ -2350,15 +2350,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 28.2,
+        "creativity": 2.8,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 4.640000000000001,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -2385,19 +2385,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 15.2,
+        "creativity": 7.3,
+        "threat": 6,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.36,
+        "CRE": 6.265000000000001,
+        "DEF": 20.912,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 38
+        "TOTAL": 39
       }
     },
     {
@@ -2420,19 +2420,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 40.6,
+        "creativity": 45.3,
+        "threat": 43,
         "total_points": 17,
         "bonus": 2
       },
       "powers_gw": {
         "ATT": 100,
-        "CRE": 32.72727272727273,
-        "DEF": 20,
+        "CRE": 66.23227272727273,
+        "DEF": 22.436,
         "FIT": 85.55555555555556,
         "CTRL": 95,
-        "TOTAL": 57
+        "TOTAL": 62
       }
     },
     {
@@ -2455,16 +2455,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 13.4,
+        "creativity": 6.4,
         "threat": 0,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 5.5,
+        "DEF": 20.804,
         "FIT": 100,
         "CTRL": 95,
         "TOTAL": 38
@@ -2490,19 +2490,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 8.2,
+        "creativity": 1.9,
+        "threat": 18,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 1.08,
+        "CRE": 2.0549999999999997,
+        "DEF": 0.49199999999999994,
         "FIT": 28.888888888888886,
         "CTRL": 95,
-        "TOTAL": 15
+        "TOTAL": 16
       }
     },
     {
@@ -2525,19 +2525,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 72.8,
+        "creativity": 13.4,
+        "threat": 59,
         "total_points": 16,
         "bonus": 3
       },
       "powers_gw": {
         "ATT": 100,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 15.990000000000002,
+        "DEF": 24.368,
         "FIT": 70,
         "CTRL": 95,
-        "TOTAL": 55
+        "TOTAL": 59
       }
     },
     {
@@ -2560,19 +2560,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 21,
+        "creativity": 56.9,
+        "threat": 8,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.48,
+        "CRE": 39.085,
+        "DEF": 21.26,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 32
+        "TOTAL": 43
       }
     },
     {
@@ -2595,19 +2595,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 19.8,
+        "creativity": 11.4,
+        "threat": 15,
         "total_points": 5,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 26,
-        "CRE": 28,
-        "DEF": 20,
+        "ATT": 26.9,
+        "CRE": 37.38999999999999,
+        "DEF": 21.188,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 48
+        "TOTAL": 50
       }
     },
     {
@@ -2630,19 +2630,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 33,
+        "creativity": 25.1,
+        "threat": 41,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 27.529411764705884,
-        "CRE": 29.647058823529413,
-        "DEF": 20,
+        "ATT": 29.989411764705885,
+        "CRE": 49.262058823529415,
+        "DEF": 21.98,
         "FIT": 94.44444444444444,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 53
       }
     },
     {
@@ -2666,18 +2666,18 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 15,
+        "threat": 6,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.36,
+        "CRE": 9.75,
         "DEF": 20,
         "FIT": 70,
         "CTRL": 93,
-        "TOTAL": 26
+        "TOTAL": 29
       }
     },
     {
@@ -2700,19 +2700,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 16.6,
+        "creativity": 26.3,
+        "threat": 6,
         "total_points": 7,
         "bonus": 1
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.36,
+        "CRE": 18.755000000000003,
+        "DEF": 20.996,
         "FIT": 85.55555555555556,
         "CTRL": 95,
-        "TOTAL": 35
+        "TOTAL": 37
       }
     },
     {
@@ -2735,16 +2735,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 0.2,
+        "creativity": 1.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.8650000000000001,
+        "DEF": 0.012,
         "FIT": 13.333333333333334,
         "CTRL": 95,
         "TOTAL": 12
@@ -2771,18 +2771,18 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 0.4,
+        "threat": 10,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.6,
+        "CRE": 0.26,
         "DEF": 0,
         "FIT": 28.888888888888886,
         "CTRL": 95,
-        "TOTAL": 15
+        "TOTAL": 16
       }
     },
     {
@@ -2805,7 +2805,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 21.4,
         "creativity": 0,
         "threat": 0,
         "total_points": 2,
@@ -2813,11 +2813,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 30,
+        "CRE": 2.14,
+        "DEF": 31.284,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 48
+        "TOTAL": 49
       }
     },
     {
@@ -2840,19 +2840,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 23.4,
+        "creativity": 16.8,
+        "threat": 19,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.14,
+        "CRE": 13.260000000000002,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 29
+        "TOTAL": 31
       }
     },
     {
@@ -2875,19 +2875,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 7.2,
+        "creativity": 9.8,
+        "threat": 6,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.36,
+        "CRE": 7.090000000000001,
         "DEF": 0,
         "FIT": 83.33333333333334,
         "CTRL": 95,
-        "TOTAL": 26
+        "TOTAL": 27
       }
     },
     {
@@ -2910,19 +2910,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 8.4,
+        "creativity": 12.3,
+        "threat": 11,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.6599999999999999,
+        "CRE": 8.835,
         "DEF": 0,
         "FIT": 71.11111111111111,
         "CTRL": 95,
-        "TOTAL": 24
+        "TOTAL": 25
       }
     },
     {
@@ -2945,19 +2945,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 6,
+        "creativity": 1.6,
+        "threat": 7,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.42,
+        "CRE": 1.6400000000000001,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 29
+        "TOTAL": 30
       }
     },
     {
@@ -2980,15 +2980,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 33.2,
+        "creativity": 2.2,
+        "threat": 2,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 4.75,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -3015,19 +3015,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 65.2,
+        "creativity": 41.3,
+        "threat": 54,
         "total_points": 13,
         "bonus": 3
       },
       "powers_gw": {
-        "ATT": 96.58536585365854,
-        "CRE": 30.731707317073173,
+        "ATT": 99.82536585365854,
+        "CRE": 64.09670731707317,
         "DEF": 0,
         "FIT": 91.11111111111111,
         "CTRL": 95,
-        "TOTAL": 63
+        "TOTAL": 73
       }
     },
     {
@@ -3050,19 +3050,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 3.4,
+        "creativity": 12,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 8.14,
+        "DEF": 0.204,
         "FIT": 27.77777777777778,
         "CTRL": 95,
-        "TOTAL": 15
+        "TOTAL": 17
       }
     },
     {
@@ -3085,19 +3085,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 5.2,
+        "creativity": 4.1,
+        "threat": 4,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.24,
+        "CRE": 3.185,
+        "DEF": 0.312,
         "FIT": 15.555555555555555,
         "CTRL": 95,
-        "TOTAL": 13
+        "TOTAL": 14
       }
     },
     {
@@ -3120,16 +3120,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 0.2,
+        "creativity": 0.4,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.28,
+        "DEF": 0.012,
         "FIT": 7.777777777777778,
         "CTRL": 95,
         "TOTAL": 11
@@ -3190,19 +3190,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 13.6,
+        "creativity": 21.9,
+        "threat": 33,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.98,
+        "CRE": 15.594999999999999,
         "DEF": 0,
         "FIT": 71.11111111111111,
         "CTRL": 93,
-        "TOTAL": 24
+        "TOTAL": 28
       }
     },
     {
@@ -3225,19 +3225,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 11.4,
+        "creativity": 4.2,
+        "threat": 2,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 3.8700000000000006,
         "DEF": 0,
         "FIT": 73.33333333333333,
         "CTRL": 95,
-        "TOTAL": 24
+        "TOTAL": 25
       }
     },
     {
@@ -3260,16 +3260,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 1.2,
+        "creativity": 0.3,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.12,
+        "CRE": 0.315,
+        "DEF": 0.072,
         "FIT": 8.88888888888889,
         "CTRL": 95,
         "TOTAL": 11
@@ -3295,19 +3295,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 51.2,
+        "creativity": 23,
+        "threat": 37,
         "total_points": 11,
         "bonus": 2
       },
       "powers_gw": {
-        "ATT": 88,
-        "CRE": 28,
+        "ATT": 90.22,
+        "CRE": 48.07000000000001,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 73
+        "TOTAL": 78
       }
     },
     {
@@ -3330,19 +3330,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 23.2,
+        "creativity": 11.2,
+        "threat": 1,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.06,
+        "CRE": 9.6,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 31
       }
     },
     {
@@ -3365,15 +3365,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 10.6,
+        "creativity": 2,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 2.3600000000000003,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -3400,15 +3400,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 13.8,
+        "creativity": 3.8,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 3.8499999999999996,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -3435,15 +3435,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 28.8,
+        "creativity": 0.8,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 3.4000000000000004,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -3470,19 +3470,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 5.6,
+        "creativity": 3.8,
+        "threat": 17,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 1.02,
+        "CRE": 3.03,
+        "DEF": 0.33599999999999997,
         "FIT": 22.22222222222222,
         "CTRL": 95,
-        "TOTAL": 14
+        "TOTAL": 15
       }
     },
     {
@@ -3505,19 +3505,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 13.4,
+        "creativity": 3.7,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 3.745,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 31
       }
     },
     {
@@ -3540,19 +3540,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 6.8,
+        "creativity": 16.4,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 11.34,
+        "DEF": 0.408,
         "FIT": 31.11111111111111,
         "CTRL": 95,
-        "TOTAL": 16
+        "TOTAL": 19
       }
     },
     {
@@ -3575,19 +3575,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 1.8,
+        "creativity": 6,
+        "threat": 3,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.18,
+        "CRE": 4.08,
         "DEF": 0,
         "FIT": 90,
         "CTRL": 95,
-        "TOTAL": 28
+        "TOTAL": 29
       }
     },
     {
@@ -3610,15 +3610,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 4.6,
+        "creativity": 1.1,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 1.175,
         "DEF": 0,
         "FIT": 76.66666666666667,
         "CTRL": 95,
@@ -3645,19 +3645,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 2.6,
+        "creativity": 12.3,
+        "threat": 2,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 8.255,
         "DEF": 0,
         "FIT": 76.66666666666667,
         "CTRL": 95,
-        "TOTAL": 25
+        "TOTAL": 27
       }
     },
     {
@@ -3680,7 +3680,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 28.2,
         "creativity": 0,
         "threat": 0,
         "total_points": 2,
@@ -3688,11 +3688,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 19,
+        "CRE": 2.8200000000000003,
+        "DEF": 20.692,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 43
+        "TOTAL": 44
       }
     },
     {
@@ -3715,19 +3715,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 44.2,
+        "creativity": 11.2,
+        "threat": 2,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 26,
-        "CRE": 28,
+        "ATT": 26.12,
+        "CRE": 39.7,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 38
+        "TOTAL": 39
       }
     },
     {
@@ -3750,15 +3750,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 1.2,
+        "creativity": 1.8,
+        "threat": 21,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.26,
+        "CRE": 1.29,
         "DEF": 0,
         "FIT": 60,
         "CTRL": 95,
@@ -3785,15 +3785,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 42.6,
+        "creativity": 0.7,
         "threat": 0,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 4.715000000000001,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -3820,15 +3820,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 27.4,
+        "creativity": 5.7,
+        "threat": 5,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.3,
+        "CRE": 6.445,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -3855,19 +3855,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 11.6,
+        "creativity": 13.8,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 10.13,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 31
       }
     },
     {
@@ -3890,15 +3890,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 12.6,
+        "creativity": 1.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 2.105,
         "DEF": 0,
         "FIT": 80,
         "CTRL": 95,
@@ -3925,16 +3925,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 4,
+        "creativity": 0.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.595,
+        "DEF": 0.24,
         "FIT": 6.666666666666667,
         "CTRL": 95,
         "TOTAL": 11
@@ -3960,19 +3960,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 16.8,
+        "creativity": 30.9,
         "threat": 0,
         "total_points": 4,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 21.765,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 35
       }
     },
     {
@@ -3995,19 +3995,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 2,
+        "creativity": 6.3,
+        "threat": 6,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.36,
+        "CRE": 4.295,
+        "DEF": 0.12,
         "FIT": 38.88888888888889,
         "CTRL": 95,
-        "TOTAL": 17
+        "TOTAL": 19
       }
     },
     {
@@ -4030,19 +4030,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 20.4,
+        "creativity": 29.3,
         "threat": 0,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 21.085,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 29
+        "TOTAL": 35
       }
     },
     {
@@ -4065,16 +4065,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 1,
+        "creativity": 3.5,
+        "threat": 17,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 1.02,
+        "CRE": 2.375,
+        "DEF": 0.06,
         "FIT": 30,
         "CTRL": 95,
         "TOTAL": 16
@@ -4100,19 +4100,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 1.4,
+        "creativity": 12.3,
+        "threat": 11,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.6599999999999999,
+        "CRE": 8.135000000000002,
         "DEF": 0,
         "FIT": 68.88888888888889,
         "CTRL": 95,
-        "TOTAL": 23
+        "TOTAL": 25
       }
     },
     {
@@ -4135,19 +4135,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 10.4,
+        "creativity": 24.5,
+        "threat": 23,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.38,
+        "CRE": 16.965,
         "DEF": 0,
         "FIT": 61.111111111111114,
         "CTRL": 95,
-        "TOTAL": 22
+        "TOTAL": 26
       }
     },
     {
@@ -4170,7 +4170,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 31.8,
         "creativity": 0,
         "threat": 0,
         "total_points": 7,
@@ -4178,11 +4178,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 64,
+        "CRE": 3.18,
+        "DEF": 65.908,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 63
+        "TOTAL": 64
       }
     },
     {
@@ -4205,16 +4205,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 15.2,
+        "creativity": 0.8,
+        "threat": 4,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.24,
+        "CRE": 2.04,
+        "DEF": 20.912,
         "FIT": 100,
         "CTRL": 95,
         "TOTAL": 38
@@ -4240,16 +4240,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 18.6,
+        "creativity": 0.8,
+        "threat": 6,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.36,
+        "CRE": 2.3800000000000003,
+        "DEF": 21.116,
         "FIT": 100,
         "CTRL": 95,
         "TOTAL": 38
@@ -4275,19 +4275,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 12.8,
+        "creativity": 13.8,
+        "threat": 2,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.12,
+        "CRE": 10.25,
+        "DEF": 20.768,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 38
+        "TOTAL": 39
       }
     },
     {
@@ -4310,19 +4310,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 42.8,
+        "creativity": 28.3,
+        "threat": 27,
         "total_points": 11,
         "bonus": 3
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 63.62,
+        "CRE": 22.675,
+        "DEF": 22.567999999999998,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 50
+        "TOTAL": 57
       }
     },
     {
@@ -4345,19 +4345,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 40.8,
+        "creativity": 39.8,
+        "threat": 48,
         "total_points": 9,
         "bonus": 1
       },
       "powers_gw": {
-        "ATT": 26,
-        "CRE": 28,
-        "DEF": 20,
+        "ATT": 28.88,
+        "CRE": 57.949999999999996,
+        "DEF": 22.448,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 57
       }
     },
     {
@@ -4380,16 +4380,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 1,
+        "creativity": 0.6,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.49,
+        "DEF": 0.06,
         "FIT": 8.88888888888889,
         "CTRL": 95,
         "TOTAL": 11
@@ -4415,19 +4415,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 4.8,
+        "creativity": 11.8,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.12,
+        "CRE": 8.15,
+        "DEF": 0.288,
         "FIT": 12.222222222222221,
         "CTRL": 95,
-        "TOTAL": 12
+        "TOTAL": 14
       }
     },
     {
@@ -4450,19 +4450,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 9.6,
+        "creativity": 4.7,
+        "threat": 2,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 4.015000000000001,
         "DEF": 0,
         "FIT": 68.88888888888889,
         "CTRL": 95,
-        "TOTAL": 23
+        "TOTAL": 24
       }
     },
     {
@@ -4485,19 +4485,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 7,
+        "creativity": 23.4,
+        "threat": 25,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 1.5,
+        "CRE": 15.909999999999998,
+        "DEF": 20.42,
         "FIT": 92.22222222222223,
         "CTRL": 95,
-        "TOTAL": 31
+        "TOTAL": 36
       }
     },
     {
@@ -4520,16 +4520,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 5,
+        "creativity": 0.3,
+        "threat": 17,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 1.02,
+        "CRE": 0.6950000000000001,
+        "DEF": 0.3,
         "FIT": 1.1111111111111112,
         "CTRL": 95,
         "TOTAL": 10
@@ -4555,19 +4555,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 28.8,
+        "creativity": 14.7,
+        "threat": 4,
         "total_points": 8,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 26,
-        "CRE": 28,
-        "DEF": 20,
+        "ATT": 26.24,
+        "CRE": 40.435,
+        "DEF": 21.728,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 51
       }
     },
     {
@@ -4590,19 +4590,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 13.8,
+        "creativity": 13,
+        "threat": 2,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.12,
+        "CRE": 9.830000000000002,
+        "DEF": 20.828,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 33
+        "TOTAL": 35
       }
     },
     {
@@ -4625,19 +4625,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 8.6,
+        "creativity": 12.2,
+        "threat": 5,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.3,
+        "CRE": 8.79,
+        "DEF": 20.516,
         "FIT": 86.66666666666667,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 32
       }
     },
     {
@@ -4662,12 +4662,12 @@
         "own_goals": 0,
         "influence": 0,
         "creativity": 0,
-        "threat": 0,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
+        "ATT": 0.12,
         "CRE": 0,
         "DEF": 0,
         "FIT": 12.222222222222221,
@@ -4695,19 +4695,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 38,
+        "creativity": 19,
+        "threat": 41,
         "total_points": 8,
         "bonus": 2
       },
       "powers_gw": {
-        "ATT": 71.53846153846153,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 73.99846153846153,
+        "CRE": 16.15,
+        "DEF": 22.28,
         "FIT": 86.66666666666667,
         "CTRL": 95,
-        "TOTAL": 58
+        "TOTAL": 63
       }
     },
     {
@@ -4730,7 +4730,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 29.6,
         "creativity": 0,
         "threat": 0,
         "total_points": 2,
@@ -4738,11 +4738,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 12,
+        "CRE": 2.9600000000000004,
+        "DEF": 13.776,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 40
+        "TOTAL": 41
       }
     },
     {
@@ -4765,19 +4765,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 21.6,
+        "creativity": 25.2,
+        "threat": 3,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.18,
+        "CRE": 18.54,
         "DEF": 0,
         "FIT": 90,
         "CTRL": 95,
-        "TOTAL": 28
+        "TOTAL": 30
       }
     },
     {
@@ -4800,19 +4800,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 32.8,
+        "creativity": 21.3,
         "threat": 0,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 17.125,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 32
       }
     },
     {
@@ -4835,19 +4835,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 13.8,
+        "creativity": 3.8,
+        "threat": 2,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 3.8499999999999996,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 29
+        "TOTAL": 30
       }
     },
     {
@@ -4870,19 +4870,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 38,
+        "creativity": 27.8,
+        "threat": 23,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 52,
-        "CRE": 56,
+        "ATT": 53.38,
+        "CRE": 77.86999999999999,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 45
+        "TOTAL": 48
       }
     },
     {
@@ -4905,15 +4905,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 7.2,
+        "creativity": 0.8,
+        "threat": 2,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 1.2400000000000002,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -4940,19 +4940,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 6.2,
+        "creativity": 15.3,
+        "threat": 4,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.24,
+        "CRE": 10.565000000000001,
+        "DEF": 20.372,
         "FIT": 72.22222222222221,
         "CTRL": 95,
-        "TOTAL": 27
+        "TOTAL": 30
       }
     },
     {
@@ -4975,19 +4975,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 12.4,
+        "creativity": 11.3,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 8.585,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 32
       }
     },
     {
@@ -5010,19 +5010,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 5.2,
+        "creativity": 1.9,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 1.755,
+        "DEF": 0.312,
         "FIT": 18.88888888888889,
         "CTRL": 95,
-        "TOTAL": 13
+        "TOTAL": 14
       }
     },
     {
@@ -5045,19 +5045,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 9.8,
+        "creativity": 13.8,
+        "threat": 6,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.36,
+        "CRE": 9.950000000000001,
         "DEF": 0,
         "FIT": 73.33333333333333,
         "CTRL": 95,
-        "TOTAL": 24
+        "TOTAL": 27
       }
     },
     {
@@ -5080,19 +5080,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 13.6,
+        "creativity": 23.1,
+        "threat": 7,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.42,
+        "CRE": 16.375,
         "DEF": 0,
         "FIT": 80,
         "CTRL": 95,
-        "TOTAL": 26
+        "TOTAL": 30
       }
     },
     {
@@ -5115,19 +5115,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 23.4,
+        "creativity": 14.8,
+        "threat": 2,
         "total_points": 5,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 26,
-        "CRE": 28,
+        "ATT": 26.12,
+        "CRE": 39.96000000000001,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 44
+        "TOTAL": 48
       }
     },
     {
@@ -5150,19 +5150,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 41.6,
+        "creativity": 15.6,
+        "threat": 41,
         "total_points": 7,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
+        "ATT": 64.46,
+        "CRE": 14.3,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 51
       }
     },
     {
@@ -5185,19 +5185,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 6.6,
+        "creativity": 0.5,
+        "threat": 19,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 1.14,
+        "CRE": 0.9850000000000001,
+        "DEF": 0.39599999999999996,
         "FIT": 18.88888888888889,
         "CTRL": 95,
-        "TOTAL": 13
+        "TOTAL": 14
       }
     },
     {
@@ -5220,19 +5220,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 6,
+        "creativity": 11.5,
+        "threat": 7,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.42,
+        "CRE": 8.075000000000001,
+        "DEF": 0.36,
         "FIT": 8.88888888888889,
         "CTRL": 95,
-        "TOTAL": 11
+        "TOTAL": 13
       }
     },
     {
@@ -5255,19 +5255,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 43.4,
+        "creativity": 0.1,
+        "threat": 2,
         "total_points": 8,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.12,
+        "CRE": 4.405,
+        "DEF": 22.604,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 38
+        "TOTAL": 39
       }
     },
     {
@@ -5290,19 +5290,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 44.2,
+        "creativity": 0.2,
+        "threat": 35,
         "total_points": 14,
         "bonus": 2
       },
       "powers_gw": {
-        "ATT": 88.57142857142857,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 90.67142857142856,
+        "CRE": 4.550000000000001,
+        "DEF": 22.652,
         "FIT": 70,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 49
       }
     },
     {
@@ -5325,19 +5325,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 5.8,
+        "creativity": 11.3,
         "threat": 0,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 7.925000000000001,
+        "DEF": 20.348,
         "FIT": 76.66666666666667,
         "CTRL": 95,
-        "TOTAL": 33
+        "TOTAL": 34
       }
     },
     {
@@ -5360,16 +5360,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 2.2,
         "creativity": 0,
-        "threat": 0,
+        "threat": 1,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.06,
+        "CRE": 0.22000000000000003,
+        "DEF": 0.132,
         "FIT": 22.22222222222222,
         "CTRL": 95,
         "TOTAL": 14
@@ -5395,19 +5395,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 13.8,
+        "creativity": 18.8,
+        "threat": 4,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.24,
+        "CRE": 13.600000000000001,
+        "DEF": 20.828,
         "FIT": 93.33333333333333,
         "CTRL": 95,
-        "TOTAL": 36
+        "TOTAL": 38
       }
     },
     {
@@ -5430,7 +5430,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 4.2,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -5438,8 +5438,8 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.42000000000000004,
+        "DEF": 0.252,
         "FIT": 28.888888888888886,
         "CTRL": 95,
         "TOTAL": 15
@@ -5465,16 +5465,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 10.6,
+        "creativity": 2.2,
+        "threat": 7,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.42,
+        "CRE": 2.49,
+        "DEF": 20.636,
         "FIT": 100,
         "CTRL": 95,
         "TOTAL": 33
@@ -5500,16 +5500,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 2,
+        "creativity": 0.3,
+        "threat": 2,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.12,
+        "CRE": 0.395,
+        "DEF": 0.12,
         "FIT": 21.11111111111111,
         "CTRL": 93,
         "TOTAL": 14
@@ -5535,19 +5535,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 19,
+        "creativity": 2.4,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 3.46,
+        "DEF": 21.14,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 32
+        "TOTAL": 33
       }
     },
     {
@@ -5570,19 +5570,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 18.4,
+        "creativity": 19.3,
         "threat": 0,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 26,
-        "CRE": 28,
-        "DEF": 20,
+        "CRE": 42.385000000000005,
+        "DEF": 21.104,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 51
       }
     },
     {
@@ -5605,19 +5605,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 17.2,
+        "creativity": 21.1,
+        "threat": 52,
         "total_points": 5,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 26,
-        "CRE": 28,
-        "DEF": 20,
+        "ATT": 29.12,
+        "CRE": 43.435,
+        "DEF": 21.032,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 48
+        "TOTAL": 53
       }
     },
     {
@@ -5640,19 +5640,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 48,
+        "creativity": 24.5,
+        "threat": 2,
         "total_points": 4,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 20.725,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 32
       }
     },
     {
@@ -5675,15 +5675,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 15.2,
+        "creativity": 2.3,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 3.0149999999999997,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -5710,15 +5710,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 16.4,
+        "creativity": 1.3,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 2.485,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -5745,19 +5745,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 13,
+        "creativity": 7.3,
+        "threat": 4,
         "total_points": 4,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.24,
+        "CRE": 6.045,
         "DEF": 0,
         "FIT": 87.77777777777777,
         "CTRL": 95,
-        "TOTAL": 27
+        "TOTAL": 29
       }
     },
     {
@@ -5780,19 +5780,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 33.6,
+        "creativity": 0.6,
+        "threat": 18,
         "total_points": 7,
         "bonus": 1
       },
       "powers_gw": {
         "ATT": 100,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 3.7500000000000004,
+        "DEF": 2.016,
         "FIT": 21.11111111111111,
         "CTRL": 95,
-        "TOTAL": 42
+        "TOTAL": 43
       }
     },
     {
@@ -5815,19 +5815,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 18.6,
+        "creativity": 28.4,
+        "threat": 8,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.48,
+        "CRE": 20.32,
         "DEF": 0,
         "FIT": 72.22222222222221,
         "CTRL": 95,
-        "TOTAL": 24
+        "TOTAL": 30
       }
     },
     {
@@ -5850,19 +5850,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 45.6,
+        "creativity": 26.3,
+        "threat": 40,
         "total_points": 9,
         "bonus": 3
       },
       "powers_gw": {
-        "ATT": 85.84615384615384,
-        "CRE": 0,
+        "ATT": 88.24615384615385,
+        "CRE": 21.655,
         "DEF": 0,
         "FIT": 72.22222222222221,
         "CTRL": 95,
-        "TOTAL": 60
+        "TOTAL": 66
       }
     },
     {
@@ -5885,16 +5885,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 1.4,
         "creativity": 0,
-        "threat": 0,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.12,
+        "CRE": 0.13999999999999999,
+        "DEF": 0.08399999999999999,
         "FIT": 26.666666666666668,
         "CTRL": 95,
         "TOTAL": 15
@@ -5921,14 +5921,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 0.1,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.065,
         "DEF": 0,
         "FIT": 11.11111111111111,
         "CTRL": 95,
@@ -5955,16 +5955,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 1.2,
+        "creativity": 1.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.9650000000000001,
+        "DEF": 0.072,
         "FIT": 26.666666666666668,
         "CTRL": 95,
         "TOTAL": 15
@@ -5990,19 +5990,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 23.6,
+        "creativity": 0.4,
+        "threat": 15,
         "total_points": 10,
         "bonus": 2
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.8999999999999999,
+        "CRE": 2.62,
+        "DEF": 21.416,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 38
+        "TOTAL": 39
       }
     },
     {
@@ -6025,19 +6025,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 14.4,
+        "creativity": 14.4,
+        "threat": 5,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.3,
+        "CRE": 10.8,
+        "DEF": 20.864,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 38
+        "TOTAL": 39
       }
     },
     {
@@ -6060,16 +6060,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 7,
+        "creativity": 1.1,
         "threat": 0,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 1.415,
+        "DEF": 20.42,
         "FIT": 100,
         "CTRL": 95,
         "TOTAL": 38
@@ -6095,19 +6095,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 24.6,
+        "creativity": 2.3,
+        "threat": 2,
         "total_points": 10,
         "bonus": 2
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.12,
+        "CRE": 3.955,
+        "DEF": 21.476,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 38
+        "TOTAL": 39
       }
     },
     {
@@ -6130,16 +6130,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 15.6,
+        "creativity": 0.6,
+        "threat": 17,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 1.02,
+        "CRE": 1.9500000000000002,
+        "DEF": 20.936,
         "FIT": 100,
         "CTRL": 95,
         "TOTAL": 38
@@ -6165,19 +6165,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 47.8,
+        "creativity": 2.3,
+        "threat": 16,
         "total_points": 13,
         "bonus": 3
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 62.96,
+        "CRE": 6.275,
+        "DEF": 22.868,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 50
+        "TOTAL": 52
       }
     },
     {
@@ -6200,19 +6200,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 10,
+        "creativity": 14,
+        "threat": 4,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.24,
+        "CRE": 10.1,
+        "DEF": 0.6,
         "FIT": 26.666666666666668,
         "CTRL": 95,
-        "TOTAL": 15
+        "TOTAL": 18
       }
     },
     {
@@ -6235,16 +6235,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 8,
+        "creativity": 1.1,
+        "threat": 7,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.42,
+        "CRE": 1.5150000000000001,
+        "DEF": 20.48,
         "FIT": 90,
         "CTRL": 95,
         "TOTAL": 31
@@ -6270,19 +6270,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 18.6,
+        "creativity": 23.3,
         "threat": 0,
         "total_points": 5,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 17.005000000000003,
+        "DEF": 21.116,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 33
+        "TOTAL": 37
       }
     },
     {
@@ -6306,14 +6306,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 0.2,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.13,
         "DEF": 0,
         "FIT": 8.88888888888889,
         "CTRL": 95,
@@ -6341,18 +6341,18 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 0.8,
+        "threat": 11,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.6599999999999999,
+        "CRE": 0.52,
         "DEF": 20,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 30
+        "TOTAL": 31
       }
     },
     {
@@ -6375,7 +6375,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 17.8,
         "creativity": 0,
         "threat": 0,
         "total_points": 2,
@@ -6383,11 +6383,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 19,
+        "CRE": 1.7800000000000002,
+        "DEF": 20.068,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 43
+        "TOTAL": 44
       }
     },
     {
@@ -6410,19 +6410,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 25.6,
+        "creativity": 1.6,
+        "threat": 24,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.44,
+        "CRE": 3.6000000000000005,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 29
+        "TOTAL": 30
       }
     },
     {
@@ -6445,19 +6445,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 13.6,
+        "creativity": 37.8,
+        "threat": 10,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.6,
+        "CRE": 25.93,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 29
+        "TOTAL": 33
       }
     },
     {
@@ -6480,19 +6480,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 18,
+        "creativity": 13.8,
+        "threat": 12,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.72,
+        "CRE": 10.770000000000001,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 29
+        "TOTAL": 31
       }
     },
     {
@@ -6515,19 +6515,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 12.4,
+        "creativity": 11.9,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 8.975000000000001,
         "DEF": 0,
         "FIT": 76.66666666666667,
         "CTRL": 95,
-        "TOTAL": 25
+        "TOTAL": 26
       }
     },
     {
@@ -6550,19 +6550,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 9.8,
+        "creativity": 17.9,
+        "threat": 29,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.74,
+        "CRE": 12.615,
         "DEF": 0,
         "FIT": 68.88888888888889,
         "CTRL": 95,
-        "TOTAL": 23
+        "TOTAL": 27
       }
     },
     {
@@ -6585,19 +6585,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 44,
+        "creativity": 34,
+        "threat": 37,
         "total_points": 12,
         "bonus": 3
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
+        "ATT": 64.22,
+        "CRE": 26.5,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 55
       }
     },
     {
@@ -6620,19 +6620,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 50.4,
+        "creativity": 47.1,
+        "threat": 21,
         "total_points": 8,
         "bonus": 1
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
+        "ATT": 63.26,
+        "CRE": 35.655,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 57
       }
     },
     {
@@ -6655,19 +6655,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 2.4,
+        "creativity": 6,
+        "threat": 5,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.3,
+        "CRE": 4.140000000000001,
         "DEF": 0,
         "FIT": 68.88888888888889,
         "CTRL": 95,
-        "TOTAL": 23
+        "TOTAL": 24
       }
     },
     {
@@ -6690,19 +6690,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 24.4,
+        "creativity": 16,
+        "threat": 4,
         "total_points": 5,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 30.38961038961039,
-        "CRE": 32.72727272727273,
+        "ATT": 30.629610389610388,
+        "CRE": 45.56727272727272,
         "DEF": 0,
         "FIT": 85.55555555555556,
         "CTRL": 95,
-        "TOTAL": 44
+        "TOTAL": 47
       }
     },
     {
@@ -6725,16 +6725,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 5.8,
+        "creativity": 1.4,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 1.4899999999999998,
+        "DEF": 0.348,
         "FIT": 30,
         "CTRL": 95,
         "TOTAL": 16
@@ -6760,19 +6760,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 4,
+        "creativity": 8.9,
+        "threat": 14,
         "total_points": 4,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 86.66666666666667,
-        "CRE": 93.33333333333334,
-        "DEF": 0,
+        "ATT": 87.50666666666667,
+        "CRE": 99.51833333333335,
+        "DEF": 0.24,
         "FIT": 30,
         "CTRL": 95,
-        "TOTAL": 65
+        "TOTAL": 67
       }
     },
     {
@@ -6795,19 +6795,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 11.4,
+        "creativity": 14.6,
+        "threat": 66,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 3.96,
+        "CRE": 10.63,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 34
       }
     },
     {
@@ -6830,16 +6830,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 1.2,
+        "creativity": 0.5,
+        "threat": 7,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.42,
+        "CRE": 0.445,
+        "DEF": 0.072,
         "FIT": 13.333333333333334,
         "CTRL": 95,
         "TOTAL": 12
@@ -6865,7 +6865,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 26.8,
         "creativity": 0,
         "threat": 0,
         "total_points": 3,
@@ -6873,11 +6873,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 26,
+        "CRE": 2.68,
+        "DEF": 27.608,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 46
+        "TOTAL": 47
       }
     },
     {
@@ -6900,7 +6900,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 19.4,
         "creativity": 0,
         "threat": 0,
         "total_points": 9,
@@ -6908,11 +6908,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 53,
+        "CRE": 1.94,
+        "DEF": 54.164,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 58
+        "TOTAL": 59
       }
     },
     {
@@ -6935,19 +6935,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 8.8,
+        "creativity": 30.4,
+        "threat": 11,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.6599999999999999,
+        "CRE": 20.639999999999997,
         "DEF": 0,
         "FIT": 68.88888888888889,
         "CTRL": 95,
-        "TOTAL": 23
+        "TOTAL": 26
       }
     },
     {
@@ -6970,19 +6970,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 43.6,
+        "creativity": 17.5,
+        "threat": 28,
         "total_points": 10,
         "bonus": 2
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
+        "ATT": 63.68,
+        "CRE": 15.735,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 41
+        "TOTAL": 43
       }
     },
     {
@@ -7005,16 +7005,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 3.8,
+        "creativity": 1.5,
+        "threat": 4,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.24,
+        "CRE": 1.355,
+        "DEF": 0.22799999999999998,
         "FIT": 36.666666666666664,
         "CTRL": 95,
         "TOTAL": 17
@@ -7040,19 +7040,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 24.4,
+        "creativity": 17.9,
+        "threat": 2,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 14.075,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 31
       }
     },
     {
@@ -7075,19 +7075,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 47.6,
+        "creativity": 13.3,
+        "threat": 17,
         "total_points": 9,
         "bonus": 1
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
+        "ATT": 63.02,
+        "CRE": 13.405000000000001,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 41
+        "TOTAL": 42
       }
     },
     {
@@ -7110,15 +7110,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 17,
+        "creativity": 3.4,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 3.91,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -7145,19 +7145,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 3.8,
+        "creativity": 3.8,
+        "threat": 39,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 2.34,
+        "CRE": 2.8499999999999996,
         "DEF": 0,
         "FIT": 62.22222222222222,
         "CTRL": 95,
-        "TOTAL": 22
+        "TOTAL": 23
       }
     },
     {
@@ -7180,19 +7180,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 5.8,
+        "creativity": 8.9,
+        "threat": 31,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.8599999999999999,
+        "CRE": 6.365,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 32
       }
     },
     {
@@ -7215,19 +7215,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 10.4,
+        "creativity": 49.6,
+        "threat": 15,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.8999999999999999,
+        "CRE": 33.28,
         "DEF": 0,
         "FIT": 90,
         "CTRL": 93,
-        "TOTAL": 27
+        "TOTAL": 37
       }
     },
     {
@@ -7250,16 +7250,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 39.2,
+        "creativity": 48.8,
+        "threat": 4,
         "total_points": 8,
         "bonus": 1
       },
       "powers_gw": {
         "ATT": 100,
         "CRE": 100,
-        "DEF": 0,
+        "DEF": 2.352,
         "FIT": 30,
         "CTRL": 95,
         "TOTAL": 71
@@ -7285,16 +7285,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 2.2,
+        "creativity": 2.1,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 1.5850000000000002,
+        "DEF": 0.132,
         "FIT": 30,
         "CTRL": 95,
         "TOTAL": 16
@@ -7320,19 +7320,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 3.8,
+        "creativity": 5.2,
+        "threat": 50,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 3,
+        "CRE": 3.7600000000000002,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 32
       }
     },
     {
@@ -7355,7 +7355,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 20.2,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -7363,11 +7363,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 8,
+        "CRE": 2.02,
+        "DEF": 9.212,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 38
+        "TOTAL": 39
       }
     },
     {
@@ -7391,18 +7391,18 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 1.2,
+        "threat": 16,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.96,
+        "CRE": 0.78,
         "DEF": 0,
         "FIT": 50,
         "CTRL": 93,
-        "TOTAL": 19
+        "TOTAL": 20
       }
     },
     {
@@ -7425,19 +7425,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 7.6,
+        "creativity": 11.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 8.105,
+        "DEF": 0.45599999999999996,
         "FIT": 11.11111111111111,
         "CTRL": 95,
-        "TOTAL": 12
+        "TOTAL": 13
       }
     },
     {
@@ -7460,19 +7460,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 25.4,
+        "creativity": 28.6,
+        "threat": 19,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.14,
+        "CRE": 21.13,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 32
       }
     },
     {
@@ -7495,15 +7495,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 6.8,
+        "creativity": 2.6,
+        "threat": 11,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.6599999999999999,
+        "CRE": 2.37,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -7530,19 +7530,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 17.4,
+        "creativity": 29.4,
+        "threat": 9,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.54,
+        "CRE": 20.849999999999998,
         "DEF": 0,
         "FIT": 87.77777777777777,
         "CTRL": 95,
-        "TOTAL": 27
+        "TOTAL": 30
       }
     },
     {
@@ -7565,19 +7565,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 25.2,
+        "creativity": 59.2,
+        "threat": 6,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.36,
+        "CRE": 41.00000000000001,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 34
       }
     },
     {
@@ -7600,19 +7600,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 20.2,
+        "creativity": 55.4,
+        "threat": 17,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.02,
+        "CRE": 38.03,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 40
       }
     },
     {
@@ -7635,19 +7635,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 9.6,
+        "creativity": 28.1,
+        "threat": 49,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 2.94,
+        "CRE": 19.225,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 36
       }
     },
     {
@@ -7670,19 +7670,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 5.4,
+        "creativity": 28.2,
+        "threat": 35,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 2.1,
+        "CRE": 18.87,
         "DEF": 0,
         "FIT": 87.77777777777777,
         "CTRL": 95,
-        "TOTAL": 27
+        "TOTAL": 33
       }
     },
     {
@@ -7705,19 +7705,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 11.6,
+        "creativity": 48.6,
+        "threat": 4,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.24,
+        "CRE": 32.75,
+        "DEF": 0.696,
         "FIT": 50,
         "CTRL": 95,
-        "TOTAL": 20
+        "TOTAL": 29
       }
     },
     {
@@ -7740,16 +7740,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 2.8,
+        "creativity": 2.5,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.12,
+        "CRE": 1.905,
+        "DEF": 0.16799999999999998,
         "FIT": 25.555555555555554,
         "CTRL": 95,
         "TOTAL": 15
@@ -7775,16 +7775,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 0.2,
+        "creativity": 0.6,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.41000000000000003,
+        "DEF": 0.012,
         "FIT": 11.11111111111111,
         "CTRL": 95,
         "TOTAL": 12
@@ -7811,14 +7811,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 0.5,
+        "threat": 9,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.54,
+        "CRE": 0.325,
         "DEF": 0,
         "FIT": 25.555555555555554,
         "CTRL": 95,
@@ -7845,15 +7845,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 37.8,
+        "creativity": 0.2,
         "threat": 0,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 3.9099999999999997,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -7915,15 +7915,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 32.4,
+        "creativity": 0.3,
         "threat": 0,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 3.435,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -7950,19 +7950,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 22,
+        "creativity": 15.2,
         "threat": 0,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 12.079999999999998,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 31
       }
     },
     {
@@ -7985,15 +7985,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 5.2,
+        "creativity": 2.4,
+        "threat": 9,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.54,
+        "CRE": 2.08,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -8020,19 +8020,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 37.4,
+        "creativity": 3.5,
+        "threat": 28,
         "total_points": 9,
         "bonus": 2
       },
       "powers_gw": {
-        "ATT": 74.39999999999999,
-        "CRE": 0,
+        "ATT": 76.08,
+        "CRE": 6.015000000000001,
         "DEF": 0,
         "FIT": 83.33333333333334,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 49
       }
     },
     {
@@ -8055,19 +8055,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 6.2,
+        "creativity": 6.4,
+        "threat": 8,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.48,
+        "CRE": 4.78,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 31
       }
     },
     {
@@ -8090,15 +8090,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 7.8,
+        "creativity": 1.3,
+        "threat": 4,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.24,
+        "CRE": 1.625,
         "DEF": 0,
         "FIT": 37.77777777777778,
         "CTRL": 93,
@@ -8126,14 +8126,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 0.1,
+        "threat": 2,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 0.065,
         "DEF": 0,
         "FIT": 15.555555555555555,
         "CTRL": 93,
@@ -8160,19 +8160,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 15.6,
+        "creativity": 21.4,
+        "threat": 3,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.18,
+        "CRE": 15.47,
         "DEF": 0,
         "FIT": 83.33333333333334,
         "CTRL": 93,
-        "TOTAL": 26
+        "TOTAL": 30
       }
     },
     {
@@ -8195,19 +8195,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 38.4,
+        "creativity": 13.9,
+        "threat": 9,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 100,
-        "CRE": 0,
+        "CRE": 12.875,
         "DEF": 0,
         "FIT": 37.77777777777778,
         "CTRL": 95,
-        "TOTAL": 45
+        "TOTAL": 49
       }
     },
     {
@@ -8230,15 +8230,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 0.4,
+        "creativity": 1.2,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.8200000000000001,
         "DEF": 0,
         "FIT": 61.111111111111114,
         "CTRL": 95,
@@ -8265,19 +8265,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 20,
+        "creativity": 16.3,
+        "threat": 28,
         "total_points": 4,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 26,
-        "CRE": 28,
+        "ATT": 27.68,
+        "CRE": 40.595,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 47
+        "TOTAL": 50
       }
     },
     {
@@ -8300,19 +8300,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 28.2,
+        "creativity": 13.7,
+        "threat": 8,
         "total_points": 4,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 42.54545454545455,
-        "CRE": 45.81818181818182,
+        "ATT": 43.025454545454544,
+        "CRE": 57.54318181818182,
         "DEF": 0,
         "FIT": 61.111111111111114,
         "CTRL": 95,
-        "TOTAL": 50
+        "TOTAL": 53
       }
     },
     {
@@ -8335,7 +8335,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 14.2,
         "creativity": 0,
         "threat": 0,
         "total_points": 2,
@@ -8343,11 +8343,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 15,
+        "CRE": 1.42,
+        "DEF": 15.852,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 41
+        "TOTAL": 42
       }
     },
     {
@@ -8370,15 +8370,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 15.2,
+        "creativity": 5.8,
+        "threat": 6,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.36,
+        "CRE": 5.29,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -8405,15 +8405,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 7.6,
+        "creativity": 0.6,
+        "threat": 14,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.84,
+        "CRE": 1.15,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -8440,19 +8440,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 32.2,
+        "creativity": 25.9,
         "threat": 0,
         "total_points": 4,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 20.055,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 32
       }
     },
     {
@@ -8475,19 +8475,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 16,
+        "creativity": 35.6,
+        "threat": 11,
         "total_points": 5,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.6599999999999999,
+        "CRE": 24.740000000000002,
+        "DEF": 20.96,
         "FIT": 81.11111111111111,
         "CTRL": 93,
-        "TOTAL": 34
+        "TOTAL": 37
       }
     },
     {
@@ -8510,19 +8510,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 20.8,
+        "creativity": 1.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 2.9250000000000003,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 29
+        "TOTAL": 30
       }
     },
     {
@@ -8546,14 +8546,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 0.9,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.5850000000000001,
         "DEF": 0,
         "FIT": 17.77777777777778,
         "CTRL": 95,
@@ -8581,18 +8581,18 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 9.3,
+        "threat": 16,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.96,
+        "CRE": 6.045000000000001,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 31
       }
     },
     {
@@ -8615,19 +8615,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 7.2,
+        "creativity": 20.8,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 14.240000000000002,
         "DEF": 0,
         "FIT": 68.88888888888889,
         "CTRL": 95,
-        "TOTAL": 23
+        "TOTAL": 27
       }
     },
     {
@@ -8650,19 +8650,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 1.4,
+        "creativity": 2.5,
         "threat": 0,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 1.765,
+        "DEF": 20.084,
         "FIT": 67.77777777777779,
         "CTRL": 95,
-        "TOTAL": 26
+        "TOTAL": 27
       }
     },
     {
@@ -8685,19 +8685,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 11.6,
+        "creativity": 42.5,
         "threat": 0,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 28.785,
+        "DEF": 20.696,
         "FIT": 81.11111111111111,
         "CTRL": 95,
-        "TOTAL": 29
+        "TOTAL": 37
       }
     },
     {
@@ -8720,19 +8720,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 17.8,
+        "creativity": 13,
+        "threat": 3,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.18,
+        "CRE": 10.23,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 32
       }
     },
     {
@@ -8756,14 +8756,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 2.4,
+        "threat": 3,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.18,
+        "CRE": 1.56,
         "DEF": 0,
         "FIT": 31.11111111111111,
         "CTRL": 95,
@@ -8790,19 +8790,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 5.2,
+        "creativity": 6.8,
+        "threat": 31,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.8599999999999999,
+        "CRE": 4.9399999999999995,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 31
       }
     },
     {
@@ -8826,14 +8826,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 1.4,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.9099999999999999,
         "DEF": 0,
         "FIT": 22.22222222222222,
         "CTRL": 95,
@@ -8895,7 +8895,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 43.6,
         "creativity": 0,
         "threat": 0,
         "total_points": 2,
@@ -8903,11 +8903,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 34,
+        "CRE": 4.36,
+        "DEF": 36.616,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 50
+        "TOTAL": 51
       }
     },
     {
@@ -8930,15 +8930,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 36.6,
+        "creativity": 2.2,
         "threat": 0,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 5.09,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -8965,19 +8965,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 31.8,
+        "creativity": 19.2,
+        "threat": 2,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 15.66,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 31
       }
     },
     {
@@ -9000,16 +9000,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 12.4,
+        "creativity": 4.5,
+        "threat": 12,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 0.72,
+        "CRE": 4.165000000000001,
+        "DEF": 20.744,
         "FIT": 100,
         "CTRL": 95,
         "TOTAL": 38
@@ -9036,14 +9036,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 0.7,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.45499999999999996,
         "DEF": 0,
         "FIT": 4.444444444444445,
         "CTRL": 95,
@@ -9070,19 +9070,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 10.4,
+        "creativity": 26,
+        "threat": 9,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.54,
+        "CRE": 17.94,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 34
       }
     },
     {
@@ -9105,19 +9105,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 4.4,
+        "creativity": 8.3,
+        "threat": 8,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.48,
+        "CRE": 5.835000000000001,
+        "DEF": 0.264,
         "FIT": 24.444444444444443,
         "CTRL": 95,
-        "TOTAL": 14
+        "TOTAL": 16
       }
     },
     {
@@ -9140,19 +9140,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 2,
+        "creativity": 14.7,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 9.754999999999999,
         "DEF": 0,
         "FIT": 50,
         "CTRL": 95,
-        "TOTAL": 20
+        "TOTAL": 22
       }
     },
     {
@@ -9176,18 +9176,18 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 5.5,
+        "threat": 1,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.06,
+        "CRE": 3.575,
         "DEF": 0,
         "FIT": 50,
         "CTRL": 93,
-        "TOTAL": 19
+        "TOTAL": 20
       }
     },
     {
@@ -9211,14 +9211,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 2,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 1.3,
         "DEF": 0,
         "FIT": 50,
         "CTRL": 95,
@@ -9245,19 +9245,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 6.2,
+        "creativity": 3.3,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 2.765,
         "DEF": 0,
         "FIT": 94.44444444444444,
         "CTRL": 95,
-        "TOTAL": 28
+        "TOTAL": 29
       }
     },
     {
@@ -9280,19 +9280,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 14.2,
+        "creativity": 5.9,
+        "threat": 55,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 3.3,
+        "CRE": 5.255000000000001,
         "DEF": 0,
         "FIT": 74.44444444444444,
         "CTRL": 95,
-        "TOTAL": 24
+        "TOTAL": 27
       }
     },
     {
@@ -9315,19 +9315,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 7.2,
+        "creativity": 27.2,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 18.4,
         "DEF": 0,
         "FIT": 50,
         "CTRL": 95,
-        "TOTAL": 20
+        "TOTAL": 25
       }
     },
     {
@@ -9352,17 +9352,17 @@
         "own_goals": 0,
         "influence": 0,
         "creativity": 0,
-        "threat": 0,
+        "threat": 5,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
+        "ATT": 0.3,
         "CRE": 0,
         "DEF": 0,
         "FIT": 24.444444444444443,
         "CTRL": 95,
-        "TOTAL": 14
+        "TOTAL": 15
       }
     },
     {
@@ -9386,18 +9386,18 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 2.2,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 1.4300000000000002,
         "DEF": 0,
         "FIT": 74.44444444444444,
         "CTRL": 95,
-        "TOTAL": 24
+        "TOTAL": 25
       }
     },
     {
@@ -9420,7 +9420,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 15.2,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -9428,7 +9428,7 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 1.52,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -9455,19 +9455,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 18.2,
+        "creativity": 1.2,
         "threat": 0,
         "total_points": 0,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 2.6,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 29
+        "TOTAL": 30
       }
     },
     {
@@ -9490,19 +9490,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 9.4,
+        "creativity": 39.4,
+        "threat": 13,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.78,
+        "CRE": 26.55,
         "DEF": 0,
         "FIT": 87.77777777777777,
         "CTRL": 95,
-        "TOTAL": 27
+        "TOTAL": 30
       }
     },
     {
@@ -9526,14 +9526,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 0.6,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.39,
         "DEF": 0,
         "FIT": 25.555555555555554,
         "CTRL": 95,
@@ -9560,19 +9560,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 23,
+        "creativity": 27.5,
+        "threat": 4,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.24,
+        "CRE": 20.175,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 32
       }
     },
     {
@@ -9595,15 +9595,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 11.4,
+        "creativity": 1.4,
+        "threat": 4,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.24,
+        "CRE": 2.05,
         "DEF": 0,
         "FIT": 73.33333333333333,
         "CTRL": 93,
@@ -9630,15 +9630,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 13.8,
+        "creativity": 5.3,
+        "threat": 11,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.6599999999999999,
+        "CRE": 4.825,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -9665,19 +9665,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 4.6,
+        "creativity": 9.9,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 6.8950000000000005,
         "DEF": 0,
         "FIT": 87.77777777777777,
         "CTRL": 95,
-        "TOTAL": 27
+        "TOTAL": 29
       }
     },
     {
@@ -9700,15 +9700,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 0.4,
+        "creativity": 0.6,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 0.43000000000000005,
         "DEF": 0,
         "FIT": 11.11111111111111,
         "CTRL": 95,
@@ -9735,19 +9735,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 18.8,
+        "creativity": 31.4,
         "threat": 0,
         "total_points": 9,
         "bonus": 2
       },
       "powers_gw": {
         "ATT": 26,
-        "CRE": 28,
+        "CRE": 50.29,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 44
+        "TOTAL": 50
       }
     },
     {
@@ -9770,19 +9770,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 14.6,
+        "creativity": 32.1,
+        "threat": 25,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.5,
+        "CRE": 22.325000000000003,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 30
+        "TOTAL": 36
       }
     },
     {
@@ -9806,14 +9806,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 0.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.195,
         "DEF": 0,
         "FIT": 11.11111111111111,
         "CTRL": 95,
@@ -9841,18 +9841,18 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 0.9,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.5850000000000001,
         "DEF": 0,
         "FIT": 34.44444444444444,
         "CTRL": 95,
-        "TOTAL": 16
+        "TOTAL": 17
       }
     },
     {
@@ -9875,19 +9875,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 32.8,
+        "creativity": 3.3,
+        "threat": 16,
         "total_points": 5,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 96.20689655172414,
-        "CRE": 0,
+        "ATT": 97.16689655172414,
+        "CRE": 5.425,
         "DEF": 0,
         "FIT": 64.44444444444444,
         "CTRL": 93,
-        "TOTAL": 49
+        "TOTAL": 51
       }
     },
     {
@@ -9911,18 +9911,18 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "creativity": 1.5,
+        "threat": 9,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.54,
+        "CRE": 0.9750000000000001,
         "DEF": 0,
         "FIT": 73.33333333333333,
         "CTRL": 95,
-        "TOTAL": 24
+        "TOTAL": 25
       }
     },
     {
@@ -9946,14 +9946,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 0.2,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.13,
         "DEF": 0,
         "FIT": 25.555555555555554,
         "CTRL": 95,
@@ -9980,7 +9980,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 0.4,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -9988,8 +9988,8 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.04000000000000001,
+        "DEF": 0.024,
         "FIT": 5.555555555555555,
         "CTRL": 95,
         "TOTAL": 11
@@ -10015,19 +10015,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 17,
+        "creativity": 39.8,
+        "threat": 30,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 31.2,
-        "CRE": 33.6,
-        "DEF": 20,
+        "ATT": 33,
+        "CRE": 61.17,
+        "DEF": 21.02,
         "FIT": 83.33333333333334,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 55
       }
     },
     {
@@ -10050,15 +10050,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 0.6,
+        "creativity": 1,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.12,
+        "CRE": 0.71,
         "DEF": 0,
         "FIT": 17.77777777777778,
         "CTRL": 95,
@@ -10085,7 +10085,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 4,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -10093,7 +10093,7 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 0.4,
         "DEF": 0,
         "FIT": 15.555555555555555,
         "CTRL": 95,
@@ -10120,19 +10120,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 12.6,
+        "creativity": 1.4,
+        "threat": 7,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.42,
+        "CRE": 2.17,
         "DEF": 0,
         "FIT": 87.77777777777777,
         "CTRL": 95,
-        "TOTAL": 27
+        "TOTAL": 28
       }
     },
     {
@@ -10155,7 +10155,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 14.4,
         "creativity": 0,
         "threat": 0,
         "total_points": 2,
@@ -10163,11 +10163,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 15,
+        "CRE": 1.4400000000000002,
+        "DEF": 15.864,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 41
+        "TOTAL": 42
       }
     },
     {
@@ -10190,19 +10190,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 31.6,
+        "creativity": 21.8,
+        "threat": 21,
         "total_points": 14,
         "bonus": 3
       },
       "powers_gw": {
-        "ATT": 62.4,
-        "CRE": 67.2,
-        "DEF": 20,
+        "ATT": 63.66,
+        "CRE": 84.53,
+        "DEF": 21.896,
         "FIT": 83.33333333333334,
         "CTRL": 95,
-        "TOTAL": 65
+        "TOTAL": 70
       }
     },
     {
@@ -10225,19 +10225,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 31.4,
+        "creativity": 0.3,
         "threat": 0,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 3.335,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 29
+        "TOTAL": 30
       }
     },
     {
@@ -10260,7 +10260,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 41.2,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -10268,11 +10268,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 41,
+        "CRE": 4.12,
+        "DEF": 43.472,
         "FIT": 100,
         "CTRL": 93,
-        "TOTAL": 53
+        "TOTAL": 54
       }
     },
     {
@@ -10295,19 +10295,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 37.2,
+        "creativity": 4.3,
+        "threat": 40,
         "total_points": 6,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 62,
-        "CRE": 0,
+        "ATT": 64.4,
+        "CRE": 6.515000000000001,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 56
+        "TOTAL": 58
       }
     },
     {
@@ -10330,19 +10330,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 2.8,
+        "creativity": 7.3,
+        "threat": 8,
         "total_points": 2,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.48,
+        "CRE": 5.025,
         "DEF": 0,
         "FIT": 80,
         "CTRL": 95,
-        "TOTAL": 26
+        "TOTAL": 27
       }
     },
     {
@@ -10365,7 +10365,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 34.6,
         "creativity": 0,
         "threat": 0,
         "total_points": 10,
@@ -10373,11 +10373,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 75,
+        "CRE": 3.4600000000000004,
+        "DEF": 77.076,
         "FIT": 100,
         "CTRL": 95,
-        "TOTAL": 68
+        "TOTAL": 70
       }
     },
     {
@@ -10401,14 +10401,14 @@
         "penalties_saved": 0,
         "own_goals": 0,
         "influence": 0,
-        "creativity": 0,
+        "creativity": 3.1,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
+        "CRE": 2.015,
         "DEF": 0,
         "FIT": 67.77777777777779,
         "CTRL": 93,
@@ -10435,19 +10435,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 8.4,
+        "creativity": 4.8,
         "threat": 0,
         "total_points": 3,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 20,
+        "CRE": 3.96,
+        "DEF": 20.504,
         "FIT": 77.77777777777779,
         "CTRL": 95,
-        "TOTAL": 28
+        "TOTAL": 29
       }
     },
     {
@@ -10470,16 +10470,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 2.4,
+        "creativity": 2.4,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 1.8,
+        "DEF": 0.144,
         "FIT": 20,
         "CTRL": 95,
         "TOTAL": 14
@@ -10505,19 +10505,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 13.2,
+        "creativity": 1.2,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 2.1,
+        "DEF": 0.7919999999999999,
         "FIT": 22.22222222222222,
         "CTRL": 95,
-        "TOTAL": 14
+        "TOTAL": 15
       }
     },
     {
@@ -10540,16 +10540,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 3.4,
+        "creativity": 1.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 1.185,
+        "DEF": 0.204,
         "FIT": 25.555555555555554,
         "CTRL": 95,
         "TOTAL": 15
@@ -10575,16 +10575,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 2.4,
+        "creativity": 0.2,
+        "threat": 2,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.12,
+        "CRE": 0.37,
+        "DEF": 0.144,
         "FIT": 27.77777777777778,
         "CTRL": 95,
         "TOTAL": 15
@@ -10610,16 +10610,16 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 0.4,
+        "creativity": 0.3,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.23500000000000001,
+        "DEF": 0.024,
         "FIT": 8.88888888888889,
         "CTRL": 95,
         "TOTAL": 11
@@ -10645,7 +10645,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 8,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -10653,11 +10653,11 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.8,
+        "DEF": 0.48,
         "FIT": 28.888888888888886,
         "CTRL": 95,
-        "TOTAL": 15
+        "TOTAL": 16
       }
     },
     {
@@ -10680,19 +10680,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 51.8,
+        "creativity": 0.6,
+        "threat": 33,
         "total_points": 15,
         "bonus": 1
       },
       "powers_gw": {
-        "ATT": 88.57142857142857,
-        "CRE": 0,
-        "DEF": 20,
+        "ATT": 90.55142857142857,
+        "CRE": 5.569999999999999,
+        "DEF": 23.108,
         "FIT": 70,
         "CTRL": 95,
-        "TOTAL": 47
+        "TOTAL": 50
       }
     },
     {
@@ -10715,19 +10715,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 24,
+        "creativity": 26.5,
+        "threat": 4,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.24,
+        "CRE": 19.625,
+        "DEF": 1.44,
         "FIT": 38.88888888888889,
         "CTRL": 95,
-        "TOTAL": 17
+        "TOTAL": 20
       }
     },
     {
@@ -10750,19 +10750,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 21.6,
+        "creativity": 14,
+        "threat": 18,
         "total_points": 5,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 33.42857142857143,
-        "CRE": 36,
+        "ATT": 34.50857142857143,
+        "CRE": 47.260000000000005,
         "DEF": 0,
         "FIT": 77.77777777777779,
         "CTRL": 95,
-        "TOTAL": 44
+        "TOTAL": 47
       }
     },
     {
@@ -10785,19 +10785,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 5.2,
+        "creativity": 10,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 7.02,
+        "DEF": 0.312,
         "FIT": 11.11111111111111,
         "CTRL": 95,
-        "TOTAL": 12
+        "TOTAL": 13
       }
     },
     {
@@ -10820,15 +10820,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 16.4,
+        "creativity": 1.2,
+        "threat": 5,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 0.3,
+        "CRE": 2.42,
         "DEF": 0,
         "FIT": 100,
         "CTRL": 95,
@@ -10855,7 +10855,7 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
+        "influence": 4,
         "creativity": 0,
         "threat": 0,
         "total_points": 1,
@@ -10863,8 +10863,8 @@
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 0.4,
+        "DEF": 0.24,
         "FIT": 8.88888888888889,
         "CTRL": 95,
         "TOTAL": 11
@@ -10890,19 +10890,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 4.2,
+        "creativity": 15.4,
+        "threat": 4,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "ATT": 0.24,
+        "CRE": 10.43,
+        "DEF": 0.252,
         "FIT": 13.333333333333334,
         "CTRL": 95,
-        "TOTAL": 12
+        "TOTAL": 15
       }
     },
     {
@@ -10925,19 +10925,19 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
+        "influence": 0.6,
+        "creativity": 2.7,
         "threat": 0,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
         "ATT": 0,
-        "CRE": 0,
-        "DEF": 0,
+        "CRE": 1.8150000000000002,
+        "DEF": 0.036,
         "FIT": 4.444444444444445,
         "CTRL": 95,
-        "TOTAL": 10
+        "TOTAL": 11
       }
     },
     {
@@ -10960,15 +10960,15 @@
         "penalties_missed": 0,
         "penalties_saved": 0,
         "own_goals": 0,
-        "influence": 0,
-        "creativity": 0,
-        "threat": 0,
+        "influence": 3.4,
+        "creativity": 0.8,
+        "threat": 17,
         "total_points": 1,
         "bonus": 0
       },
       "powers_gw": {
-        "ATT": 0,
-        "CRE": 0,
+        "ATT": 1.02,
+        "CRE": 0.8600000000000001,
         "DEF": 0,
         "FIT": 16.666666666666664,
         "CTRL": 95,
@@ -11242,7 +11242,7 @@
     {
       "code": 2645195,
       "event": 1,
-      "finished": false,
+      "finished": true,
       "finished_provisional": true,
       "id": 1,
       "kickoff_time": "2026-08-21T19:00:00Z",
@@ -11612,7 +11612,7 @@
     {
       "code": 2645198,
       "event": 1,
-      "finished": false,
+      "finished": true,
       "finished_provisional": true,
       "id": 4,
       "kickoff_time": "2026-08-22T11:30:00Z",
@@ -11986,7 +11986,7 @@
     {
       "code": 2645197,
       "event": 1,
-      "finished": false,
+      "finished": true,
       "finished_provisional": true,
       "id": 3,
       "kickoff_time": "2026-08-22T14:00:00Z",
@@ -12343,7 +12343,7 @@
     {
       "code": 2645199,
       "event": 1,
-      "finished": false,
+      "finished": true,
       "finished_provisional": true,
       "id": 5,
       "kickoff_time": "2026-08-22T14:00:00Z",
@@ -12715,7 +12715,7 @@
     {
       "code": 2645200,
       "event": 1,
-      "finished": false,
+      "finished": true,
       "finished_provisional": true,
       "id": 6,
       "kickoff_time": "2026-08-22T14:00:00Z",
@@ -13044,7 +13044,7 @@
     {
       "code": 2645196,
       "event": 1,
-      "finished": false,
+      "finished": true,
       "finished_provisional": true,
       "id": 2,
       "kickoff_time": "2026-08-22T16:30:00Z",
@@ -13415,7 +13415,7 @@
     {
       "code": 2645201,
       "event": 1,
-      "finished": false,
+      "finished": true,
       "finished_provisional": true,
       "id": 7,
       "kickoff_time": "2026-08-23T13:00:00Z",
@@ -13798,7 +13798,7 @@
     {
       "code": 2645202,
       "event": 1,
-      "finished": false,
+      "finished": true,
       "finished_provisional": true,
       "id": 8,
       "kickoff_time": "2026-08-23T13:00:00Z",
@@ -14163,7 +14163,7 @@
     {
       "code": 2645203,
       "event": 1,
-      "finished": false,
+      "finished": true,
       "finished_provisional": true,
       "id": 9,
       "kickoff_time": "2026-08-23T15:30:00Z",
@@ -14564,7 +14564,7 @@
     {
       "code": 2645204,
       "event": 1,
-      "finished": false,
+      "finished": true,
       "finished_provisional": true,
       "id": 10,
       "kickoff_time": "2026-08-24T19:00:00Z",
